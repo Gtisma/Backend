@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Domain\Models;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use App\Domain\Models\ModelTraits\GetsTableName;
@@ -15,16 +15,17 @@ class User extends Authenticatable
 
 
     const ID = 'id';
-    const NAME = 'name';
+    const FIRST_NAME = 'first_name';
     const LAST_NAME = 'last_name';
     const EMAIL = 'email';
+    const PHONE = 'phone';
     const PASSWORD = 'password';
-    const AVATAR = 'avatar';
-    const IS_OWNER = 'is_owner';
+    const PICTURE_URL = 'picture_url';
+    const IS_ACTIVE = 'is_active';
+    const STATE_ID = 'state_id';
+    const GENDER_ID = 'gender_id';
+    const RANK_ID = 'rank_id';
     const EMAIL_VERIFIED_AT = 'email_verified_at';
-    const DATE_OF_BIRTH = 'date_of_birth';
-    const COUNTRY = 'country';
-    const CITY = 'city';
 
     /**
      * The attributes that are mass assignable.
@@ -55,4 +56,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function state()
+    {
+        return $this->belongsTo(State::class,self::STATE_ID);
+    }
+    public function rank()
+    {
+        return $this->belongsTo(Rank::class,self::RANK_ID);
+    }
+    public function gender()
+    {
+        return $this->belongsTo(Gender::class,self::GENDER_ID);
+    }
 }
