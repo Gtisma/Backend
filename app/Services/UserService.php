@@ -4,18 +4,18 @@ namespace App\Services;
 
 
 use App\Domain\Models\User;
-use App\Repositories\User\IUserRepository;
+use App\Repositories\User\IGenderRepository;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Hash;
 
 class UserService
 {
     /**
-     * @var IUserRepository
+     * @var IGenderRepository
      */
     protected $userRepository;
 
-    public function __construct(IUserRepository $userRepository)
+    public function __construct(IGenderRepository $userRepository)
     {
         $this->userRepository = $userRepository;
     }

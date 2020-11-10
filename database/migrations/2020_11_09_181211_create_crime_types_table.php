@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-
+use App\Domain\Models\CrimeType;
 class CreateCrimeTypesTable extends Migration
 {
     /**
@@ -15,6 +15,7 @@ class CreateCrimeTypesTable extends Migration
     {
         Schema::create('crime_types', function (Blueprint $table) {
             $table->id();
+            $table->string(CrimeType::NAME);
             $table->timestamps();
         });
     }

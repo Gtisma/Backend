@@ -6,7 +6,7 @@ use App\Domain\Models\ModelTraits\GetsTableName;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class Gender
+ * Class State
  * @package App\Domain\Models
  * @property int id
  * @property string name

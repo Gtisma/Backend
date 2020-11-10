@@ -114,7 +114,6 @@ return [
          */
 
         'expiration_time' => \DateInterval::createFromDateString('24 hours'),
-
         /*
          * The cache key used to store all permissions.
          */

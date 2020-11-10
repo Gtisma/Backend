@@ -119,6 +119,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
       <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-permission" />
+      <path value="$PROJECT_DIR$/vendor/laravel/ui" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jy4BJWCfSWCKGvKsmyVjVikgiL" />
@@ -129,16 +130,18 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Console/Services" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/seeders" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/Console/Services" />
+      <recent name="$PROJECT_DIR$/database/seeders" />
       <recent name="$PROJECT_DIR$/app/Repositories" />
-      <recent name="$PROJECT_DIR$/app/Exceptions" />
       <recent name="$PROJECT_DIR$/app/Domain/Models" />
+      <recent name="$PROJECT_DIR$/app/Domain/Helpers" />
+      <recent name="$PROJECT_DIR$/app/Domain" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app" />
@@ -160,7 +163,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604762861177</updated>
-      <workItem from="1604762862362" duration="17073000" />
+      <workItem from="1604762862362" duration="33622000" />
     </task>
     <servers />
   </component>
@@ -168,11 +171,23 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="387" y="241" key="#Log_Highlighting_(ideolog)" timestamp="1605029894064">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state x="387" y="241" key="#Log_Highlighting_(ideolog)/0.23.1440.834@0.23.1440.834" timestamp="1605029894064" />
+    <state x="485" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605028216427">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state x="485" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.834@0.23.1440.834" timestamp="1605028216427" />
     <state x="458" y="195" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604957038919">
       <screen x="0" y="23" width="1440" height="833" />
     </state>
     <state x="458" y="195" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.833@0.23.1440.833" timestamp="1604957038919" />
     <state x="458" y="195" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.834@0.23.1440.834" timestamp="1604766351522" />
+    <state x="478" y="300" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1605018458618">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state x="478" y="300" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.834@0.23.1440.834" timestamp="1605018458618" />
     <state width="596" height="445" key="SwitcherDM" timestamp="1604943414064">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
@@ -181,9 +196,9 @@
       <screen x="0" y="23" width="1440" height="833" />
     </state>
     <state x="418" y="188" width="604" height="490" key="find.popup/0.23.1440.833@0.23.1440.833" timestamp="1604955723459" />
-    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup" timestamp="1604768795963">
+    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup" timestamp="1605026461419">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup/0.23.1440.834@0.23.1440.834" timestamp="1604768795963" />
+    <state x="385" y="181" width="670" height="676" key="search.everywhere.popup/0.23.1440.834@0.23.1440.834" timestamp="1605026461419" />
   </component>
 </project>

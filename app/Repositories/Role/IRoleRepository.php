@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories\Permissions;
+namespace App\Repositories\Role;
 
 use App\Repositories\IBaseRepository;
 
