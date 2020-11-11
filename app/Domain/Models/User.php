@@ -26,6 +26,7 @@ class User extends Authenticatable
     const GENDER_ID = 'gender_id';
     const RANK_ID = 'rank_id';
     const EMAIL_VERIFIED_AT = 'email_verified_at';
+    const API_TOKEN = 'api_token';
 
     /**
      * The attributes that are mass assignable.
@@ -45,7 +46,7 @@ class User extends Authenticatable
      */
     protected $hidden = [
         'password',
-        'remember_token',
+        'remember_token','api_token',
     ];
 
     /**

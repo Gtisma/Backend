@@ -4,18 +4,18 @@ namespace App\Services;
 
 
 use App\Domain\Models\User;
-use App\Repositories\User\IGenderRepository;
+use App\Repositories\User\UserRepository;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Hash;
 
 class UserService
 {
     /**
-     * @var IGenderRepository
+     * @var UserRepository
      */
     protected $userRepository;
 
-    public function __construct(IGenderRepository $userRepository)
+    public function __construct(UserRepository $userRepository)
     {
         $this->userRepository = $userRepository;
     }
@@ -33,10 +33,10 @@ class UserService
 
 
 
-    public function destroyUser(DeleteDto $dto, int $companyId)
-    {
-        return $this->userRepository->deleteWhere([User::ID => $dto->id, User::COMPANY_ID => $companyId], true);
-    }
+//    public function destroyUser(DeleteDto $dto, int $companyId)
+//    {
+//        return $this->userRepository->deleteWhere([User::ID => $dto->id, User::COMPANY_ID => $companyId], true);
+//    }
 
     public function findUserByEmail(string $email, int $companyId)
     {

@@ -29,7 +29,7 @@ class CreateUsersTable extends Migration
             $table->unsignedBigInteger(User::RANK_ID)->nullable();
             $table->unsignedBigInteger(User::GENDER_ID)->nullable();
             $table->string(User::PICTURE_URL)->nullable();
-
+            $table->string(User::API_TOKEN, 80)->unique()->nullable();
             $table->foreign(User::STATE_ID)->references(State::ID)->on(
                 State::getTableName()
             )->cascadeOnUpdate()->nullOnDelete();
