@@ -18,8 +18,7 @@ class ForceJson
      */
     public function handle(Request $request, Closure $next)
     {
-        echo("Middle wire Force Json called");
-        Log::info("Middle wire Force Json called");
+        Log::info("Middle wire Force Json called",[$request]);
         // Force Json accept type
         if (! Str::contains($request->header('accept'), ['/json', '+json'])) {
             $request->headers->set('accept', 'application/json,' . $request->header('accept'));

@@ -20,27 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cd36280-a89e-408e-830a-9b2d8c76bee7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Domain/Api/Dto/Request/Auth/LoginDto.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/V1/AuthController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Auth/LoginRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/BaseApiRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/AuthService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/api/user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/GtismaBackend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GtismaBackend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Domain/Helpers/Constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Domain/Helpers/Constants.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Domain/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Domain/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/V1/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/V1/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/V1/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/V1/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/ForceJson.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/ForceJson.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_09_175000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_09_175000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/UserTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UserTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/auth.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/c0/71/c071422490d526a8aada046adf3a9c9fa0593468" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/data/c0/71/c071422490d526a8aada046adf3a9c9fa0593468" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/ec/c4/ecc49f49f4da6b940dcde13f0571e79c299871e6" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/data/ec/c4/ecc49f49f4da6b940dcde13f0571e79c299871e6" afterDir="false" />
     </list>
@@ -216,7 +202,7 @@
       <updated>1604762861177</updated>
       <workItem from="1604762862362" duration="34206000" />
       <workItem from="1605114265603" duration="7412000" />
-      <workItem from="1605211259990" duration="15892000" />
+      <workItem from="1605211259990" duration="16883000" />
     </task>
     <servers />
   </component>

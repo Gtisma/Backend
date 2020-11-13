@@ -16,7 +16,7 @@ class AuthController extends Controller
     }
     public function Login(LoginRequest $loginRequest){
         $loginResult = $this->authService->Login($loginRequest->convertToDto());
-        if(isset($loginResult["error"])) {return errorResponse($loginResult["error"]);}
+        if(isset($loginResult["error"])) {return errorResponse($loginResult["error"],$loginRequest["code"]??401);}
         return successResponse($loginResult["data"]);
     }
 

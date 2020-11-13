@@ -47,7 +47,7 @@ class User extends Authenticatable implements JWTSubject
      *
      * @var array
      */
-    protected $hidden = ['password', 'remember_token','email_verified_at','is_active','block','last_login'];
+    protected $hidden = ['password', 'remember_token','email_verified_at','is_active','block','api_token'];
 
     /**
      * The attributes that should be cast to native types.
