@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+
+
+Route::fallback(function(){
+    return response()->json(['message' => 'Route Not Found.'], 404);
+})->name('api.fallback.404');

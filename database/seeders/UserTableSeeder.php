@@ -17,6 +17,8 @@ class UserTableSeeder extends Seeder {
                 User::FIRST_NAME => 'Gtisma',
                 User::EMAIL => 'admin@gtisma.com',
                 User::PHONE => '08012345678',
+                User::IS_ACTIVE => '1',
+                User::EMAIL_VERIFIED_AT => date('Y-m-d H:i:s'),
                 User::PASSWORD => bcrypt('adminpassword')]);
 
             $user->assignRole(Constants::Roles[0]);

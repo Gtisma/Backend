@@ -84,7 +84,7 @@ class RouteServiceProvider extends ServiceProvider
     {
         $this->mapWebRoute('/api.php');
         $this->mapApiRoute('/api/auth.php', '/api/auth');
-//        $this->mapApiRoute('/api/products.php', '/api/products');
+        $this->mapApiRoute('/api/user.php', '/api/user');
 
     }
 

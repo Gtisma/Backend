@@ -20,7 +20,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cd36280-a89e-408e-830a-9b2d8c76bee7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Domain/Api/Dto/Request/Auth/LoginDto.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/V1/AuthController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Auth/LoginRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/BaseApiRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/AuthService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/api/user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/GtismaBackend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GtismaBackend.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domain/Helpers/Constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Domain/Helpers/Constants.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domain/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Domain/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_09_175000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_09_175000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/UserTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UserTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/c0/71/c071422490d526a8aada046adf3a9c9fa0593468" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/data/c0/71/c071422490d526a8aada046adf3a9c9fa0593468" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/ec/c4/ecc49f49f4da6b940dcde13f0571e79c299871e6" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/data/ec/c4/ecc49f49f4da6b940dcde13f0571e79c299871e6" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,6 +165,9 @@
       <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-permission" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/namshi/jose" />
+      <path value="$PROJECT_DIR$/vendor/tymon/jwt-auth" />
+      <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
     </include_path>
   </component>
   <component name="ProjectId" id="1jy4BJWCfSWCKGvKsmyVjVikgiL" />
@@ -154,23 +179,25 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers/Api/V1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/routes/api" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/routes/api" />
+      <recent name="$PROJECT_DIR$/app/Services" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/Api/V1" />
+      <recent name="$PROJECT_DIR$/app/Domain/Api/Dto/Request/Auth" />
+      <recent name="$PROJECT_DIR$/app/Http/Requests/Api/Auth" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Domain/Api" />
       <recent name="$PROJECT_DIR$/app" />
       <recent name="$PROJECT_DIR$/app/Domain/Models" />
       <recent name="$PROJECT_DIR$/app/Domain" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/Http/Controllers/Api/V1" />
-      <recent name="$PROJECT_DIR$/database/seeders" />
-      <recent name="$PROJECT_DIR$/app/Repositories" />
-      <recent name="$PROJECT_DIR$/app/Domain/Models" />
-      <recent name="$PROJECT_DIR$/app/Domain/Helpers" />
     </key>
   </component>
   <component name="RunManager">
@@ -188,7 +215,8 @@
       <option name="presentableId" value="Default" />
       <updated>1604762861177</updated>
       <workItem from="1604762862362" duration="34206000" />
-      <workItem from="1605114265603" duration="5254000" />
+      <workItem from="1605114265603" duration="7412000" />
+      <workItem from="1605211259990" duration="15892000" />
     </task>
     <servers />
   </component>
@@ -205,16 +233,25 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="387" y="241" key="#Log_Highlighting_(ideolog)" timestamp="1605029894064">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state x="387" y="241" key="#Log_Highlighting_(ideolog)/0.23.1440.834@0.23.1440.834" timestamp="1605029894064" />
-    <state x="485" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605028216427">
+    <state x="416" y="242" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605298428589">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="485" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.834@0.23.1440.834" timestamp="1605028216427" />
+    <state x="416" y="242" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.834@0.23.1440.834" timestamp="1605298428589" />
+    <state x="523" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1605299050005">
+      <screen x="0" y="23" width="1440" height="833" />
+    </state>
+    <state x="523" y="122" key="#com.intellij.ide.util.MemberChooser/0.23.1440.833@0.23.1440.833" timestamp="1605299050005" />
+    <state x="485" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605264657114">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state x="485" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.834@0.23.1440.834" timestamp="1605264657114" />
     <state x="458" y="195" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605115964961">
       <screen x="0" y="23" width="1440" height="833" />
     </state>
@@ -224,6 +261,10 @@
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state x="478" y="300" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.834@0.23.1440.834" timestamp="1605018458618" />
+    <state x="372" y="166" key="NewPhpClassDialog" timestamp="1605272255945">
+      <screen x="0" y="23" width="1440" height="834" />
+    </state>
+    <state x="372" y="166" key="NewPhpClassDialog/0.23.1440.834@0.23.1440.834" timestamp="1605272255945" />
     <state width="596" height="445" key="SwitcherDM" timestamp="1604943414064">
       <screen x="0" y="23" width="1440" height="834" />
     </state>

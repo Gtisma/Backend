@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
+use Tymon\JWTAuth\Contracts\JWTSubject;
 
-class User extends Authenticatable
+class User extends Authenticatable implements JWTSubject
 {
     use HasFactory, Notifiable,GetsTableName,HasRoles;
 
@@ -22,10 +23,12 @@ class User extends Authenticatable
     const PASSWORD = 'password';
     const PICTURE_URL = 'picture_url';
     const IS_ACTIVE = 'is_active';
+    const BLOCK = 'block';
     const STATE_ID = 'state_id';
     const GENDER_ID = 'gender_id';
     const RANK_ID = 'rank_id';
     const EMAIL_VERIFIED_AT = 'email_verified_at';
+    const LAST_LOGIN = 'last_login';
     const API_TOKEN = 'api_token';
 
     /**
@@ -36,7 +39,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
-        'password',
+        'password','picture_url','last_login'
     ];
 
     /**
@@ -44,10 +47,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $hidden = [
-        'password',
-        'remember_token','api_token',
-    ];
+    protected $hidden = ['password', 'remember_token','email_verified_at','is_active','block','last_login'];
 
     /**
      * The attributes that should be cast to native types.
@@ -68,5 +68,15 @@ class User extends Authenticatable
     public function gender()
     {
         return $this->belongsTo(Gender::class,self::GENDER_ID);
+    }
+
+    public function getJWTIdentifier()
+    {
+        return $this->getKey();
+    }
+
+    public function getJWTCustomClaims()
+    {
+        return [];
     }
 }

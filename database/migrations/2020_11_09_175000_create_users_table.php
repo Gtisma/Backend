@@ -7,6 +7,7 @@ use App\Domain\Models\User;
 use \App\Domain\Models\State;
 use \App\Domain\Models\Rank;
 use \App\Domain\Models\Gender;
+use \App\Domain\Helpers\Constants;
 
 class CreateUsersTable extends Migration
 {
@@ -24,11 +25,14 @@ class CreateUsersTable extends Migration
             $table->string(User::EMAIL)->unique();
             $table->string(User::PHONE)->unique();
             $table->timestamp(User::EMAIL_VERIFIED_AT)->nullable();
+            $table->timestamp(User::LAST_LOGIN)->nullable();
             $table->string(User::PASSWORD);
             $table->unsignedBigInteger(User::STATE_ID)->nullable();
             $table->unsignedBigInteger(User::RANK_ID)->nullable();
             $table->unsignedBigInteger(User::GENDER_ID)->nullable();
             $table->string(User::PICTURE_URL)->nullable();
+            $table->boolean(User::IS_ACTIVE)->nullable()->default(Constants::Active['Inactive']);
+            $table->boolean(User::BLOCK)->nullable()->default(Constants::Active['Inactive']);
             $table->string(User::API_TOKEN, 80)->unique()->nullable();
             $table->foreign(User::STATE_ID)->references(State::ID)->on(
                 State::getTableName()
