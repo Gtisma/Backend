@@ -1,0 +1,127 @@
+/* Dropdown */
+.dropdown-content {
+    margin: 0;
+    display: none;
+    min-width: 100px;
+    overflow-y: auto;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+    transform-origin: 0 0;
+}
+.dropdown-content:focus { outline: 0 }
+.dropdown-content li {
+    clear: both;
+    cursor: pointer;
+    width: 100%;
+}
+.dropdown-content li:focus { outline: none }
+body.keyboard-focused .dropdown-content li:focus {
+  background-color: #dadada;
+}
+
+
+
+/* Tables */
+table, th, td { border: none; }
+table {
+    width: 100%;
+    display: table;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table.striped tr { border-bottom: none; }
+table.striped > tbody > tr > td { border-radius: 0; }
+
+table.centered thead tr th, table.centered tbody tr td { text-align: center; }
+
+tr { border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+
+td, th {
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+}
+
+@media (max-width: 992px) {
+    table.responsive-table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        display: block;
+        position: relative;
+        /* sort out borders */
+    }
+    table.responsive-table td:empty:before { content: '\00a0'; }
+    table.responsive-table th,
+    table.responsive-table td {
+        margin: 0;
+        vertical-align: top;
+    }
+    table.responsive-table th { text-align: left; }
+    table.responsive-table thead {
+        display: block;
+        float: left;
+    }
+    table.responsive-table thead tr { display: block; }
+    table.responsive-table thead tr th::before { content: "\00a0"; }
+    table.responsive-table tbody {
+        display: block;
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    table.responsive-table tbody tr {
+        display: inline-block;
+        vertical-align: top;
+    }
+    table.responsive-table th {
+        display: block;
+        text-align: right;
+    }
+    table.responsive-table td {
+        display: block;
+        min-height: 1.25em;
+        text-align: left;
+    }
+    table.responsive-table tr { border-bottom: none; }
+    table.responsive-table thead {
+        border: 0;
+        border-right: 1px solid rgba(0, 0, 0, 0.12);
+    }
+}
+
+
+
+/* Modals */
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    padding: 0;
+    margin: auto;
+    overflow-y: auto;
+    will-change: top, opacity;
+}
+.modal:focus { outline: none; }
+.modal .modal-close { cursor: pointer; }
+
+.modal-overlay {
+    position: fixed;
+    z-index: 999;
+    top: -25%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 125%;
+    width: 100%;
+    background: #000;
+    display: none;
+    will-change: opacity;
+}
