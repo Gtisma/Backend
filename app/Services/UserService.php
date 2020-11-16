@@ -30,6 +30,11 @@ class UserService
     {
         return $this->userRepository->findWhere([User::PHONE => $companyId]);
     }
+    public function  getLoggedInUser(){
+        $user = auth()->user();
+        $user->roles;
+        return $user;
+    }
 
 
 

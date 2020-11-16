@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\Auth\LoginRequest;
+use App\Http\Requests\Api\Auth\RegisterRequest;
 use App\Services\AuthService;
 
 class AuthController extends Controller
@@ -18,6 +19,11 @@ class AuthController extends Controller
         $loginResult = $this->authService->Login($loginRequest->convertToDto());
         if(isset($loginResult["error"])) {return errorResponse($loginResult["error"],$loginRequest["code"]??401);}
         return successResponse($loginResult["data"]);
+    }
+    public function Register(RegisterRequest $registerRequest){
+        $registerResult = $this->authService->Register($registerRequest->convertToDto());
+        if(isset($registerResult["error"])) {return errorResponse($registerResult["error"],422);}
+        return successResponse($registerResult["data"]);
     }
 
 

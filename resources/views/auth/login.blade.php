@@ -14,27 +14,43 @@
             </a></div>
         <div class="r-w-100% r-maxwidth-xs">
             <h3 class="r-mt-0 r-headline--small">Welcome back!</h3>
+            @if (session('message'))
+                <div class="alert alert-info" style="margin: 30px">
+                    {{ session('message') }}
+                </div>
+            @endif
             <p class="r-mb-0">
-                New to GTISMA? <a href="/sign-up" class="r-co-secondary">Sign up.</a>
+                New to GTISMA? <a href="{{ route('register') }}" class="r-co-secondary">Sign up.</a>
             </p><div class="r-tx-l">
-                <form action="{{ route('login') }}" class="">
+                <form method="POST" action="{{ route('login') }}" >
+                    @csrf
                     <p class="input-field r-mb-0">
-                        <input id="email" class="validate  @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" type="email" required autocomplete="email" autofocus>
+
+                        <input id="email" name="email" class="validate  @error('email') is-invalid @enderror" value="{{ old('email') }}" type="email" required autocomplete="email" autofocus>
                         <label for="email" class="">Email</label>
                         @error('email')
-                        <span class="invalid-feedback" role="alert">
+                        <span class="invalid-feedback r-fs-pico r-red" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                         @enderror
                     </p>
                     <p class="input-field r-mb-0">
-                        <input id="password" type="password" class="validate @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" >
+                        <input id="password" name="password" type="password" class="validate @error('password') is-invalid @enderror"  required autocomplete="current-password" >
                         <label for="password" class="">Password</label>
+                        @error('password')
+                        <span class="invalid-feedback r-fs-pico r-red" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                        @enderror
                     </p>
-                    <button type="submit" class="r-btn r-btn--primary r-btn--match-input r-btn--left-floated-icon input-field r-btn-spinner"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" class="icon icon-unlock">
+
+
+                    <button class="r-btn r-btn--primary r-btn--match-input r-btn--left-floated-icon input-field r-btn-spinner">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" class="icon icon-unlock">
                             <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
                             <path d="M7 11V7a5 5 0 0 1 9.9-1" />
-                        </svg><span class="r-fw-medium r-btn_text">Log in</span>
+                        </svg>
+                        <span class="r-fw-medium r-btn_text"> {{ __('Login') }}</span>
                         <div class="r-spinner r-pos-a r-right-edge">
                             <span></span>
                             <span></span>
@@ -45,11 +61,7 @@
                 <a href="{{ route('password.request') }}" class="r-gutter--top--as-edge r-d-flex r-j-c-fe r-co-secondary">
                     Forgot password?
                 </a>
-                <p class="r-mb-0 r-gutter--as-edge r-opacity-08 r-fs-nano">
-                    By continuing you accept our
-                    <a href="/tocs" target="_blank">Terms of Use</a> and
-                    <a href="/privacy" target="_blank">Privacy Policy</a>.
-                </p>
+
             </div></div>
     </section>
 @endsection

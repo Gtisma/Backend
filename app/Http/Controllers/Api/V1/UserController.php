@@ -15,8 +15,9 @@ class UserController extends Controller
     }
     public function getUser(){
 
-       return successResponse(auth()->user());
+       return successResponse($this->userService->getLoggedInUser());
     }
+
 
 
 }

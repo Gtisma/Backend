@@ -4,7 +4,7 @@ namespace App\Domain\Helpers;
 
 class Constants {
 
-    const Roles = ['administrator', 'superadmin', 'witness'];
+    const Roles = ['superadmin','administrator', 'witness'];
     const Active =['Active'=>'1', 'Inactive'=>'0'];
 
 }

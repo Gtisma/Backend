@@ -4,6 +4,7 @@ namespace App\Services;
 
 
 use App\Domain\Api\Dto\Request\Auth\LoginDto;
+use App\Domain\Api\Dto\Request\Auth\RegisterDto;
 use App\Domain\Helpers\Constants;
 use App\Domain\Models\User;
 use App\Repositories\User\UserRepository;
@@ -53,6 +54,15 @@ class AuthService
             'token_type' => 'bearer',
             'expires_in' => auth()->factory()->getTTL() * 60
         ]);
+    }
+    public function Register(RegisterDto $registerDto)
+    {
+        $user= $this->userRepository->create([User::EMAIL=>$registerDto->email,User::PASSWORD=>bcrypt($registerDto->password),User::PHONE=>$registerDto->phone
+        ,User::LAST_NAME=>$registerDto->last_name,User::FIRST_NAME=>$registerDto->first_name,User::GENDER_ID=>$registerDto->gender_id]);
+        $user->assignRole(Constants::Roles[2]);
+        return ["data"=>"Email has been sent for Verification"];
+
+
     }
 
 

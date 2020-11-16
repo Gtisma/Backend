@@ -121,7 +121,7 @@
             const
                 button = q('button[type="submit"]', form),
                 handler = (e) => {
-                    e.preventDefault();
+                    // e.preventDefault();
                     button.setAttribute('disabled', '');
                     button.classList.add('r-active');
                     form.reset();
