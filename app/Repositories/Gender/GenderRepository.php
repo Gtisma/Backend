@@ -2,11 +2,11 @@
 
 namespace App\Repositories\Gender;
 
-use App\Domain\Models\Rank;
+use App\Domain\Models\Gender;
 use App\Repositories\BaseRepository;
-use App\Repositories\User\IRankRepository;
 
-class GenderRepository extends BaseRepository implements IRankRepository {
+
+class GenderRepository extends BaseRepository implements IGenderRepository {
 
     /**
      * Specify Model class name
@@ -15,7 +15,7 @@ class GenderRepository extends BaseRepository implements IRankRepository {
      */
     public function model()
     {
-        return Rank::class;
+        return Gender::class;
     }
 //
 }
