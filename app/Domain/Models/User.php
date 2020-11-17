@@ -30,6 +30,10 @@ class User extends Authenticatable implements JWTSubject
     const EMAIL_VERIFIED_AT = 'email_verified_at';
     const LAST_LOGIN = 'last_login';
     const API_TOKEN = 'api_token';
+    const FACEBOOK_ID = 'facebook_id';
+    const TWITTER_ID = 'twitter_id';
+    const GOOGLE_ID = 'google_id';
+    const SOURCE = 'source';
 
     /**
      * The attributes that are mass assignable.
@@ -47,7 +51,7 @@ class User extends Authenticatable implements JWTSubject
      *
      * @var array
      */
-    protected $hidden = ['password', 'remember_token','email_verified_at','is_active','block','api_token'];
+    protected $hidden = ['password', 'remember_token','email_verified_at','is_active','block','api_token','facebook_id','twitter_id','google_id'];
 
     /**
      * The attributes that should be cast to native types.

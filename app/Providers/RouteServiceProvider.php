@@ -67,7 +67,7 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapWebRoutes()
     {
         $this->mapWebRoute('/web.php');
-//        $this->mapWebRoute('/web/calendar.php', '/calendar');
+        $this->mapWebRoute('/web/admin/home.php', '/admin');
 //        $this->mapWebRoute('/web/marketing.php', '/marketing');
 //        $this->mapWebRoute('/web/settings.php', '/settings');
 
@@ -86,6 +86,7 @@ class RouteServiceProvider extends ServiceProvider
         $this->mapApiRoute('/api/auth.php', '/api/auth');
         $this->mapApiRoute('/api/user.php', '/api/user');
         $this->mapApiRoute('/api/gender.php', '/api/gender');
+        $this->mapApiRoute('/api/crimetype.php', '/api/crimetype');
 
     }
 

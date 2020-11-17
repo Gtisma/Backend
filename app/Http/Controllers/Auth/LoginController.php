@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Domain\Helpers\Constants;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -22,7 +23,6 @@ class LoginController extends Controller
     |
     */
 
-    use AuthenticatesUsers;
 
 
     /**
@@ -37,16 +37,21 @@ class LoginController extends Controller
      *
      * @return void
      */
+    protected function authenticated(Request $request, $user)
+    {
+        if ( $user->hasRole(Constants::Roles[2]) ) {// do your magic here
+            auth()->logout();
+            return redirect('/login')->with('message','You cannot Login on this platform, Kindly use the mobile app ');
+        }
+        date_default_timezone_set('Africa/Lagos');
+        $user->last_login = date('Y-m-d H:i:s');
+        $user->save();
+        return redirect('/admin');
+    }
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
     }
+    use AuthenticatesUsers;
 
-    public function redirectTo(){
-        $user = auth()->user();
-        date_default_timezone_set('Africa/Lagos');
-        $user->last_login = date('Y-m-d H:i:s');
-        $user->save();
-        return $this->redirectTo = '/home';
-    }
 }

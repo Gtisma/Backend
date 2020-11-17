@@ -26,7 +26,11 @@ class CreateUsersTable extends Migration
             $table->string(User::PHONE)->unique();
             $table->timestamp(User::EMAIL_VERIFIED_AT)->nullable();
             $table->timestamp(User::LAST_LOGIN)->nullable();
-            $table->string(User::PASSWORD);
+            $table->string(User::PASSWORD)->nullable();
+            $table->string(User::SOURCE)->nullable()->default('regular');
+            $table->string(User::FACEBOOK_ID)->nullable();
+            $table->string(User::GOOGLE_ID)->nullable();
+            $table->string(User::TWITTER_ID)->nullable();
             $table->unsignedBigInteger(User::STATE_ID)->nullable();
             $table->unsignedBigInteger(User::RANK_ID)->nullable();
             $table->unsignedBigInteger(User::GENDER_ID)->nullable();

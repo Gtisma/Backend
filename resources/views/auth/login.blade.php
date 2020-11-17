@@ -29,7 +29,7 @@
         <div class="r-w-100% r-maxwidth-xs">
             <h3 class="r-mt-0 r-headline--small">Welcome back!</h3>
             @if (session('message'))
-                <div class="alert alert-info" style="margin: 30px">
+                <div class="alert alert-info r-red" style="margin: 30px">
                     {{ session('message') }}
                 </div>
             @endif
@@ -43,7 +43,7 @@
                         <input id="email" name="email" class="validate  @error('email') is-invalid @enderror" value="{{ old('email') }}" type="email" required autocomplete="email" autofocus>
                         <label for="email" class="">Email</label>
                         @error('email')
-                        <span class="invalid-feedback r-fs-pico r-red" role="alert">
+                        <span class="r-fs-pico r-red" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                         @enderror
