@@ -21,8 +21,8 @@ class ClientAuthentication
 	public function handle($request, Closure $next, $guard = null)
 	{
 	    Log::info("header Request",[$request->header()]);
-        if(!($request->header('client_id'))) return errorResponse('client_id must be sent in the header',401);
-        if(!in_array($request->header('client_id'),Constants::Clients))return errorResponse('Invalid client_id sent in the header',401);
+        if(!($request->header('clientid'))) return errorResponse('clientid must be sent in the header',401);
+        if(!in_array($request->header('clientid'),Constants::Clients))return errorResponse('Invalid clientid sent in the header',401);
 		return $next($request);
 	}
 }
