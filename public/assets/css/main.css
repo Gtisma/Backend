@@ -3656,6 +3656,9 @@ table td,
 .r-mt-0 {
     margin-top: 0
 }
+.r-mt-1 {
+    margin-top: 1rem
+}
 
 .r-mr-0 {
     margin-right: 0
@@ -3663,6 +3666,12 @@ table td,
 
 .r-mb-0 {
     margin-bottom: 0
+}
+.r-mb-1 {
+    margin-bottom: 1rem
+}
+.r-mb-2 {
+    margin-bottom: 2rem
 }
 
 .r-ml-0 {
@@ -3743,6 +3752,9 @@ table td,
 .r-pt-0 {
     padding-top: 0
 }
+.r-pt-1 {
+    padding-top: 1rem
+}
 
 .r-pb-0 {
     padding-bottom: 0
@@ -3764,6 +3776,11 @@ table td,
 
 .r-p-edges {
     padding: 1em
+}
+
+.r-py-1 {
+    padding-right: 1rem;
+    padding-left: 1rem
 }
 
 .r-px-2 {
@@ -3962,6 +3979,52 @@ table td,
 
 .r-red {
     color: #e5104c;
+}
+
+.r-dropzone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed rgba(22, 6, 4, 0.15);
+    border-radius: 8.4px;
+    width: 100%;
+    height: 3em;
+    font-size: .92em;
+    color: #9e9e9e;
+    transition: box-shadow .3s, border .3s;
+    text-decoration: none;
+}
+.r-dropzone:focus,.r-dropzone:hover {
+    border: 2px solid #2474eb;
+    color: #2474eb;
+}
+
+.modal {
+    max-width: 768px;
+}
+.modal-content {
+    overflow-y: auto;
+    height: 100%;
+    max-height: 480px;
+}
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #52154E;
+    color: white;
+    border-bottom-left-radius: 14.4px;
+    padding: 0.35rem 0.5rem;
+    padding-top: 0.5rem;
+    transition: opacity 0.3s ease;
+}
+.modal-close:focus,.modal-close:hover {
+    color: white;
+    opacity: 0.7;
+}
+.webcamvideo{
+    width: 100%;
+    height: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

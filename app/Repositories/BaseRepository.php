@@ -3,10 +3,12 @@
 namespace App\Repositories;
 
 use App\Exceptions\RepositoryException;
+use App\Mail\GtismaMailQueue;
 use Illuminate\Container\Container as Application;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Mail;
 
 abstract class BaseRepository implements IBaseRepository
 {
@@ -1038,4 +1040,12 @@ abstract class BaseRepository implements IBaseRepository
             }
         }
     }
+    public function sendEmailQueue($subject,$to,$from,$view,$data,$link){
+        Mail::to($to)->queue(new GtismaMailQueue($data,$view,$to,$from,$subject,$link));
+    }
+    public static function sendEmailQueuestatic($subject,$to,$from,$view,$data,$link){
+        Mail::to($to)->queue(new GtismaMailQueue($data,$view,$to,$from,$subject,$link));
+    }
+
+
 }

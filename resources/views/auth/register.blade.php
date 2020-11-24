@@ -26,11 +26,15 @@
         GTISMA
     </span>
             </a></div>
+
+
         <div class="r-w-100% r-maxwidth-xs">
             <h3 class="r-mt-0 r-headline--small">Welcome to GTISMA!</h3>
             <p class="r-mb-0">
                 Already on GTISMA? <a href="{{ route('login') }}" class="r-co-secondary ">Log in.</a>
-            </p><div class="r-tx-l">
+            </p>
+
+            <div class="r-tx-l">
                 <form action="{{ route('register') }}" class="">
                     <div class="r-grid r-grid--gap-as-edge@md-up r-grid--1-6@md">
                         <p class="input-field r-mb-0">
@@ -42,14 +46,17 @@
                             <label for="lastname" class="">Last Name</label>
                         </p>
                     </div>
-                    <p class="input-field r-mb-0">
-                        <input id="phone" type="tel" required>
-                        <label for="phone" class="">Your Phone</label>
-                    </p>
-                    <p class="input-field r-mb-0">
-                        <input id="email" type="email" required>
-                        <label for="email" class="">Your Email</label>
-                    </p>
+                    <div class="r-grid r-grid--gap-as-edge@md-up r-grid--1-6@md">
+                        <p class="input-field r-mb-0">
+                            <input id="phone" type="tel" name="phone" required>
+                            <label for="phone" class="">Your Phone</label>
+                        </p>
+                        <p class="input-field r-mb-0">
+                            <input id="email" type="email" name = "email" required>
+                            <label for="email" class="">Your Email</label>
+                        </p>
+                    </div>
+                    <div class="r-grid r-grid--gap-as-edge@md-up r-grid--1-6@md">
                     <p class="input-field r-mb-0">
                         <input id="password" type="password" name="password" required>
                         <label for="password" class=""> Password</label>
@@ -58,6 +65,22 @@
                         <input id="password" type="password" name="confirm_password" required>
                         <label for="password" class="">Confirm Password</label>
                     </p>
+                    </div>
+                    @include('auth.webcam')
+
+                    <div class="input-field r-select-wrapper">
+                        <select id ="securities" onchange="getRanks()">
+                            <option value="" disabled selected>Choose your Security</option>
+                        @if(isset($securities) && count($securities) > 0)
+                                @foreach($securities as $security)
+                            <option value="{{$security->id}}">{{$security->name}}</option>
+                                @endforeach
+
+                            @endif
+                        </select>
+                        <label>Securities</label>
+                    </div>
+
                     <button type="submit" class="r-btn r-btn--primary r-btn--match-input r-btn--left-floated-icon input-field r-btn-spinner"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" class="icon icon-lock">
                             <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
                             <path d="M7 11V7a5 5 0 0 1 10 0v4" />
@@ -77,3 +100,4 @@
             </div></div>
     </section>
 @endsection
+

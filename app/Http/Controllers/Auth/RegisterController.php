@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Domain\Models\Security;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
@@ -30,6 +31,12 @@ class RegisterController extends Controller
      * @var string
      */
     protected $redirectTo = RouteServiceProvider::HOME;
+
+    public function showRegistrationForm()
+    {
+        $securities = Security::all();
+        return view('auth.register',compact('securities'));
+    }
 
     /**
      * Create a new controller instance.

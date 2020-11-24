@@ -33,7 +33,7 @@ class AuthService
         if($user->block == Constants::Active["Active"]) return ["error"=>"User is Blocked, contact admin"];
         if($user->email_verified_at == null) return ["error"=>"Email has not been verified, please check your email"];
         $token = auth('api')->attempt([User::EMAIL=>$loginDto->email,User::PASSWORD=>$loginDto->password]);
-        if(!$token) return ["error"=>"Incorrect Password, Try Again","code",401];
+        if(!$token) return ["error"=>"Invalid Credential, Try Again","code",401];
         $user->last_login = date('Y-m-d H:i:s');
         $user->save();
         return ["data"=>$token];
