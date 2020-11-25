@@ -510,7 +510,7 @@
 
 
 
-
+<noscript>Your browser does not support JavaScript!</noscript>
 <!--====== Jquery js ======-->
 <script src="{{ asset('homeassets/js/vendor/jquery-3.5.1-min.js') }}"></script>
 <script src="{{ asset('homeassets/js/vendor/modernizr-3.7.1.min.js') }}"></script>
