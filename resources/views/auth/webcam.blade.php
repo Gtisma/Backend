@@ -1,7 +1,19 @@
 
 <a href="#modal1" class="r-dropzone input-field modal-trigger">
-   Take a picture
+   <span id="show-before-capture" >
+       Take a picture
+   </span>
+    <div id="show-after-capture" class="r-d-flex r-w-100% r-al-i-c r-j-c-sb r-py-hh" style="display: none">
+        <img id ="captureimage"src="{{ asset('assets/images/avatar.jpg') }}" class="r-avatar r-avatar--medium r-suffix">
+        <span>Retake?</span>
+        <span class="r-co-primary r-prefix">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </span>
+    </div>
 </a>
+<span id="webcamerror" class="invalid-feedback r-fs-pico r-red" role="alert">
+                            <strong>Picture must be uploaded</strong>
+</span>
 
 <div id="modal1" class="modal" tabindex="0">
     <div class="modal-content">
@@ -17,52 +29,54 @@
     </a>
 
     <div class="r-flex r-j-c-c r-mt-1 r-mb-2">
-        <button class="r-btn r-btn--primary r-py-1" onclick="snapPicture()">
+        <a class="r-btn r-btn--primary r-py-1"  onclick="snapPicture()">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-camera"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
             <span class="r-suffix">
                 Capture
             </span>
-        </button>
+        </a>
     </div>
 
 </div>
-
-<div id="download-photo"></div>
 @section('footerscripts')
     <script>
 
+        let instanceModal,picture;
         let webcam,webcamElement,canvasElement,snapSoundElement;
-        const picturecapture = document.getElementById('pictureCapture');
         const snapcontent = document.getElementById('snapcontent');
         let rankdiv = document.getElementById('rankid');
-        picturecapture.style.display = "none";
+        let showaftercapture = document.getElementById('show-after-capture');
+        let captureimage = document.getElementById('captureimage');
+        let showbeforecapture = document.getElementById('show-before-capture');
+        let webcamerror = document.getElementById('webcamerror');
+        let securityerror = document.getElementById('securityerror');
         rankdiv.style.display = "none";
+        webcamerror.style.display = "none";
+        securityerror.style.display = "none";
         document.addEventListener('DOMContentLoaded', function () {
             const optionsModal = {
                 onOpenStart: () => {
                     openCamera();
                 },
                 onCloseEnd: () => {
-                    console.log("close modal");
+                    // console.log("close modal");
                     endSnap();
                 }
             }
-            var Modalelem = document.querySelector('.modal');
-            var instanceModal = M.Modal.init(Modalelem, optionsModal);
+            let Modalelem = document.querySelector('.modal');
+             instanceModal = M.Modal.init(Modalelem, optionsModal);
         });
 
 
     function openCamera(){
          snapcontent.style.display = "block";
-         picturecapture.style.display = "none";
          webcamElement = document.getElementById('webcam');
          canvasElement = document.getElementById('canvas');
          snapSoundElement = document.getElementById('snapSound');
          webcam = new Webcam(webcamElement, 'user', canvasElement, snapSoundElement);
          webcam.start()
         .then(result =>{
-            console.log("result",result);
-            console.log("webcam started");
+            // console.log("result",result);
         })
         .catch(err => {
             console.log(err);
@@ -70,55 +84,27 @@
 
         }
         function snapPicture(){
-            let picture = webcam.snap();
-            picturecapture.href = picture;
-            picturecapture.style.display = "block";
-            snapcontent.style.display = "none";
+            event.preventDefault();
+            showaftercapture.style.display = "flex";
+            webcamerror.style.display = "none";
+            showbeforecapture.style.display = "none";
+            picture = webcam.snap();
+            let pictureinput = document.createElement("input");
+            pictureinput.setAttribute("type", "hidden");
+            pictureinput.setAttribute("name", "picture_url");
+            pictureinput.setAttribute("value", picture);
+            document.getElementById("registrationform").appendChild(pictureinput);
+            captureimage.src =picture;
+            instanceModal.close();
 
         }
         function endSnap(){
             webcam.stop();
-            console.log("Stop",webcam);
-            picturecapture.style.display = "none";
         }
 
-        function getRanks2(){
-            var id = $('#securities').find(":selected").val();
-            var option = document.createElement("option");
-            rankdiv.style.display = "block";
-            if(id != undefined ) {
-                var getranks = "/api/rank/" + id ;
-                $.ajaxSetup({
-                    headers:{
-                        'clientid': "mobileclientpqqh6ebizhTecUpfb0qA"
-                    }
-                });
-                $.get(getranks, function (data) {
-                    console.log("data",data.data);
-                    // if (data.status == "success") {
-                    //     $('#bal').text("(Balance : NGN "+ data.data +")");
-                    // }
 
-                    if (data.status == "success") {
-                        var len = data.data.length;
-                        data = data.data;
-                        if (len > 0) {
-                            for (var i = 0; i < len; i++) {
-                                option.text = data[i].name;
-                                option.value = data[i].id;
-                                rankselect.appendChild(option);
-                            }
-                        } else {
-                            // $('.bankerror').show();
-                        }
-                    }
-
-                }).fail(function (error) {
-                    console.log("errror",error);
-                });
-            }
-        }
         function getRanks() {
+            securityerror.style.display = "none";
             var id = $('#securities').find(":selected").val();
             rankdiv.style.display = "block";
             var rankselect = document.getElementById("rankselect");
@@ -133,34 +119,30 @@
             $.get(getrankurl, function (data) {
                 if (data.status == "success") {
                     data = data.data;
-
-                        for(i in data)
+                        for(let i in data)
                         {
-                            var opt = document.createElement("option");
+                            let opt = document.createElement("option");
                             opt.value= data[i].id;
-                            opt.innerHTML = data[i].name; // whatever property it has
-                            console.log("options",opt);
-                            // then append it to the select element
+                            opt.innerHTML = data[i].name;
                             rankselect.appendChild(opt);
                         }
-                        // for(var i = 0 ; i <len ; i++ ){
-                        //     var option = document.createElement("option");
-                        //     option.text = data[i].name;
-                        //     option.value = data[i].id;
-                        //     console.log("options",option);
-                        //     rankselect.append(option);
-                        // }
-
                 }
-
 
             }).fail(function (error) {
                 console.log("error");
-                $('.bankerror').show();
+                // $('.bankerror').show();
             })
 
 
         }
+        function validateRegister(){
+        let chk = true;
+        if(!picture) {webcamerror.style.display = "block";chk= false;}
+        let secu = $('#securities').find(":selected").val();
+        if(!secu) {securityerror.style.display = "block";chk = false;}
+        return chk;
+        }
+
 
 
     </script>

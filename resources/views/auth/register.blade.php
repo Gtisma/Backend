@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="r-split-twin_content r-gutter--bottom r-d-flex r-flex-dir-col r-al-i-c r-tx-c r-gutter--2x@lg r-edges">
-        <h2 class="r-sr">Log In Form</h2>
+        <h2 class="r-sr">Register Form</h2>
         <div class="r-visible-lg-up r-gutter--bottom"><a href="/" class="r-logo r-d-flex r-al-i-c">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375pt" height="374.999991pt" viewBox="0 0 375 374.999991" version="1.2">
                     <defs>
@@ -35,26 +35,48 @@
             </p>
 
             <div class="r-tx-l">
-                <form action="{{ route('register') }}" class="">
+                <form method="POST" action="{{ route('register') }}" id="registrationform" >
+                    @csrf
                     <div class="r-grid r-grid--gap-as-edge@md-up r-grid--1-6@md">
                         <p class="input-field r-mb-0">
-                            <input id="firstname" type="text" required>
-                            <label for="firstname" class="">First Name</label>
+                            <input name="first_name" id="firstname" type="text" value="{{ old('first_name') }}" autocomplete="first_name" required>
+                            <label for="first_name" class="">First Name</label>
                         </p>
                         <p class="input-field r-mb-0">
-                            <input id="lastname" type="text" required>
-                            <label for="lastname" class="">Last Name</label>
+                            <input name="last_name" id="lastname" type="text" value="{{ old('last_name') }}" autocomplete="last_name" required>
+                            <label for="last_name" class="">Last Name</label>
                         </p>
+                        @error('first_name')
+                        <span class="invalid-feedback r-fs-pico r-red" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                        @enderror
+                        @error('last_name')
+                        <span class="invalid-feedback r-fs-pico r-red" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                        @enderror
                     </div>
                     <div class="r-grid r-grid--gap-as-edge@md-up r-grid--1-6@md">
                         <p class="input-field r-mb-0">
-                            <input id="phone" type="tel" name="phone" required>
+                            <input id="phone" type="tel" name="phone" value="{{ old('phone') }}" autocomplete="phone" required>
                             <label for="phone" class="">Your Phone</label>
                         </p>
+
                         <p class="input-field r-mb-0">
-                            <input id="email" type="email" name = "email" required>
+                            <input id="email" type="email" name ="email"  value="{{ old('email') }}" autocomplete="email" required>
                             <label for="email" class="">Your Email</label>
                         </p>
+                        @error('phone')
+                        <span class="invalid-feedback r-fs-pico r-red" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                        @enderror
+                        @error('email')
+                        <span class="invalid-feedback r-fs-pico r-red" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                        @enderror
                     </div>
                     <div class="r-grid r-grid--gap-as-edge@md-up r-grid--1-6@md">
                     <p class="input-field r-mb-0">
@@ -62,41 +84,51 @@
                         <label for="password" class=""> Password</label>
                     </p>
                     <p class="input-field r-mb-0">
-                        <input id="password" type="password" name="confirm_password" required>
-                        <label for="password" class="">Confirm Password</label>
+                        <input id="confirm_password" type="password" name="password_confirmation" required>
+                        <label for="confirm_password" class="">Confirm Password</label>
                     </p>
                     </div>
+                    @error('password')
+                    <span class="invalid-feedback r-fs-pico r-red" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                    @enderror
                     @include('auth.webcam')
 
-                    <div class="input-field r-select-wrapper">
-                        <select id ="securities" onchange="getRanks()">
+                    <p class="r-select-wrapper r-mb-0">
+                        <label for="securities">Securities</label>
+                        <select name="security_id" id ="securities" onchange="getRanks()" class="browser-default">
                             <option value="" disabled selected>Choose your Security</option>
                         @if(isset($securities) && count($securities) > 0)
                                 @foreach($securities as $security)
                             <option value="{{$security->id}}">{{$security->name}}</option>
                                 @endforeach
-
                             @endif
                         </select>
-                        <label>Securities</label>
-                    </div>
-                    <div class="input-field r-select-wrapper" id="rankid">
-                        <select id="rankselect">
+                        <span id="securityerror" class="invalid-feedback r-fs-pico r-red" role="alert">
+                            <strong>Select a valid security</strong>
+                        </span>
+                    </p>
+                    <p class="r-select-wrapper r-mb-0" id="rankid">
+                        <label for="rankselect">Ranks</label>
+                        <select name="rank_id" id="rankselect" class="browser-default">
                         </select>
-                        <label>Ranks</label>
-                    </div>
+                    </p>
 
-
-                    <button type="submit" class="r-btn r-btn--primary r-btn--match-input r-btn--left-floated-icon input-field r-btn-spinner"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" class="icon icon-lock">
+                    <button  onclick="return validateRegister()" class="r-btn r-btn--primary r-btn--match-input r-btn--left-floated-icon input-field r-btn-spinner">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" class="icon icon-unlock">
                             <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                        </svg><span class="r-fw-medium r-btn_text">Sign up</span>
+                            <path d="M7 11V7a5 5 0 0 1 9.9-1" />
+                        </svg>
+                        <span class="r-fw-medium r-btn_text"> {{ __('Sign Up') }}</span>
                         <div class="r-spinner r-pos-a r-right-edge">
                             <span></span>
                             <span></span>
                             <span></span>
                         </div>
                     </button>
+
+
                 </form>
                 <p class="r-mb-0 r-gutter--as-edge r-opacity-08 r-fs-nano">
                     By continuing you accept our
