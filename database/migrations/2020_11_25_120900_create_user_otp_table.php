@@ -1,5 +1,6 @@
 <?php
 
+use App\Domain\Models\UserOtp;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
@@ -13,11 +14,11 @@ class CreateUserOtpTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_otp', function (Blueprint $table) {
+        Schema::create('user_otps', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('otp')->nullable();
-            $table->dateTime('expires_at')->nullable();
-            $table->uuid('user_id');
+            $table->string(UserOtp::OTP)->nullable();
+            $table->dateTime(UserOtp::EXPIRED_AT)->nullable();
+            $table->uuid(UserOtp::USER_ID);
             $table->timestamps();
         });
     }

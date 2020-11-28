@@ -113,7 +113,7 @@
             var getrankurl = "/api/rank/" + id ;
             $.ajaxSetup({
                 headers:{
-                    'clientid': "mobileclientpqqh6ebizhTecUpfb0qA"
+                    'clientid': "{{config('constants.client')}}"
                 }
             });
             $.get(getrankurl, function (data) {

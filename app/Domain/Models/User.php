@@ -73,6 +73,10 @@ class User extends Authenticatable implements JWTSubject
     {
         return $this->belongsTo(Gender::class,self::GENDER_ID);
     }
+    public function userotp()
+    {
+        return $this->hasOne(UserOtp::class,UserOtp::USER_ID);
+    }
 
     public function getJWTIdentifier()
     {

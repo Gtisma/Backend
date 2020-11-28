@@ -3,10 +3,13 @@
 namespace App\Services;
 
 
+use App\Domain\Api\Dto\Request\UserOtp\ConfirmOtpDto;
+use App\Domain\Api\Dto\Request\UserOtp\ResendOtpDto;
+use App\Domain\Helpers\Constants;
 use App\Domain\Models\User;
 use App\Repositories\User\UserRepository;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\Hash;
+
 
 class UserService
 {
@@ -25,7 +28,6 @@ class UserService
         return $this->userRepository->findOrFail($userId);
     }
 
-
     public function getAllUsers(int $companyId): Collection
     {
         return $this->userRepository->findWhere([User::PHONE => $companyId]);
@@ -36,25 +38,45 @@ class UserService
         return $user;
     }
 
+    public function verifyOtp( ConfirmOtpDto $confirmOtpDto){
+        $user = $this->userRepository->findWhere([User::EMAIL=>$confirmOtpDto->email])->first();
+        if($user === null) return ["error"=>"User not found"];
+
+        $userotp =$user->userotp;
+        if($userotp === null) return [ 'error' => 'User otp not set'];
+        date_default_timezone_set('Africa/Lagos');
+        if(date('Y-m-d H:i:s') > $userotp->expires_at )return ['error'=>'Otp expired, try again'];
+
+        if($confirmOtpDto->otp !== $userotp->otp) return ['error'=>'Otp mismatch, try again'];
+        $user->is_active = Constants::Active["Active"];
+        $user->last_login = date('Y-m-d H:i:s');
+        $user->email_verified_at = date('Y-m-d H:i:s');
+        $user->save();
+        $token = auth('api')->login($user);
+        return ['data'=>$token];
+
+    }
+
+    public function resendOtp(ResendOtpDto $resendOtpDto){
+        $user = $this->userRepository->findWhere([User::EMAIL=>$resendOtpDto->email])->first();
+        if($user === null) return ["error"=>"User not found"];
+        $userotp = $this->userRepository->storeUserOtp($user);
+        return ['data' =>'Otp has been sent'];
+
+    }
 
 
-//    public function destroyUser(DeleteDto $dto, int $companyId)
-//    {
-//        return $this->userRepository->deleteWhere([User::ID => $dto->id, User::COMPANY_ID => $companyId], true);
-//    }
 
-    public function findUserByEmail(string $email, int $companyId)
+
+    public function findUserByEmail(string $email, sting $phone)
     {
         return $this->userRepository->where(
             [
                 User::EMAIL => $email,
-                User::PHONE => $companyId,
+                User::PHONE => $phone,
             ]
         )->first();
     }
 
-    public function findFirstUserFromCompany(int $companyId): User
-    {
-        return $this->userRepository->findOne([User::PASSWORD => $companyId]);
-    }
+
 }

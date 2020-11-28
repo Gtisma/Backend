@@ -2,8 +2,10 @@
 
 namespace App\Repositories;
 
+use App\Domain\Models\UserOtp;
 use App\Exceptions\RepositoryException;
 use App\Mail\GtismaMailQueue;
+use DateTime;
 use Illuminate\Container\Container as Application;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
@@ -1045,6 +1047,29 @@ abstract class BaseRepository implements IBaseRepository
     }
     public static function sendEmailQueuestatic($subject,$to,$from,$view,$data,$link){
         Mail::to($to)->queue(new GtismaMailQueue($data,$view,$to,$from,$subject,$link));
+    }
+    public function generateNumericOTP($n)
+    {
+        $iDigits = "135792468";
+        $iOtp = "";
+        for ($i = 1; $i <= $n; $i++) {
+            $iOtp .= substr($iDigits, (rand() % (strlen($iDigits))), 1);
+        }
+        return $iOtp;
+    }
+    public function storeUserOtp($user){
+        $userotp = UserOtp::where('user_id',$user->id)->first();
+        if($userotp != null) {
+            $userotp = new UserOtp();
+            $userotp->user_id = $user->id;
+        }
+        $userotp->otp =$this->generateNumericOTP(6);
+        $dateTime = new DateTime(date('Y-m-d H:i:s'));
+        $dateTime->modify('+60 minutes');
+        $userotp->expires_at = $dateTime;
+        $userotp->save();
+        // Send email and firebase message
+        return $userotp;
     }
 
 

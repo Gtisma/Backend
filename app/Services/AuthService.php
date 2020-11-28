@@ -8,7 +8,6 @@ use App\Domain\Api\Dto\Request\Auth\RegisterDto;
 use App\Domain\Helpers\Constants;
 use App\Domain\Models\User;
 use App\Repositories\User\UserRepository;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
@@ -33,7 +32,7 @@ class AuthService
         if($user->block == Constants::Active["Active"]) return ["error"=>"User is Blocked, contact admin"];
         if($user->email_verified_at == null) return ["error"=>"Email has not been verified, please check your email"];
         $token = auth('api')->attempt([User::EMAIL=>$loginDto->email,User::PASSWORD=>$loginDto->password]);
-        if(!$token) return ["error"=>"Invalid Credential, Try Again","code",401];
+        if(!$token) return ["error"=>"Invalid Credential, Try Again","code"=>401];
         $user->last_login = date('Y-m-d H:i:s');
         $user->save();
         return ["data"=>$token];
@@ -60,10 +59,11 @@ class AuthService
         $user= $this->userRepository->create([User::EMAIL=>$registerDto->email,User::PASSWORD=>bcrypt($registerDto->password),User::PHONE=>$registerDto->phone
         ,User::LAST_NAME=>$registerDto->last_name,User::FIRST_NAME=>$registerDto->first_name,User::GENDER_ID=>$registerDto->gender_id]);
         $user->assignRole(Constants::Roles[2]);
-        return ["data"=>"Email has been sent for Verification"];
-
+        $userotp = $this->userRepository->storeUserOtp($user);
+        return ["data"=>"Otp has been sent to your email"];
 
     }
+
 
 
 }

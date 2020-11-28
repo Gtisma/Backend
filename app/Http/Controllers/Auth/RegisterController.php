@@ -5,10 +5,11 @@ namespace App\Http\Controllers\Auth;
 use App\Domain\Helpers\Constants;
 use App\Domain\Models\Security;
 use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
 use App\Domain\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
@@ -38,6 +39,10 @@ class RegisterController extends Controller
         $securities = Security::all();
         return view('auth.register',compact('securities'));
     }
+    protected function registered(Request $request, $user)
+    {
+        $request->session()->flash('message', 'Check your mail to activate account!');
+    }
 
     /**
      * Create a new controller instance.
@@ -57,15 +62,23 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-      dd($data);
+       $result = $this->uploadToCloud($data['picture_url'],'profilepicture');
+       $rand = substr(md5(microtime()),rand(0,26),8);
         $user = User::create([
             'first_name' => $data['first_name'],
             'last_name' => $data['last_name'],
             'phone' => $data['phone'],
             'email' => $data['email'],
+            'security_id' => $data['security_id'],
+            'rank_id' => $data['rank_id'],
             'password' => Hash::make($data['password']),
         ]);
         $user->assignRole( Constants::Roles[1] );
+        $user->link = url('/') . '/activate/' . $user->id . '/gtisma/' . $user->active . '/' . $rand;
+        Log::info($user->link);
+        if(isset($result["data"])) $user->picture_url = $result["data"];
+        // send email for verification
+        $this->sendEmailQueue('Welcome', $user->email, config('mail.from.address'), 'admin.email.welcome', $user, $user->link);
         return $user;
     }
 
@@ -82,6 +95,8 @@ class RegisterController extends Controller
             'last_name' => ['required', 'string', 'max:255'],
             'phone' => 'required|string|min:10|max:13|unique:users',
             'picture_url' => ['required', 'string'],
+            'security_id' => ['required'],
+            'rank_id' => ['required'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => [
                 'min:8',
