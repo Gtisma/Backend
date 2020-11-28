@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="r-split-twin_content r-gutter--bottom r-d-flex r-flex-dir-col r-al-i-c r-tx-c r-gutter--2x@lg r-edges">
-        <h2 class="r-sr">Log In Form</h2>
+        <h2 class="r-sr">Resend Activation Link Form</h2>
         <div class="r-visible-lg-up r-gutter--bottom"><a href="/" class="r-logo r-d-flex r-al-i-c">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375pt" height="374.999991pt" viewBox="0 0 375 374.999991" version="1.2">
                     <defs>
@@ -37,7 +37,7 @@
             <p class="r-mb-0">
                 New to GTISMA? <a href="{{ route('register') }}" class="r-co-secondary">Sign up.</a>
             </p><div class="r-tx-l">
-                <form method="POST" action="{{ route('login') }}" >
+                <form method="POST" action="#" >
                     @csrf
                     <p class="input-field r-mb-0">
 
@@ -49,15 +49,6 @@
                                     </span>
                         @enderror
                     </p>
-                    <p class="input-field r-mb-0">
-                        <input id="password" name="password" type="password" class="validate @error('password') is-invalid @enderror"  required autocomplete="current-password" >
-                        <label for="password" class="">Password</label>
-                        @error('password')
-                        <span class="invalid-feedback r-fs-pico r-red" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                        @enderror
-                    </p>
 
 
                     <button class="r-btn r-btn--primary r-btn--match-input r-btn--left-floated-icon input-field r-btn-spinner">
@@ -65,7 +56,7 @@
                             <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
                             <path d="M7 11V7a5 5 0 0 1 9.9-1" />
                         </svg>
-                        <span class="r-fw-medium r-btn_text"> {{ __('Login') }}</span>
+                        <span class="r-fw-medium r-btn_text"> {{ __('Resend') }}</span>
                         <div class="r-spinner r-pos-a r-right-edge">
                             <span></span>
                             <span></span>
@@ -73,15 +64,12 @@
                         </div>
                     </button>
                 </form>
-                <div class="r-grid r-grid--gap-as-edge@md-up r-grid--1-6@md">
+
                 <a href="{{ route('password.request') }}" class="r-gutter--top--as-edge r-d-flex r-j-c-fe r-co-secondary r-mb-0">
                     Forgot password?
                 </a>
-                <a href="{{ url('/resendactivation') }}" class="r-gutter--top--as-edge r-d-flex r-j-c-fe r-co-secondary r-mb-0">
-                    Resend  Activation Email?
-                </a>
 
-                </div>
+
 
             </div></div>
     </section>

@@ -37,7 +37,7 @@ class CreateUsersTable extends Migration
             $table->string(User::PICTURE_URL)->nullable();
             $table->boolean(User::IS_ACTIVE)->nullable()->default(Constants::Active['Inactive']);
             $table->boolean(User::BLOCK)->nullable()->default(Constants::Active['Inactive']);
-            $table->string(User::API_TOKEN, 80)->unique()->nullable();
+            $table->string(User::ACTIVATION_TOKEN)->unique()->nullable();
             $table->foreign(User::STATE_ID)->references(State::ID)->on(
                 State::getTableName()
             )->cascadeOnUpdate()->nullOnDelete();

@@ -29,7 +29,7 @@ class User extends Authenticatable implements JWTSubject
     const RANK_ID = 'rank_id';
     const EMAIL_VERIFIED_AT = 'email_verified_at';
     const LAST_LOGIN = 'last_login';
-    const API_TOKEN = 'api_token';
+    const ACTIVATION_TOKEN = 'activation_token';
     const FACEBOOK_ID = 'facebook_id';
     const TWITTER_ID = 'twitter_id';
     const GOOGLE_ID = 'google_id';
@@ -43,6 +43,15 @@ class User extends Authenticatable implements JWTSubject
     protected $fillable = [
         'name',
         'email',
+        'first_name',
+        'last_name',
+        'state_id',
+        'rank_id',
+        'google_id',
+        'twitter_id',
+        'phone',
+        'activation_token',
+        'facebook_id',
         'password','picture_url','last_login'
     ];
 

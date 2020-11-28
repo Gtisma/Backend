@@ -50,9 +50,11 @@
         let showbeforecapture = document.getElementById('show-before-capture');
         let webcamerror = document.getElementById('webcamerror');
         let securityerror = document.getElementById('securityerror');
+        let stateerror = document.getElementById('stateerror');
         rankdiv.style.display = "none";
         webcamerror.style.display = "none";
         securityerror.style.display = "none";
+        stateerror.style.display = "none";
         document.addEventListener('DOMContentLoaded', function () {
             const optionsModal = {
                 onOpenStart: () => {
@@ -140,6 +142,8 @@
         if(!picture) {webcamerror.style.display = "block";chk= false;}
         let secu = $('#securities').find(":selected").val();
         if(!secu) {securityerror.style.display = "block";chk = false;}
+        let state = $('#states').find(":selected").val();
+        if(!state) {stateerror.style.display = "block";chk = false;}
         return chk;
         }
 

@@ -22,6 +22,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/sendtestmail',  [App\Http\Controllers\Admin\UserController::class,'sendTestmail'])->name( 'send-test-mail' );
 //activate user
 Route::get( '/activate/{userid}/sfsinvest/{active}/{random}', [App\Http\Controllers\Admin\UserController::class, 'activate'] )->name( 'activate-user' );
+Route::get( '/resendactivation', [App\Http\Controllers\Admin\UserController::class, 'resendActivation'] )->name( 'activate-user' );
 
 Route::get('/welcome', function() {
     return view('admin.email.welcome-otp');

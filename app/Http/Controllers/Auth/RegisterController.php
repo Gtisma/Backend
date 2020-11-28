@@ -4,10 +4,12 @@ namespace App\Http\Controllers\Auth;
 
 use App\Domain\Helpers\Constants;
 use App\Domain\Models\Security;
+use App\Domain\Models\State;
 use App\Http\Controllers\Controller;
 use App\Domain\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
@@ -32,16 +34,18 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/login';
 
     public function showRegistrationForm()
     {
         $securities = Security::all();
-        return view('auth.register',compact('securities'));
+        $states = State::all();
+        return view('auth.register',compact('securities','states'));
     }
     protected function registered(Request $request, $user)
     {
+        auth()->logout();
         $request->session()->flash('message', 'Check your mail to activate account!');
+        return redirect('/login');
     }
 
     /**
@@ -69,16 +73,18 @@ class RegisterController extends Controller
             'last_name' => $data['last_name'],
             'phone' => $data['phone'],
             'email' => $data['email'],
-            'security_id' => $data['security_id'],
+            'state_id' => $data['state_id'],
             'rank_id' => $data['rank_id'],
             'password' => Hash::make($data['password']),
         ]);
         $user->assignRole( Constants::Roles[1] );
-        $user->link = url('/') . '/activate/' . $user->id . '/gtisma/' . $user->active . '/' . $rand;
+        $link = url('/') . '/activate/' . $user->id . '/gtisma/' . $user->is_active . '/' . $rand;
         Log::info($user->link);
         if(isset($result["data"])) $user->picture_url = $result["data"];
+        $user->activation_token = $rand;
+        $user->save();
         // send email for verification
-        $this->sendEmailQueue('Welcome', $user->email, config('mail.from.address'), 'admin.email.welcome', $user, $user->link);
+//        $this->sendEmailQueue('Welcome', $user->email, config('mail.from.address'), 'admin.email.welcome', $user, $link);
         return $user;
     }
 
@@ -95,7 +101,7 @@ class RegisterController extends Controller
             'last_name' => ['required', 'string', 'max:255'],
             'phone' => 'required|string|min:10|max:13|unique:users',
             'picture_url' => ['required', 'string'],
-            'security_id' => ['required'],
+            'state_id' => ['required'],
             'rank_id' => ['required'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => [

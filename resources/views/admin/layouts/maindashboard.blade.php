@@ -33,7 +33,7 @@
             @include('admin.layouts.nav')
             <div class="r-aside_footer r-ml-1 r-border-top">
                 <div class="r-gutter--top--as-edge r-tx-c">
-                    <small class="r-opacity-09 r-fw-bold">&copy; Copyright 2020 GTISMA.</small>
+                    <small class="r-opacity-09 r-fw-bold">&copy; Copyright {{date('Y')}} GTISMA.</small>
                 </div>
                 <ul class="r-none r-d-flex r-al-i-c"><li class="r-d-flex r-al-i-c r-border-right--as-after">
                         <a href="/toc/" class="r-link--gray r-decoration-none r-fs-nano r-fw-medium r-edges--y r-edges--x">
@@ -62,12 +62,13 @@
                     </div>
                     <div class="r-d-flex r-al-i-c r-edges*2@xl">
                         <div class="r-hidden-xl-up"><a href="/" class="r-logo r-d-flex r-al-i-c"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
-                                    <title>ADX Credit Logo Icon (Full Brand Red Background)</title>
+                                    <title>GTISMA Credit Logo Icon (Full Brand Red Background)</title>
                                     <rect fill="#52154e" width="2000" height="2000" rx="1000" />
                                     <polygon fill="#fff" points="556.34 1245.12 1013.01 280.07 1657.54 1627.43 995.66 653.14 556.34 1245.12" />
                                     <polygon fill="#fff" points="342.46 1673.68 992.77 844.3 1178.66 1127.58 1018.79 1029.29 342.46 1673.68" />
                                 </svg><span class="r-logo_text r-fw-medium r-suffix r-visible-sm-up">
-        Admin Dashboard
+
+         Admin Dashboard
     </span>
                             </a></div></div>
                 </div><div class="r-gutter--height-adjust r-d-flex r-al-i-c">
@@ -80,7 +81,7 @@
                     </a>
                     <div class="r-dropdown r-suffix--wider">
                         <button role="list" class="r-d-flex r-al-i-c dropdown-trigger r-will-flip-icon" data-target="user_actions">
-                            <img src="https://adx-usr.now.sh/images/avatar.jpg" alt="User image" class="r-avatar r-avatar--border--white">
+                            <img src="{{$user->picture_url}}" alt="User image" class="r-avatar r-avatar--border--white">
                         </button>
                         <ul id="user_actions" class="r-dropdown_list r-none r-list dropdown-content">
                             <li>

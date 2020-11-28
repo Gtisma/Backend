@@ -4002,7 +4002,9 @@ table td,
 .r-red {
     color: #e5104c;
 }
-
+.r-blue {
+    color: deepskyblue;
+}
 .r-dropzone {
     display: flex;
     justify-content: center;

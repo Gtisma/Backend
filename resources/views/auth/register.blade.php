@@ -94,7 +94,20 @@
                                     </span>
                     @enderror
                     @include('auth.webcam')
-
+                    <p class="r-select-wrapper r-mb-0">
+                        <label for="states">State</label>
+                        <select name="state_id" id ="states" class="browser-default">
+                            <option value="" disabled selected>Choose your State</option>
+                            @if(isset($states) && count($states) > 0)
+                                @foreach($states as $state)
+                                    <option value="{{$state->id}}">{{$state->name}}</option>
+                                @endforeach
+                            @endif
+                        </select>
+                        <span id="stateerror" class="invalid-feedback r-fs-pico r-red" role="alert">
+                            <strong>Select a valid State</strong>
+                        </span>
+                    </p>
                     <p class="r-select-wrapper r-mb-0">
                         <label for="securities">Securities</label>
                         <select name="security_id" id ="securities" onchange="getRanks()" class="browser-default">

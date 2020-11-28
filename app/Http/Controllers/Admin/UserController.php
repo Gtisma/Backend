@@ -22,9 +22,14 @@ class UserController extends Controller
     {
         $this->middleware('guest');
     }
+
     public function activate($userid,$activate,$random){
         try {
             $user = User::findorfail($userid);
+
+            if($user->activation_token !== $random){
+                return redirect('/login')->with('message', 'Activation Link failed');
+            }
             if ($user->active == Constants::Active['Inactive']) {
                 $user->is_active = Constants::Active['Active'];
                 $user->last_login = date('Y-m-d H:i:s');
@@ -37,6 +42,9 @@ class UserController extends Controller
             return redirect('/login')->with('message', 'Account Verification failed');
             \Log::error("Activation Error",[$exception->getMessage()]);
         }
+    }
+    public function resendActivation(){
+        return view('auth.resendactivation');
     }
     public function sendTestmail(){
         $this->sendEmailQueue('Welcome','ezeibesandra@gmail.com',config('mail.from.address'),'admin.email.welcome',null,"www.google.com");

@@ -37,6 +37,10 @@ class LoginController extends Controller
      */
     protected function authenticated(Request $request, $user)
     {
+        if($user->is_active == Constants::Active["Inactive"]){
+            auth()->logout();
+            return redirect('/login')->with('message','You account has not be activated, Check mail or click resend ');
+        }
         if ( $user->hasRole(Constants::Roles[2]) ) {// do your magic here
             auth()->logout();
             return redirect('/login')->with('message','You cannot Login on this platform, Kindly use the mobile app ');
