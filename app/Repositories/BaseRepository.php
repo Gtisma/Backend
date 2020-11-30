@@ -1059,7 +1059,7 @@ abstract class BaseRepository implements IBaseRepository
     }
     public function storeUserOtp($user){
         $userotp = UserOtp::where('user_id',$user->id)->first();
-        if($userotp != null) {
+        if($userotp == null) {
             $userotp = new UserOtp();
             $userotp->user_id = $user->id;
         }
