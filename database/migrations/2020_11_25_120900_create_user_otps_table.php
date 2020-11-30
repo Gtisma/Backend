@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserOtpTable extends Migration
+class CreateUserOtpsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -30,6 +30,6 @@ class CreateUserOtpTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_otp');
+        Schema::dropIfExists('user_otps');
     }
 }
