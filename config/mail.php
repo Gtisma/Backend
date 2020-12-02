@@ -1,5 +1,4 @@
 <?php
-
 return [
 
     /*
@@ -39,8 +38,8 @@ return [
             'host' => env('MAIL_HOST', 'smtp.sendgrid.net'),
             'port' => env('MAIL_PORT', 587),
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-            'username' => env('MAIL_USERNAME'),
-            'password' => env('MAIL_PASSWORD'),
+            'username' => env('MAIL_USERNAME','cgolebu@gmail.com'),
+            'password' => env('MAIL_PASSWORD','Gtisma123@#ghdiueh'),
             'timeout' => null,
             'auth_mode' => null,
         ],

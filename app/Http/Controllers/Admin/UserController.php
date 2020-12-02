@@ -26,17 +26,16 @@ class UserController extends Controller
     public function activate($userid,$activate,$random){
         try {
             $user = User::findorfail($userid);
-
             if($user->activation_token !== $random){
-                return redirect('/login')->with('message', 'Activation Link failed');
+                return redirect('/login')->with('message', 'Activation Link failed,Incorrect Link');
             }
-            if ($user->active == Constants::Active['Inactive']) {
+            if ($user->is_active == Constants::Active['Inactive']) {
                 $user->is_active = Constants::Active['Active'];
                 $user->last_login = date('Y-m-d H:i:s');
                 $user->email_verified_at = date('Y-m-d H:i:s');
                 $user->save();
-                Auth::loginUsingId($userid);
-                return redirect('/home')->with('message', 'Account has been Activated');
+                Auth::loginUsingId($user->id);
+                return redirect('/admin')->with('message', 'Account has been Activated');
             }
         }catch (\Exception $exception) {
             return redirect('/login')->with('message', 'Account Verification failed');

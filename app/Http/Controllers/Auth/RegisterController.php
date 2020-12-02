@@ -84,7 +84,7 @@ class RegisterController extends Controller
         $user->activation_token = $rand;
         $user->save();
         // send email for verification
-//        $this->sendEmailQueue('Welcome', $user->email, config('mail.from.address'), 'admin.email.welcome', $user, $link);
+        $this->sendEmailQueue('Welcome', $user->email, config('mail.from.address'), 'admin.email.welcome', $user, $link);
         return $user;
     }
 

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\Auth\LoginRequest;
 use App\Http\Requests\Api\Auth\RegisterRequest;
 use App\Services\AuthService;
+use Illuminate\Support\Facades\Log;
 
 class AuthController extends Controller
 {
