@@ -16,7 +16,7 @@ class Controller extends BaseController
     public function uploadToCloud($data,$path){
         try {
             $publicid = date("Ymd") . time() . mt_rand(10000, 99999);
-            $uploadedFileUrl = cloudinary()->uploadFile($data, array($publicid => "gtisma/" . $path . "/"))->getSecurePath();
+            $uploadedFileUrl = cloudinary()->uploadFile($data, array("folder"=> "gtisma/".$path."/","publicid" =>$publicid,"overwrite" => TRUE))->getSecurePath();
             Log::info("File Uploaded Path", [$uploadedFileUrl]);
             return ["data"=>$uploadedFileUrl];
         }catch (\Exception $e){

@@ -124,7 +124,7 @@
                     // e.preventDefault();
                     button.setAttribute('disabled', '');
                     button.classList.add('r-active');
-                    form.reset();
+                    // form.reset();
                 }
             ;
             form.addEventListener('submit', handler, false)

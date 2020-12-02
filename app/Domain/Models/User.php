@@ -2,6 +2,7 @@
 
 namespace App\Domain\Models;
 
+use App\Domain\Traits\Uuids;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use App\Domain\Models\ModelTraits\GetsTableName;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -60,7 +61,7 @@ class User extends Authenticatable implements JWTSubject
      *
      * @var array
      */
-    protected $hidden = ['password', 'remember_token','email_verified_at','is_active','block','api_token','facebook_id','twitter_id','google_id'];
+    protected $hidden = ['password', 'remember_token','email_verified_at','block','api_token','facebook_id','twitter_id','google_id'];
 
     /**
      * The attributes that should be cast to native types.

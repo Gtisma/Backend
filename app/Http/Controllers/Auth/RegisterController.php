@@ -9,7 +9,6 @@ use App\Http\Controllers\Controller;
 use App\Domain\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
@@ -76,12 +75,13 @@ class RegisterController extends Controller
             'state_id' => $data['state_id'],
             'rank_id' => $data['rank_id'],
             'password' => Hash::make($data['password']),
+            'is_active' => Constants::Active['Inactive'],
+            'activation_token' => $rand,
         ]);
         $user->assignRole( Constants::Roles[1] );
-        $link = url('/') . '/activate/' . $user->id . '/gtisma/' . $user->is_active . '/' . $rand;
-        Log::info($user->link);
+        $link = url('/') . '/activate/' . $user->id . '/gtisma/' .Constants::Active['Inactive']. '/' . $rand;
+        Log::info("Link",[$link]);
         if(isset($result["data"])) $user->picture_url = $result["data"];
-        $user->activation_token = $rand;
         $user->save();
         // send email for verification
         $this->sendEmailQueue('Welcome', $user->email, config('mail.from.address'), 'admin.email.welcome', $user, $link);
