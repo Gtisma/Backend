@@ -34,8 +34,8 @@ class UserController extends Controller
                 $user->last_login = date('Y-m-d H:i:s');
                 $user->email_verified_at = date('Y-m-d H:i:s');
                 $user->save();
-                Auth::loginUsingId($user->id);
-                return redirect('/admin')->with('message', 'Account has been Activated');
+//                Auth::loginUsingId($user->id);
+                return redirect('/login')->with('message', 'Account has been Activated, Please Login');
             }
         }catch (\Exception $exception) {
             return redirect('/login')->with('message', 'Account Verification failed');
