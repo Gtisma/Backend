@@ -81,7 +81,7 @@
                     </a>
                     <div class="r-dropdown r-suffix--wider">
                         <button role="list" class="r-d-flex r-al-i-c dropdown-trigger r-will-flip-icon" data-target="user_actions">
-                            <img src="{{$user->picture_url}}" alt="User image" class="r-avatar r-avatar--border--white">
+                            <img src="{{$user->picture_url ?? asset('assets/images/userprofile.png') }}" alt="User image" class="r-avatar r-avatar--border--white">
                         </button>
                         <ul id="user_actions" class="r-dropdown_list r-none r-list dropdown-content">
                             <li>

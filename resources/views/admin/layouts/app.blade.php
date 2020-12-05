@@ -21,8 +21,8 @@
     <meta property="og:title" content="GTISMA" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta property="og:locale" content="en_US" />
-    <link rel="canonical" href="https://geotiscm.org/" />
-    <meta property="og:url" content="https://geotiscm.org/" />
+    <link rel="canonical" href="https://www.geotiscm.org/" />
+    <meta property="og:url" content="https://www.geotiscm.org/" />
     <meta property="og:site_name" content="GTISMA" />
     <script type="application/ld+json">
 {"url":"https://geotiscm.org/","name":"GTISMA ADMIN Interface","headline":"Overview","@type":"WebSite","@context":"https://schema.org"}</script>

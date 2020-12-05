@@ -21,10 +21,26 @@ class ResetPasswordController extends Controller
 
     use ResetsPasswords;
 
+    protected function rules()
+    {
+        return [
+            'token' => 'required',
+            'email' => 'required|email',
+            'password' => [
+                'min:8',
+                'required',
+                'confirmed',
+                'regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$/']
+        ];
+    }
+    protected function validationErrorMessages(){
+        return[ 'password.regex' => 'Password must have Uppercase, Lowercase, Number and Special Character'] ;
+    }
+
     /**
      * Where to redirect users after resetting their password.
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = '/admin';
 }

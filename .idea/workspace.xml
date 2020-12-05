@@ -20,8 +20,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cd36280-a89e-408e-830a-9b2d8c76bee7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Domain/Api/Dto/Request/Auth/EmailActivationDto.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/SetTimeZone.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Auth/EmailActivationRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/images/userprofile.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/UserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/UserService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/UserTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UserTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/home/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/home/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/maindashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/maindashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/resendactivation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/resendactivation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/webcam.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/webcam.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/c0/71/c071422490d526a8aada046adf3a9c9fa0593468" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/data/c0/71/c071422490d526a8aada046adf3a9c9fa0593468" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/ec/c4/ecc49f49f4da6b940dcde13f0571e79c299871e6" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/data/ec/c4/ecc49f49f4da6b940dcde13f0571e79c299871e6" afterDir="false" />
     </list>
@@ -164,7 +181,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Domain/Models" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Domain/Api/Dto/Request/Auth" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -179,11 +196,11 @@
       <recent name="$PROJECT_DIR$/app" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Domain/Api/Dto/Request/Auth" />
+      <recent name="$PROJECT_DIR$/app/Http/Requests/Api/Auth" />
+      <recent name="$PROJECT_DIR$/public/assets/images" />
+      <recent name="$PROJECT_DIR$/app/Http/Middleware" />
       <recent name="$PROJECT_DIR$/app/Domain/Models" />
-      <recent name="$PROJECT_DIR$/resources/views/auth/passwords" />
-      <recent name="$PROJECT_DIR$/resources/views/auth" />
-      <recent name="$PROJECT_DIR$/app/Http/Requests/Api/UserOtp" />
-      <recent name="$PROJECT_DIR$/app/Domain/Api/Dto/Request/UserOtp" />
     </key>
   </component>
   <component name="RunManager">
@@ -203,7 +220,7 @@
       <workItem from="1604762862362" duration="34206000" />
       <workItem from="1605114265603" duration="7412000" />
       <workItem from="1605211259990" duration="122299000" />
-      <workItem from="1606915232635" duration="13990000" />
+      <workItem from="1606915232635" duration="23102000" />
     </task>
     <servers />
   </component>
@@ -261,10 +278,11 @@
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state width="596" height="445" key="SwitcherDM/0.23.1440.834@0.23.1440.834" timestamp="1604943414064" />
-    <state x="418" y="188" width="604" height="490" key="find.popup" timestamp="1604955723459">
+    <state x="418" y="188" width="604" height="490" key="find.popup" timestamp="1607195540157">
       <screen x="0" y="23" width="1440" height="833" />
     </state>
-    <state x="418" y="188" width="604" height="490" key="find.popup/0.23.1440.833@0.23.1440.833" timestamp="1604955723459" />
+    <state x="418" y="187" width="604" height="490" key="find.popup/0.23.1440.830@0.23.1440.830" timestamp="1607193524959" />
+    <state x="418" y="188" width="604" height="490" key="find.popup/0.23.1440.833@0.23.1440.833" timestamp="1607195540157" />
     <state x="385" y="181" width="670" height="676" key="search.everywhere.popup" timestamp="1606504322020">
       <screen x="0" y="23" width="1440" height="834" />
     </state>

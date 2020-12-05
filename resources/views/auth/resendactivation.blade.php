@@ -28,16 +28,16 @@
             </a></div>
         <div class="r-w-100% r-maxwidth-xs">
 
-            <h3 class="r-mt-0 r-headline--small">Welcome back!</h3>
+            <h3 class="r-mt-0 r-headline--small">Resend Email Activation Link!</h3>
             @if (session('message'))
-                <div class="alert alert-info r-blue" style="margin: 30px">
+                <div class="alert alert-info r-red" style="margin: 30px">
                     {{ session('message') }}
                 </div>
             @endif
             <p class="r-mb-0">
                 New to GTISMA? <a href="{{ route('register') }}" class="r-co-secondary">Sign up.</a>
             </p><div class="r-tx-l">
-                <form method="POST" action="#" >
+                <form method="POST" action="{{route('resend-activate-user')}}" >
                     @csrf
                     <p class="input-field r-mb-0">
 
@@ -56,7 +56,7 @@
                             <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
                             <path d="M7 11V7a5 5 0 0 1 9.9-1" />
                         </svg>
-                        <span class="r-fw-medium r-btn_text"> {{ __('Resend') }}</span>
+                        <span class="r-fw-medium r-btn_text"> {{ __('Resend Email Link') }}</span>
                         <div class="r-spinner r-pos-a r-right-edge">
                             <span></span>
                             <span></span>

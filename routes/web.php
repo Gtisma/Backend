@@ -23,6 +23,7 @@ Route::get('/sendtestmail',  [App\Http\Controllers\Admin\UserController::class,'
 //activate user
 Route::get( '/activate/{userid}/gtisma/{active}/{random}', [App\Http\Controllers\Admin\UserController::class, 'activate'] )->name( 'activate-user' );
 Route::get( '/resendactivation', [App\Http\Controllers\Admin\UserController::class, 'resendActivation'] )->name( 'activate-user' );
+Route::post( '/resendactivation', [App\Http\Controllers\Admin\UserController::class, 'resendActivationLink'] )->name( 'resend-activate-user' );
 
 Route::get('/welcome', function() {
     return view('admin.email.welcome-otp');

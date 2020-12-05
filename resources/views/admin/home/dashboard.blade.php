@@ -6,7 +6,8 @@
                         <div class="r-grid r-grid--1-7-5@md r-grid--gap">
                             <div class="r-media-object">
                                 <figure class="r-media-object_figure--adjust@md">
-                                    <img src="{{$user->picture_url}}" alt="User image" class="r-avatar r-avatar--large-to-xlarge@md r-avatar--border--linen">
+
+                                    <img src="{{$user->picture_url ?? asset('assets/images/userprofile.png') }}" alt="User image" class="r-avatar r-avatar--large-to-xlarge@md r-avatar--border--linen">
                                 </figure>
                                 <div class="r-media-object_body">
                                     <span class="r-caps r-caps--nano r-opacity-07 r-fw-bold">Welcome back,</span>

@@ -44,7 +44,6 @@ class UserService
 
         $userotp =$user->userotp;
         if($userotp === null) return [ 'error' => 'User otp not set'];
-        date_default_timezone_set('Africa/Lagos');
         if(date('Y-m-d H:i:s') > $userotp->expires_at )return ['error'=>'Otp expired, try again'];
 
         if($confirmOtpDto->otp !== $userotp->otp) return ['error'=>'Otp mismatch, try again'];
@@ -59,7 +58,7 @@ class UserService
 
     public function resendOtp(ResendOtpDto $resendOtpDto){
         $user = $this->userRepository->findWhere([User::EMAIL=>$resendOtpDto->email])->first();
-        if($user === null) return ["error"=>"User not found"];
+        if($user == null) return ["error"=>"User not found"];
         $userotp = $this->userRepository->storeUserOtp($user);
         return ['data' =>'Otp has been sent'];
 

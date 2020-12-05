@@ -20,7 +20,7 @@ class UserTableSeeder extends Seeder {
                 User::IS_ACTIVE => '1',
                 User::EMAIL_VERIFIED_AT => date('Y-m-d H:i:s'),
                 User::PASSWORD => bcrypt('adminpassword'),
-                User::PICTURE_URL =>config('constants.base_url').'email/email-icon.png',
+                User::PICTURE_URL =>config('constants.base_url').'assets/images/userprofile.png',
                 User::GENDER_ID => 1]);
 
             $user->assignRole(Constants::Roles[0]);
