@@ -4,11 +4,13 @@ namespace App\Services;
 
 
 use App\Domain\Api\Dto\Request\UserOtp\ConfirmOtpDto;
+use App\Domain\Api\Dto\Request\UserOtp\PasswordConfirmOtpDto;
 use App\Domain\Api\Dto\Request\UserOtp\ResendOtpDto;
 use App\Domain\Helpers\Constants;
 use App\Domain\Models\User;
 use App\Repositories\User\UserRepository;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Hash;
 
 
 class UserService
@@ -61,6 +63,24 @@ class UserService
         if($user == null) return ["error"=>"User not found"];
         $userotp = $this->userRepository->storeUserOtp($user);
         return ['data' =>'Otp has been sent'];
+
+    }
+    public function confirmOtp(PasswordConfirmOtpDto $passwordConfirmOtpDto){
+        $user = $this->userRepository->findWhere([User::EMAIL=>$passwordConfirmOtpDto->email])->first();
+        if($user == null) return ["error"=>"User not found"];
+        $userotp =$user->userotp;
+        if($userotp == null) return [ 'error' => 'User otp not set'];
+        if(date('Y-m-d H:i:s') > $userotp->expires_at )return ['error'=>'Otp expired, try again'];
+
+        if($passwordConfirmOtpDto->otp !== $userotp->otp) return ['error'=>'Otp mismatch, try again'];
+        $user->password = Hash::make($passwordConfirmOtpDto->password);
+        $user->is_active = Constants::Active["Active"];
+        $user->last_login = date('Y-m-d H:i:s');
+
+        $user->save();
+        $token = auth('api')->login($user);
+        return ['data'=>$token];
+
 
     }
 
