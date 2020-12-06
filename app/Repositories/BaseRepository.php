@@ -1069,7 +1069,7 @@ abstract class BaseRepository implements IBaseRepository
         $userotp->expires_at = $dateTime;
         $userotp->save();
         // Send email and firebase message
-        $this->sendEmailQueue('Welcome OTP', $user->email, config('mail.from.address'), 'admin.email.welcome-otp', $userotp, null);
+        $this->sendEmailQueue('Welcome OTP', $user->email, config('mail.from.address'), 'admin.email.welcome-otp', $userotp, $user);
         return $userotp;
     }
 
