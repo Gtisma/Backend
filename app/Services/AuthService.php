@@ -34,6 +34,8 @@ class AuthService
         $token = auth('api')->attempt([User::EMAIL=>$loginDto->email,User::PASSWORD=>$loginDto->password]);
         if(!$token) return ["error"=>"Invalid Credential, Try Again","code"=>401];
         $user->last_login = date('Y-m-d H:i:s');
+        $user->device_id = $loginDto->device_id;
+        $user->firebase_token = $loginDto->firebase_token;
         $user->save();
         return ["data"=>$token];
 

@@ -11,6 +11,8 @@ use App\Http\Requests\Api\BaseApiRequest;
  * @package App\Http\Requests\Api\Auth
  * @property string email
  * @property string password
+ * @property string firebase_token
+ * @property string device_id
  */
 class LoginRequest extends BaseApiRequest
 {
@@ -31,6 +33,6 @@ class LoginRequest extends BaseApiRequest
 
     public function convertToDto(): LoginDto
     {
-        return new LoginDto($this->email, $this->password);
+        return new LoginDto($this->email, $this->password,$this->firebase_token,$this->device_id);
     }
 }
