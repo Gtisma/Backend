@@ -31,7 +31,7 @@ class Controller extends BaseController
     public function sendPushNotification($firebaseToken,$title,$body)
     {
         $data = [
-            "registration_ids" => $firebaseToken,
+            "registration_ids" => [$firebaseToken],
             "notification" => [
                 "title" => $title,
                 "body" => $body,
