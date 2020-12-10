@@ -14,6 +14,8 @@ use App\Http\Requests\Api\BaseApiRequest;
  * @property string phone
  * @property string last_name
  * @property string first_name
+ * @property string firebase_token
+ * @property string device_id
  * @property int gender_id
  */
 class RegisterRequest extends BaseApiRequest
@@ -49,6 +51,6 @@ class RegisterRequest extends BaseApiRequest
 
     public function convertToDto(): RegisterDto
     {
-        return new RegisterDto($this->email, $this->password,$this->phone,$this->first_name,$this->last_name,$this->gender_id);
+        return new RegisterDto($this->email, $this->password,$this->phone,$this->first_name,$this->last_name,$this->gender_id,$this->firebase_token,$this->device_id);
     }
 }

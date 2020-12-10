@@ -57,7 +57,7 @@ class AuthService
     public function Register(RegisterDto $registerDto)
     {
         $user= $this->userRepository->create([User::EMAIL=>$registerDto->email,User::PASSWORD=>bcrypt($registerDto->password),User::PHONE=>$registerDto->phone
-        ,User::LAST_NAME=>$registerDto->last_name,User::FIRST_NAME=>$registerDto->first_name,User::GENDER_ID=>$registerDto->gender_id]);
+        ,User::LAST_NAME=>$registerDto->last_name,User::FIRST_NAME=>$registerDto->first_name,User::GENDER_ID=>$registerDto->gender_id,User::FIREBASE_TOKEN=>$registerDto->firebase_token,User::DEVICE_ID=>$registerDto->device_id]);
         $user->assignRole(Constants::Roles[2]);
         $userotp = $this->userRepository->storeUserOtp($user);
         return ["data"=>"Otp has been sent to your email"];
