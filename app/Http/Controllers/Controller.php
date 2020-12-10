@@ -28,4 +28,28 @@ class Controller extends BaseController
     public function sendEmailQueue($subject,$to,$from,$view,$data,$link){
         Mail::to($to)->queue(new GtismaMailQueue($data,$view,$to,$from,$subject,$link));
     }
+    public function sendPushNotification($firebaseToken,$title,$body)
+    {
+        $data = [
+            "registration_ids" => $firebaseToken,
+            "notification" => [
+                "title" => $title,
+                "body" => $body,
+            ]
+        ];
+        $headers = [
+            'Authorization: key=' . config('constants.firebase_server_key'),
+            'Content-Type: application/json',
+        ];
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, config('constants.firebase_base_url'));
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+        $response = curl_exec($ch);
+        Log::info("FireBase Push Notification",[$response]);
+    }
+
 }
