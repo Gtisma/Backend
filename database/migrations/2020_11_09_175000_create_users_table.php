@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->string(User::FIRST_NAME);
             $table->string(User::LAST_NAME);
             $table->string(User::EMAIL)->unique();
-            $table->string(User::PHONE)->unique();
+            $table->string(User::PHONE)->nullable();
             $table->timestamp(User::EMAIL_VERIFIED_AT)->nullable();
             $table->timestamp(User::LAST_LOGIN)->nullable();
             $table->string(User::PASSWORD)->nullable();

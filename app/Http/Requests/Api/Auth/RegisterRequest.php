@@ -7,7 +7,7 @@ use App\Http\Requests\Api\BaseApiRequest;
 
 
 /**
- * Class CreateRequest
+ * Class RegisterRequest
  * @package App\Http\Requests\Api\Auth
  * @property string email
  * @property string password

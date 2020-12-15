@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api\V1;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\Auth\LoginRequest;
 use App\Http\Requests\Api\Auth\RegisterRequest;
+use App\Http\Requests\Api\Auth\SocialRegisterRequest;
 use App\Services\AuthService;
 use Illuminate\Support\Facades\Log;
 
@@ -25,6 +26,11 @@ class AuthController extends Controller
         $registerResult = $this->authService->Register($registerRequest->convertToDto());
         if(isset($registerResult["error"])) {return errorResponse($registerResult["error"],422);}
         return successResponse($registerResult["data"]);
+    }
+    public function socialRegister(SocialRegisterRequest $socialregisterRequest){
+        $socialregisterResult = $this->authService->SocialRegister($socialregisterRequest->convertToDto());
+        if(isset($socialregisterResult["error"])) {return errorResponse($socialregisterResult["error"],422);}
+        return successResponse($socialregisterResult["data"]);
     }
 
 
