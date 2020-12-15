@@ -98,6 +98,7 @@ class AuthService
         if($source == Constants::Source[0]){$key="facebook_id"; $value = $payload->facebook_id; }
         if($source == Constants::Source[1]){$key="google_id"; $value = $payload->google_id; }
         if($source == Constants::Source[2]){$key="twitter_id"; $value = $payload->twitter_id; }
+        if($source == Constants::Source[3]){$key="instagram_id"; $value = $payload->instagram_id; }
         $user= $this->userRepository->findOne(["source"=>$source,$key=>$value,"email"=>$payload->email]);
         if($user != null) return ["data"=>JWTAuth::fromUser($user)];
     }
@@ -105,6 +106,7 @@ class AuthService
         if($source == Constants::Source[0] && !isset($payload->facebook_id)) return ["error"=>"A valid facebook id must be sent"];
         if($source == Constants::Source[1] && !isset($payload->google_id)) return ["error"=>"A valid google id must be sent"];
         if($source == Constants::Source[2] && !isset($payload->twitter_id)) return ["error"=>"A valid twitter id must be sent"];
+        if($source == Constants::Source[3] && !isset($payload->instagram_id)) return ["error"=>"A valid instagram id must be sent"];
     }
 
 

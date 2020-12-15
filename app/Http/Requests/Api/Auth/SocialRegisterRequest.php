@@ -30,7 +30,7 @@ class SocialRegisterRequest extends BaseApiRequest
             'email' => ['required', 'email'],
             'last_name' => 'required',
             'first_name' => 'required',
-            'source' => ['required', Rule::in(['facebook', 'google','twitter'])]
+            'source' => ['required', Rule::in(['facebook', 'google','twitter','instagram'])]
 
         ];
     }
@@ -38,6 +38,6 @@ class SocialRegisterRequest extends BaseApiRequest
 
     public function convertToDto(): SocialRegisterDto
     {
-        return new SocialRegisterDto($this->email,$this->phone,$this->last_name,$this->first_name,$this->facebook_id,$this->google_id,$this->twitter_id,$this->source,$this->picture_url,$this->gender_id,$this->firebase_token,$this->device_id);
+        return new SocialRegisterDto($this->email,$this->phone,$this->last_name,$this->first_name,$this->facebook_id,$this->google_id,$this->twitter_id,$this->instagram_id,$this->source,$this->picture_url,$this->gender_id,$this->firebase_token,$this->device_id);
     }
 }

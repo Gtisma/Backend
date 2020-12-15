@@ -33,6 +33,7 @@ class User extends Authenticatable implements JWTSubject
     const ACTIVATION_TOKEN = 'activation_token';
     const FACEBOOK_ID = 'facebook_id';
     const TWITTER_ID = 'twitter_id';
+    const INSTAGRAM_ID = 'instagram_id';
     const FIREBASE_TOKEN = 'firebase_token';
     const DEVICE_ID = 'device_id';
     const GOOGLE_ID = 'google_id';
@@ -52,6 +53,7 @@ class User extends Authenticatable implements JWTSubject
         'rank_id',
         'google_id',
         'twitter_id',
+        'instagram_id',
         'phone',
         'activation_token',
         'firebase_token',
@@ -65,7 +67,7 @@ class User extends Authenticatable implements JWTSubject
      *
      * @var array
      */
-    protected $hidden = ['password', 'remember_token','email_verified_at','block','api_token','facebook_id','twitter_id','google_id','device_id','firebase_token','device_id'];
+    protected $hidden = ['password', 'remember_token','email_verified_at','block','api_token','facebook_id','twitter_id','google_id','instagram_id','device_id','firebase_token','device_id'];
 
     /**
      * The attributes that should be cast to native types.
