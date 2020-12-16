@@ -100,6 +100,7 @@ class AuthService
         if($source == Constants::Source[2]){$key="twitter_id"; $value = $payload->twitter_id; }
         if($source == Constants::Source[3]){$key="instagram_id"; $value = $payload->instagram_id; }
         $user= $this->userRepository->findOne(["source"=>$source,$key=>$value,"email"=>$payload->email]);
+        Log::info('user',[$user,$source,$key,$value,$payload]);
         if($user != null) return ["data"=>JWTAuth::fromUser($user)];
     }
     protected function findSourceid($source,$payload){
