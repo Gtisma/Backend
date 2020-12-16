@@ -68,7 +68,7 @@ class AuthService
 
     }
     public function SocialRegister(SocialRegisterDto $registerDto)
-    {
+    { Log::info("social Login",[$registerDto]);
         if(!in_array($registerDto->source,Constants::Source))return ["error"=>"Invalid source"];
         $source = $this->findSourceid($registerDto->source,$registerDto);
         if(isset($source["error"]))  return ["error"=>$source["error"]];
