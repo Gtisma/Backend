@@ -1392,6 +1392,10 @@ h3,
 .r-status--failed .r-format-amount {
     color: #e51c23
 }
+.r-num{
+    font-size: 1.72em;
+    font-weight: 700;
+}
 
 .r-section-title {
     display: flex;

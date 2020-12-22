@@ -77,7 +77,7 @@
         <line x1="12" y1="5" x2="12" y2="19" />
         <line x1="5" y1="12" x2="19" y2="12" />
     </svg></span>
-                        <span class="r-fw-medium r-btn_icon-adjust">New</span>
+                        <span class="r-fw-medium r-btn_icon-adjust">New Report</span>
                     </a>
                     <div class="r-dropdown r-suffix--wider">
                         <button role="list" class="r-d-flex r-al-i-c dropdown-trigger r-will-flip-icon" data-target="user_actions">

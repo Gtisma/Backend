@@ -20,30 +20,30 @@
                         </div>
                     </section>
                     <section class="r-section r-section--padded r-pt-0">
-                        <h2 class="sr">Loans & Investments Highlights</h2>
+                        <h2 class="sr">Report Cases </h2>
                         <div class="r-gutter r-edges--as-gutter r-gradient r-gradient--primary r-br--all"><div class="r-grid r-grid--gap r-grid--1-6@md r-al-i-c r-card-height--minimum">
                                 <div class="r-w-100% r-tx-c@md r-gutter--half r-gutter--bottom-23rd@md-down r-border-right--as-divider@md r-border--light">
-                                    <h3 class="r-m-0 r-co-white r-caps r-caps--nano r-opacity-07 r-fw-bold">Total Loan Balance</h3>
-                                    <p class="r-mb-0 r-co-white r-format-amount r-money-format">
-                                        897570.99
+                                    <h3 class="r-m-0 r-co-white r-caps r-caps--nano r-opacity-07 r-fw-bold">Total Reported Cases</h3>
+                                    <p class="r-mb-0 r-co-white r-num">
+                                        1000
                                     </p>
                                     <p class="r-mb-0 r-co-white r-opacity-07 r-fw-medium r-fs-nano">
-                                        Total from all loans taken.
+                                        Total from all report gotten.
                                     </p>
                                 </div>
                                 <div class="r-w-100% r-tx-c@md r-gutter--half">
-                                    <h3 class="r-m-0 r-co-white r-caps r-caps--nano r-opacity-07 r-fw-bold">Total Current Returns</h3>
-                                    <p class="r-mb-0 r-co-white r-format-amount r-money-format">
-                                        963410.94
+                                    <h3 class="r-m-0 r-co-white r-caps r-caps--nano r-opacity-07 r-fw-bold">Total EyeWitness</h3>
+                                    <p class="r-mb-0 r-co-white r-num">
+                                        900
                                     </p>
                                     <p class="r-mb-0 r-co-white r-opacity-07 r-fw-medium r-d-flex r-al-i-c r-j-c-c@md r-fs-nano">
-                                        From all investments up to date.
+                                         All Eyewitness up to date.
                                     </p>
                                 </div>
                             </div></div>
                     </section>
                     <section class="r-section r-section--padded">
-                        <h2 class="sr">Current Loans & Investments</h2>
+                        <h2 class="sr">Total Eyewitness</h2>
                         <div class="r-grid r-grid--1-6@md r-grid--gap">
                             <div>
                                 <div class="r-section-title">
@@ -216,7 +216,7 @@
                         <div class="r-content-area">
                             <div class="r-section-title">
                                 <h2 class="r-section-title_title">
-                                    Recent Transactions
+                                    Recent Reports
                                 </h2>
                                 <a href="/transactions/" class="r-d-flex r-al-i-c r-fw-bold r-decoration-none r-read-more r-icon-move-on-hover">
                                     <span class=" r-prefix">View all</span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" class="icon icon-arrow-right">
