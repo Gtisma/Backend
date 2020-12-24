@@ -18,7 +18,7 @@ class CreateUserOtpsTable extends Migration
             $table->increments('id');
             $table->string(UserOtp::OTP)->nullable();
             $table->dateTime(UserOtp::EXPIRED_AT)->nullable();
-            $table->uuid(UserOtp::USER_ID);
+            $table->integer(UserOtp::USER_ID);
             $table->timestamps();
         });
     }

@@ -20,11 +20,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cd36280-a89e-408e-830a-9b2d8c76bee7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Domain/Api/Dto/Request/Report/ReportDto.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Domain/Models/Report.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Domain/Models/ReportApproval.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Domain/Models/ReportContent.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Domain/Models/ReportType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/V1/ReportController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/V1/StateController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Report/ReportRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/Report/IReportRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/Report/ReportRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/ReportApproval/IReportApprovalRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/ReportApproval/ReportApprovalRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/ReportContent/IReportContentRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/ReportContent/ReportContentRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/ReportType/IReportTypeRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Repositories/ReportType/ReportTypeRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/ReportApprovalService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/ReportContentService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/ReportService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/ReportTypeService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Services/StateService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_23_181211_create_report_types_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_23_181213_create_reports_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_23_181214_create_report_approvals_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_23_181215_create_report_contents_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeders/ReportTypeTableSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/api/report.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/api/state.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/home/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/home/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/maindashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/maindashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domain/Helpers/Constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Domain/Helpers/Constants.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/BaseRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/BaseRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repositories/State/StateRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/State/StateRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_25_120900_create_user_otps_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_25_120900_create_user_otps_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/02/47/0247bb36de8848a8f2a2ee50eeb7912eab2ae309" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/data/02/47/0247bb36de8848a8f2a2ee50eeb7912eab2ae309" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/6b/70/6b7041320a73d38513b4afcd5638b069fe86bd58" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/data/6b/70/6b7041320a73d38513b4afcd5638b069fe86bd58" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/ec/c4/ecc49f49f4da6b940dcde13f0571e79c299871e6" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/data/ec/c4/ecc49f49f4da6b940dcde13f0571e79c299871e6" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,26 +200,26 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Domain/Api/Dto/Request/Auth" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/routes/api" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/Domain/Api/Dto/Request/Auth" />
-      <recent name="$PROJECT_DIR$/app/Http/Requests/Api/Auth" />
-      <recent name="$PROJECT_DIR$/app/Domain/Api/Dto/Request/UserOtp" />
-      <recent name="$PROJECT_DIR$/app/Http/Requests/Api/UserOtp" />
-      <recent name="$PROJECT_DIR$/app/Http/Controllers/Api/V1" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/Domain/Traits" />
       <recent name="$PROJECT_DIR$/app/Http/Requests/Api" />
       <recent name="$PROJECT_DIR$/routes" />
       <recent name="$PROJECT_DIR$/app/Domain/Api" />
       <recent name="$PROJECT_DIR$/app" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/routes/api" />
+      <recent name="$PROJECT_DIR$/app/Services" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/Api/V1" />
+      <recent name="$PROJECT_DIR$/app/Repositories" />
+      <recent name="$PROJECT_DIR$/app/Repositories/Report" />
     </key>
   </component>
   <component name="RunManager">
@@ -206,7 +241,8 @@
       <workItem from="1605211259990" duration="122299000" />
       <workItem from="1606915232635" duration="26025000" />
       <workItem from="1607589507791" duration="6889000" />
-      <workItem from="1608056611182" duration="14341000" />
+      <workItem from="1608056611182" duration="19204000" />
+      <workItem from="1608722044723" duration="23516000" />
     </task>
     <servers />
   </component>
@@ -244,11 +280,12 @@
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state x="485" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.834@0.23.1440.834" timestamp="1605264657114" />
-    <state x="458" y="193" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607606099343">
-      <screen x="0" y="23" width="1440" height="828" />
+    <state x="458" y="194" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1608814789503">
+      <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="458" y="193" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.828@0.23.1440.828" timestamp="1607606099343" />
-    <state x="458" y="194" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.829@0.23.1440.829" timestamp="1606923670147" />
+    <state x="458" y="194" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.829@0.23.1440.829" timestamp="1608808434361" />
+    <state x="458" y="194" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.830@0.23.1440.830" timestamp="1608814789503" />
     <state x="458" y="194" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.831@0.23.1440.831" timestamp="1607200645667" />
     <state x="458" y="195" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.833@0.23.1440.833" timestamp="1605115964961" />
     <state x="458" y="195" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.834@0.23.1440.834" timestamp="1606600319641" />

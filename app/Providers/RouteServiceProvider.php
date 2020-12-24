@@ -89,6 +89,8 @@ class RouteServiceProvider extends ServiceProvider
         $this->mapApiRoute('/api/crimetype.php', '/api/crimetype');
         $this->mapApiRoute('/api/rank.php', '/api/rank');
         $this->mapApiRoute('/api/password.php', '/api/password');
+        $this->mapApiRoute('/api/report.php', '/api/reports');
+        $this->mapApiRoute('/api/state.php', '/api/state');
 
     }
 
