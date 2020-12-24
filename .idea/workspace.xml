@@ -20,46 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cd36280-a89e-408e-830a-9b2d8c76bee7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Domain/Api/Dto/Request/Report/ReportDto.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Domain/Models/Report.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Domain/Models/ReportApproval.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Domain/Models/ReportContent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Domain/Models/ReportType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/V1/ReportController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/V1/StateController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Api/Report/ReportRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/Report/IReportRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/Report/ReportRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/ReportApproval/IReportApprovalRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/ReportApproval/ReportApprovalRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/ReportContent/IReportContentRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/ReportContent/ReportContentRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/ReportType/IReportTypeRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Repositories/ReportType/ReportTypeRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/ReportApprovalService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/ReportContentService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/ReportService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/ReportTypeService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Services/StateService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_23_181211_create_report_types_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_23_181213_create_reports_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_23_181214_create_report_approvals_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_12_23_181215_create_report_contents_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/ReportTypeTableSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/api/report.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/api/state.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Domain/Helpers/Constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Domain/Helpers/Constants.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/BaseRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/BaseRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repositories/State/StateRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repositories/State/StateRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_25_120900_create_user_otps_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_25_120900_create_user_otps_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/02/47/0247bb36de8848a8f2a2ee50eeb7912eab2ae309" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/data/02/47/0247bb36de8848a8f2a2ee50eeb7912eab2ae309" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/6b/70/6b7041320a73d38513b4afcd5638b069fe86bd58" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/data/6b/70/6b7041320a73d38513b4afcd5638b069fe86bd58" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/ec/c4/ecc49f49f4da6b940dcde13f0571e79c299871e6" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/data/ec/c4/ecc49f49f4da6b940dcde13f0571e79c299871e6" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/UserTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UserTableSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,7 +204,7 @@
       <workItem from="1606915232635" duration="26025000" />
       <workItem from="1607589507791" duration="6889000" />
       <workItem from="1608056611182" duration="19204000" />
-      <workItem from="1608722044723" duration="23516000" />
+      <workItem from="1608722044723" duration="24148000" />
     </task>
     <servers />
   </component>
