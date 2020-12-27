@@ -48,7 +48,7 @@
                             <div>
                                 <div class="r-section-title">
                                     <h3 class="r-section-title_title">
-                                        Current Loans
+                                        Current Rape Cases
                                     </h3>
                                     <a href="/loans/" class="r-d-flex r-al-i-c r-fw-bold r-decoration-none r-read-more r-icon-move-on-hover">
                                         <span class=" r-prefix">View all</span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" class="icon icon-arrow-right">
@@ -59,7 +59,7 @@
                                         <a href="/loans/personal" class="r-none r-w-100% r-card r-card--literal r-gradient r-gradient--green">
                                             <div class="r-d-flex r-al-i-c r-j-c-sb r-mt-adjust--line-height">
                                                 <p class="r-mb-0 r-co-white">
-                                                    <span class="r-caps r-caps--nano r-fw-bold r-opacity-09">Personal</span>
+                                                    <span class="r-caps r-caps--nano r-fw-bold r-opacity-09">Approved Crimes</span>
                                                     <span class="r-d-block r-fs-nano r-tt-l r-opacity-07">
                             12 Mo.
                         </span>
@@ -96,7 +96,7 @@
                                         <a href="/loans/business" class="r-none r-w-100% r-card r-card--literal r-gradient r-gradient--blue">
                                             <div class="r-d-flex r-al-i-c r-j-c-sb r-mt-adjust--line-height">
                                                 <p class="r-mb-0 r-co-white">
-                                                    <span class="r-caps r-caps--nano r-fw-bold r-opacity-09">Business</span>
+                                                    <span class="r-caps r-caps--nano r-fw-bold r-opacity-09">Pending Crimes</span>
                                                     <span class="r-d-block r-fs-nano r-tt-l r-opacity-07">
                             24 Mo.
                         </span>
@@ -133,7 +133,7 @@
                             <div>
                                 <div class="r-section-title">
                                     <h3 class="r-section-title_title">
-                                        Current Investments
+                                        Current Crimes
                                     </h3>
                                     <a href="/investments/" class="r-d-flex r-al-i-c r-fw-bold r-decoration-none r-read-more r-icon-move-on-hover">
                                         <span class=" r-prefix">View all</span><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" class="icon icon-arrow-right">
@@ -143,7 +143,7 @@
                                 </div><ul class="r-none r-grid r-grid--gap r-grid--autosize"><li class="r-grid_item r-w-100% r-d-flex">
                                         <a href="/investments/ian/" class="r-none r-w-100% r-card r-card--no-shadow r-card--border r-card--border--secondary r-card--literal r-d-flex r-flex-dir-col r-pb-0">
                                             <div class="r-grid r-grid--8-4 r-grid--gap">
-                                                <h3 class="r-m-0 r-fs-micro">Investment Appreciation Note (IAN)</h3>
+                                                <h3 class="r-m-0 r-fs-micro">Robbery and Kidnapping</h3>
                                                 <p class="r-mb-0 r-tx-c">
                                                     <span class="r-fs-small r-fw-bold r-co-green">12.56%</span>
                                                     <span class="r-caps r-caps--pico r-d-block r-tt-l r-opacity-07 r-fw-bold">
@@ -178,7 +178,7 @@
                                     </li><li class="r-grid_item r-w-100% r-d-flex">
                                         <a href="/investments/lin/" class="r-none r-w-100% r-card r-card--no-shadow r-card--border r-card--border--secondary r-card--literal r-d-flex r-flex-dir-col r-pb-0">
                                             <div class="r-grid r-grid--8-4 r-grid--gap">
-                                                <h3 class="r-m-0 r-fs-micro">Lease Investment Note (LIN)</h3>
+                                                <h3 class="r-m-0 r-fs-micro">Child Abuse</h3>
                                                 <p class="r-mb-0 r-tx-c">
                                                     <span class="r-fs-small r-fw-bold r-co-green">6.56%</span>
                                                     <span class="r-caps r-caps--pico r-d-block r-tt-l r-opacity-07 r-fw-bold">

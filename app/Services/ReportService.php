@@ -30,11 +30,11 @@ class ReportService
     public function getReports(){
         $user = auth()->user();
         $role = $user->getRoleNames()[0];
-        $reports = $this->reportRepository->with([Report::R_REPORTCONTENT]);
+        $reports = $this->reportRepository->with([Report::R_REPORTCONTENT,Report::R_CRIMETYPE,Report::R_STATE])->orderBy('Created_at','desc');
         if($role == Constants::Roles[2]){
-           $reports=  $reports->Where([Report::USER_ID=>$user->id])->get();
+           $reports=  $reports->Where([Report::USER_ID=>$user->id])->paginate(30);
         }else{
-            $reports = $reports->get();
+            $reports = $reports->paginate(30);
         }
         return ["data"=>$reports];
     }

@@ -20,6 +20,7 @@ class ReportContent extends Model
     const FILE_URL = 'file_url';
     const REPORT_TYPE_ID = 'report_type_id';
     const REPORT_ID = 'report_id';
+    const R_REPORTTYPE = 'reporttype';
 
     public function reports()
     {

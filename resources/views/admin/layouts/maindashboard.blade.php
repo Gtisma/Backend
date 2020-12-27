@@ -72,7 +72,7 @@
     </span>
                             </a></div></div>
                 </div><div class="r-gutter--height-adjust r-d-flex r-al-i-c">
-                    <a href="https://adx-usr.now.sh/new" class="r-d-flex r-al-i-c r-btn r-btn--primary">
+                    <a href="{{url('/admin/report/add')}}" class="r-d-flex r-al-i-c r-btn r-btn--primary">
         <span class="r-prefix r-d-flex r-al-i-c r-co-white"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" class="icon icon-plus">
         <line x1="12" y1="5" x2="12" y2="19" />
         <line x1="5" y1="12" x2="19" y2="12" />

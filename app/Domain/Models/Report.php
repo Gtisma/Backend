@@ -24,6 +24,9 @@ class Report extends Model
     const LOCATION = 'location';
     const DESCRIPTION = 'description';
     const R_REPORTCONTENT ='reportcontent';
+    const R_STATE ='state';
+    const R_CRIMETYPE ='crimetype';
+
 
 
     public function reportcontent()
@@ -33,6 +36,14 @@ class Report extends Model
     public function reportapproval()
     {
         return $this->hasOne(ReportApproval::class,self::ID);
+    }
+    public function state()
+    {
+        return $this->hasOne(State::class,State::ID,self::STATE_ID);
+    }
+    public function crimetype()
+    {
+        return $this->hasOne(CrimeType::class,CrimeType::ID,self::CRIME_TYPE_ID);
     }
 
 }
