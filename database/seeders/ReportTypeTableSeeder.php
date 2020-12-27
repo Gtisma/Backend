@@ -19,7 +19,12 @@ class ReportTypeTableSeeder extends Seeder
                     'name' => 'Video',
                     'created_at' => date('Y-m-d H:i:s'),
                     'updated_at' => date('Y-m-d H:i:s')],
-                ]);
+                ['id' => '3',
+                'name' => 'Audio',
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s')
+                ]
+            ]);
         }
 
     }

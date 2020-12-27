@@ -9,6 +9,6 @@ class Constants {
     const Clients =['mobileclientpqqh6ebizhTecUpfb0qA','webclient25kDA3WKx2qhbucvVy3L'];
     const Source =['facebook','google','twitter','instagram'];
     const Status =['pending','confirmed'];
-    const ReportContentTpye =['picture'=>1,'video'=>2];
+    const ReportContentTpye =['picture'=>1,'video'=>2,'audio'=>3];
 
 }
