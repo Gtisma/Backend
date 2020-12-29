@@ -20,21 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cd36280-a89e-408e-830a-9b2d8c76bee7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ReportController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/reports/addnew.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/reports/view.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/web/admin/report.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/css/dropzone.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/js/dropzone.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Domain/Models/Report.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Domain/Models/Report.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Domain/Models/ReportContent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Domain/Models/ReportContent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Services/ReportService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/ReportService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/home/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/home/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/maindashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/maindashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/nav.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/02/47/0247bb36de8848a8f2a2ee50eeb7912eab2ae309" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/data/02/47/0247bb36de8848a8f2a2ee50eeb7912eab2ae309" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/6b/70/6b7041320a73d38513b4afcd5638b069fe86bd58" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/data/6b/70/6b7041320a73d38513b4afcd5638b069fe86bd58" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/ec/c4/ecc49f49f4da6b940dcde13f0571e79c299871e6" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/data/ec/c4/ecc49f49f4da6b940dcde13f0571e79c299871e6" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domain/Helpers/Constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Domain/Helpers/Constants.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domain/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Domain/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/AuthService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/AuthService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_09_175000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_09_175000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/footerscript.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/footerscript.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/reports/addnew.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/reports/addnew.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +170,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/reports" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/assets/js" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -183,18 +178,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/assets/js" />
       <recent name="$PROJECT_DIR$/resources/views/admin/reports" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Admin" />
       <recent name="$PROJECT_DIR$/routes/web/admin" />
       <recent name="$PROJECT_DIR$/routes/api" />
-      <recent name="$PROJECT_DIR$/app/Services" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/assets/css" />
       <recent name="$PROJECT_DIR$/app/Domain/Traits" />
       <recent name="$PROJECT_DIR$/app/Http/Requests/Api" />
       <recent name="$PROJECT_DIR$/routes" />
       <recent name="$PROJECT_DIR$/app/Domain/Api" />
-      <recent name="$PROJECT_DIR$/app" />
     </key>
   </component>
   <component name="RunManager">
@@ -218,7 +213,7 @@
       <workItem from="1607589507791" duration="6889000" />
       <workItem from="1608056611182" duration="19204000" />
       <workItem from="1608722044723" duration="26645000" />
-      <workItem from="1609078650893" duration="5601000" />
+      <workItem from="1609078650893" duration="8519000" />
     </task>
     <servers />
   </component>

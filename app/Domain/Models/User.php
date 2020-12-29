@@ -34,6 +34,7 @@ class User extends Authenticatable implements JWTSubject
     const FACEBOOK_ID = 'facebook_id';
     const TWITTER_ID = 'twitter_id';
     const INSTAGRAM_ID = 'instagram_id';
+    const APPLE_ID = 'apple_id';
     const FIREBASE_TOKEN = 'firebase_token';
     const DEVICE_ID = 'device_id';
     const GOOGLE_ID = 'google_id';

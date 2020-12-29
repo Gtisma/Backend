@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/materialize.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/glide.core.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}"><!-- Begin Jekyll SEO tag v2.6.1 -->
+    <link rel="stylesheet" href="{{ asset('assets/css/dropzone.css') }}"><!-- Begin Jekyll SEO tag v2.6.1 -->
     <meta name="generator" content="Jekyll v4.0.0" />
     <meta property="og:title" content="GTISMA" />
     <meta name="csrf-token" content="{{ csrf_token() }}">

@@ -32,6 +32,7 @@ class CreateUsersTable extends Migration
             $table->string(User::GOOGLE_ID)->nullable();
             $table->string(User::TWITTER_ID)->nullable();
             $table->string(User::INSTAGRAM_ID)->nullable();
+            $table->string(User::APPLE_ID)->nullable();
             $table->string(User::FIREBASE_TOKEN)->nullable();
             $table->string(User::DEVICE_ID)->nullable();
             $table->unsignedBigInteger(User::STATE_ID)->nullable();

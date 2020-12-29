@@ -10,7 +10,7 @@
             <h3 class="r-mt-0 r-headline--small">Add New Report</h3>
 
             <div class="r-tx-l">
-                <form method="POST" action="{{ route('admin.store.report') }}" id="reportform" >
+                <form method="POST" action="{{ route('admin.store.report') }}" id="reportform"  enctype="multipart/form-data" >
                     @csrf
 
                     <p class="r-select-wrapper r-mb-0">
@@ -37,7 +37,9 @@
                         </select>
 
                     </p>
-
+                    <p class="input-field r-mb-0">
+                        <input name="report_files" type="file" class="dropzone" multiple />
+                    </p>
                     <div class="input-field r-d-flex">
                         <textarea id="contact-address" class="materialize-textarea">CubeHub, Adebola House (Suite 100), 38, Opebi Road, Ikeja Lagos, Nigeria.</textarea>
                         <label for="contact-address">Address</label>
@@ -65,4 +67,14 @@
 
             </div></div>
     </section>
+@endsection
+@section('footerscripts')
+<script>
+    Dropzone.autoDiscover = false;
+    var myDropzone = new Dropzone(".dropzone",{
+        url: "/file/post",
+        maxFilesize: 3,  // 3 mb
+        acceptedFiles: ".jpeg,.jpg,.png,.mp4,.mp3,.png",
+    });
+</script>
 @endsection
