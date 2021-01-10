@@ -3672,6 +3672,9 @@ table td,
 .r-mt-0 {
     margin-top: 0
 }
+.r-mt-hh {
+    margin-top: 0.25rem;
+}
 .r-mt-1 {
     margin-top: 1rem
 }
@@ -3692,6 +3695,12 @@ table td,
 
 .r-ml-0 {
     margin-left: 0
+}
+.r-ml-hh {
+    margin-left: 0.25rem;
+}
+.r-ml-h {
+    margin-left: 0.5rem;
 }
 
 .r-mx-auto,
@@ -4053,6 +4062,37 @@ table td,
 .webcamvideo{
     width: 100%;
     height: 100%;
+}
+.r-file {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    height: 3rem;
+    width: 100%;
+}
+.r-file input {
+    min-width: 14rem;
+    margin: 0;
+    opacity: 0;
+}
+.r-file-custom {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+    height: 3rem;
+    padding: .75rem;
+    line-height: 1.4;
+    color: rgba(22, 6, 4, 0.75);
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 8.4px;
+    user-select: none;
+}
+.r-file-custom::before {
+    content: "Choose file...";
+    font-size: 1rem;
 }
 
 /*# sourceMappingURL=main.css.map */

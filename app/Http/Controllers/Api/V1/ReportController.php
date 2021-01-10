@@ -6,6 +6,7 @@ namespace App\Http\Controllers\Api\V1;
 use App\Http\Controllers\Controller;
 
 use App\Http\Requests\Api\Report\ReportRequest;
+use App\Http\Requests\Api\Report\ReportApprovalRequest;
 use App\Services\ReportService;
 
 class ReportController extends Controller
@@ -19,6 +20,11 @@ class ReportController extends Controller
 
     public function sendReport(ReportRequest $reportRequest){
         $sendReport = $this->reportService->sendReport($reportRequest->convertToDto());
+        if(isset($sendReport["error"])) {return errorResponse($sendReport["error"],$sendReport["code"]??401);}
+        return successResponse($sendReport["data"]);
+    }
+    public function approveReport(ReportApprovalRequest $reportApprovalRequest){
+        $sendReport = $this->reportService->approveReport($reportApprovalRequest->convertToDto());
         if(isset($sendReport["error"])) {return errorResponse($sendReport["error"],$sendReport["code"]??401);}
         return successResponse($sendReport["data"]);
     }
