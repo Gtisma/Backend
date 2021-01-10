@@ -39,7 +39,7 @@
                     </p>
                     <div class="r-select-wrapper r-mb-0">
                         <label class="r-file">
-                            <input type="file" id="report_files" aria-label="Report file browser " onchange="return RecordfileTypeValidate(this)" name="report_files[]"  class="" accept="image/*,video/mp4,video/x-m4v,video/*" multiple required/>
+                            <input type="file" id="report_files" aria-label="Report file browser " onchange="return RecordfileTypeValidate(this)" name="report_files[]"  class="" accept="audio/*,image/*,video/mp4,video/x-m4v,video/*" multiple required/>
                             <span class="r-file-custom"></span>
                         </label>
                         <p class="js-filename-block r-ml-h r-mb-h r-mt-hh r-italic r-opacity-06">
