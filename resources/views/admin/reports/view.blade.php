@@ -79,6 +79,8 @@
                     </td>
                 </tr>
                     @endforeach
+                @else
+                    <tr colspan="7"> NO Report </tr>
                     @endif
 
                 </tbody>
