@@ -80,7 +80,8 @@
                 </tr>
                     @endforeach
                 @else
-                    <tr colspan="7"> NO Report </tr>
+                    <tr >
+                        <td colspan="7">NO Report</td> </tr>
                     @endif
 
                 </tbody>
