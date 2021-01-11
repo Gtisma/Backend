@@ -32,7 +32,7 @@ class ReportService
     public function getReports(){
         $user = auth()->user();
         $role = $user->getRoleNames()[0];
-        $reports = $this->reportRepository->with([Report::R_REPORTCONTENT,Report::R_CRIMETYPE,Report::R_STATE])->orderBy('Created_at','desc');
+        $reports = $this->reportRepository->with([Report::R_USER,Report::R_CRIMETYPE,Report::R_STATE,Report::R_REPORTCONTENT])->orderBy('Created_at','desc');
         if($role == Constants::Roles[2]){
            $reports=  $reports->Where([Report::USER_ID=>$user->id])->paginate(30);
         }else{

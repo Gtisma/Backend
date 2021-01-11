@@ -26,6 +26,7 @@ class Report extends Model
     const R_REPORTCONTENT ='reportcontent';
     const R_STATE ='state';
     const R_CRIMETYPE ='crimetype';
+    const R_USER ='user';
 
 
 
@@ -33,9 +34,14 @@ class Report extends Model
     {
         return $this->hasMany(ReportContent::class,ReportContent::REPORT_ID,self::ID);
     }
+
     public function reportapproval()
     {
         return $this->hasOne(ReportApproval::class,self::ID);
+    }
+    public function user()
+    {
+        return $this->BelongsTo(User::class,self::USER_ID);
     }
     public function state()
     {

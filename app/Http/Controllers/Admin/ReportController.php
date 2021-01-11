@@ -31,7 +31,8 @@ class ReportController extends Controller
      */
     public function index()
     {
-        return view('admin.reports.view');
+        $reports = Report::orderBy('created_at','DESC')->paginate(10);
+        return view('admin.reports.view',compact('reports'));
     }
     public function create()
     {

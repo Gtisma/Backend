@@ -20,7 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cd36280-a89e-408e-830a-9b2d8c76bee7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domain/Models/Report.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Domain/Models/Report.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ReportController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ReportController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/ReportService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/ReportService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/reports/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/reports/view.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/52/ac/52acebe9de48b9434598fa65d2ec8d0e111e90b0" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/data/52/ac/52acebe9de48b9434598fa65d2ec8d0e111e90b0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/70/d5/70d5789fb8fa04f157e2f175d8e9158bc3d2b5c6" beforeDir="false" afterPath="$PROJECT_DIR$/storage/framework/cache/data/70/d5/70d5789fb8fa04f157e2f175d8e9158bc3d2b5c6" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +215,7 @@
       <workItem from="1608056611182" duration="19204000" />
       <workItem from="1608722044723" duration="26645000" />
       <workItem from="1609078650893" duration="11569000" />
-      <workItem from="1610266604220" duration="12149000" />
+      <workItem from="1610266604220" duration="15725000" />
     </task>
     <servers />
   </component>
@@ -271,11 +277,12 @@
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state width="596" height="445" key="SwitcherDM/0.23.1440.834@0.23.1440.834" timestamp="1604943414064" />
-    <state x="418" y="188" width="604" height="490" key="find.popup" timestamp="1607195540157">
-      <screen x="0" y="23" width="1440" height="833" />
+    <state x="418" y="189" width="604" height="492" key="find.popup" timestamp="1610323279481">
+      <screen x="0" y="23" width="1440" height="836" />
     </state>
     <state x="418" y="187" width="604" height="490" key="find.popup/0.23.1440.830@0.23.1440.830" timestamp="1607193524959" />
     <state x="418" y="188" width="604" height="490" key="find.popup/0.23.1440.833@0.23.1440.833" timestamp="1607195540157" />
+    <state x="418" y="189" width="604" height="492" key="find.popup/0.23.1440.836@0.23.1440.836" timestamp="1610323279481" />
     <state x="385" y="181" width="670" height="676" key="search.everywhere.popup" timestamp="1606504322020">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
