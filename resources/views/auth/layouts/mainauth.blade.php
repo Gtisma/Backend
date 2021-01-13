@@ -30,7 +30,7 @@
     </span>
                     </a></div>
 
-                <img src="{{ asset('assets/images/woman-sitting-in-front-of-a-computer-while-talking-on-the-phone.jpg') }}" alt="Woman sitting in front of a computer while talking on the phone">
+                <img src="{{ asset('assets/images/Rape2.jpg') }}" alt="Woman sitting in front of a computer while talking on the phone">
             </section>
            @yield('content')
         </div>

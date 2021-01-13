@@ -4095,4 +4095,22 @@ table td,
     font-size: 1rem;
 }
 
+/* From TailwindCSS */
+.w-5 {
+    width: 1.25rem;
+}
+
+.h-5 {
+    height: 1.25rem;
+}
+
+.hidden { overflow: hidden; }
+
+@media (min-width: 576px) {
+    .sm\:flex-1 { flex: 1; }
+    .sm\:flex { display: flex; }
+    .sm\:items-center { align-items: center; }
+    .sm\:justify-between { justify-content: space-between; }
+}
+
 /*# sourceMappingURL=main.css.map */
