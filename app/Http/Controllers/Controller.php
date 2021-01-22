@@ -26,7 +26,7 @@ class Controller extends BaseController
 
     }
     public static function uploadToCloudStatic($data,$path){
-        Log::info("Cloudinary file Upload",gettype($data),$data,gettype($data));
+        Log::info("Cloudinary file Upload",[gettype($data),$data,gettype($data)]);
         try {
             $publicid = date("Ymd") . time() . mt_rand(10000, 99999);
             $uploadedFileUrl = cloudinary()->uploadFile($data, array("folder"=> "gtisma/".$path."/","publicid" =>$publicid,"overwrite" => TRUE))->getSecurePath();
