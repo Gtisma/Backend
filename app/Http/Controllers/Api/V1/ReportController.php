@@ -20,8 +20,7 @@ class ReportController extends Controller
     }
 
     public function sendReport(ReportRequest $reportRequest){
-        \Log::info("report Data Api",[gettype($reportRequest->convertToDto()->report_file),$reportRequest->convertToDto()]);
-        return successResponse($reportRequest->convertToDto());
+        \Log::info("report Data Api",[json_decode($reportRequest->convertToDto()->report_file),$reportRequest->convertToDto()]);
         $sendReport = $this->reportService->sendReport($reportRequest->convertToDto());
         if(isset($sendReport["error"])) {return errorResponse($sendReport["error"],$sendReport["code"]??401);}
         return successResponse($sendReport["data"]);

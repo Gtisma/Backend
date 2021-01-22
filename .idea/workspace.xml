@@ -23,7 +23,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/V1/ReportController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/V1/ReportController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Listeners/SendFileCloudNotification.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Listeners/SendFileCloudNotification.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web/admin/report.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web/admin/report.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +212,7 @@
       <workItem from="1608722044723" duration="26645000" />
       <workItem from="1609078650893" duration="11569000" />
       <workItem from="1610266604220" duration="21644000" />
-      <workItem from="1611012577252" duration="7994000" />
+      <workItem from="1611012577252" duration="8272000" />
     </task>
     <servers />
   </component>
