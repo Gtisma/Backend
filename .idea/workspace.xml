@@ -21,7 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="2cd36280-a89e-408e-830a-9b2d8c76bee7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web/admin/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web/admin/home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ReportController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ReportController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/V1/ReportController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/V1/ReportController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Listeners/SendFileCloudNotification.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Listeners/SendFileCloudNotification.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web/admin/report.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web/admin/report.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,7 +215,7 @@
       <workItem from="1608722044723" duration="26645000" />
       <workItem from="1609078650893" duration="11569000" />
       <workItem from="1610266604220" duration="21644000" />
-      <workItem from="1611012577252" duration="8820000" />
+      <workItem from="1611012577252" duration="10523000" />
     </task>
     <servers />
   </component>

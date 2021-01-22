@@ -60,7 +60,7 @@
             </a>
         </li>
        <li class="r-no-border r-mb-h">
-            <a class=" r-list-item is-vertical-nav" href="{{url('/admin/report')}}"><svg role="img" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" aria-labelledby="creditCardIconTitle" stroke="#52154e" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="miter" fill="none" color="#52154e" class="icon icon-payments">
+            <a class=" r-list-item is-vertical-nav" href="{{url('/admin/report/pending')}}"><svg role="img" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" aria-labelledby="creditCardIconTitle" stroke="#52154e" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="miter" fill="none" color="#52154e" class="icon icon-payments">
                     <title id="creditCardIconTitle">Credit Card</title>
                     <rect width="20" height="14" x="2" y="5" rx="2" />
                     <path d="M2,14 L22,14" />
@@ -68,8 +68,8 @@
             </a>
         </li>
         <li class="r-no-border r-mb-h">
-            <a class=" r-list-item is-vertical-nav" href="{{url('/admin/report')}}"><svg role="img" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" aria-labelledby="creditCardIconTitle" stroke="#52154e" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="miter" fill="none" color="#52154e" class="icon icon-payments">
-                    <title id="creditCardIconTitle">Credit Card</title>
+            <a class=" r-list-item is-vertical-nav" href="{{url('/admin/report/approved')}}"><svg role="img" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" aria-labelledby="creditCardIconTitle" stroke="#52154e" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="miter" fill="none" color="#52154e" class="icon icon-payments">
+                    <title id="creditCardIconTitle">Approved Reports</title>
                     <rect width="20" height="14" x="2" y="5" rx="2" />
                     <path d="M2,14 L22,14" />
                 </svg><span class="r-suffix--wider r-list-item_text"> Approved Reports</span>

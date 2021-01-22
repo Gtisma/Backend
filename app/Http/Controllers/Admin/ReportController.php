@@ -29,9 +29,27 @@ class ReportController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    private function checkStatus ($status){
+        switch ($status){
+            case 'pending':
+                $res="pending";
+                break;
+            default:
+                $res= "confirmed";
+        }
+        return $res;
+    }
+    public function index($status)
     {
-        $reports = Report::orderBy('created_at','DESC')->paginate(10);
+
+        if(isset($status)){
+            $sta = $this->checkStatus($status);
+            $reports = Report::where('status',$sta)->orderBy('created_at', 'DESC')->paginate(10);
+        }
+        else {
+            $reports = Report::orderBy('created_at', 'DESC')->paginate(10);
+        }
+
         return view('admin.reports.view',compact('reports'));
     }
     public function create()
