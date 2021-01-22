@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\Report\ReportRequest;
 use App\Http\Requests\Api\Report\ReportApprovalRequest;
 use App\Services\ReportService;
+use phpDocumentor\Reflection\Type;
 
 class ReportController extends Controller
 {
@@ -19,7 +20,8 @@ class ReportController extends Controller
     }
 
     public function sendReport(ReportRequest $reportRequest){
-        \Log::info("report Data Api",[$reportRequest->convertToDto()]);
+        \Log::info("report Data Api",[typeOf($reportRequest->convertToDto()->report_file),$reportRequest->convertToDto()]);
+        return successResponse($reportRequest->convertToDto());
         $sendReport = $this->reportService->sendReport($reportRequest->convertToDto());
         if(isset($sendReport["error"])) {return errorResponse($sendReport["error"],$sendReport["code"]??401);}
         return successResponse($sendReport["data"]);
