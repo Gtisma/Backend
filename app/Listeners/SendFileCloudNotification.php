@@ -6,6 +6,7 @@ use App\Domain\Helpers\Constants;
 use App\Domain\Models\ReportContent;
 use App\Events\UploadCloud;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Log;
 
 
 class SendFileCloudNotification
@@ -29,6 +30,7 @@ class SendFileCloudNotification
     public function handle(UploadCloud $uploadCloud)
     {
         $reportF = json_decode($uploadCloud->report_file,true);
+        Log::info("Decoded File",[$reportF]);
         for($i = 0 ; $i < count($reportF); $i++){
             $report_file =$reportF;
             if(isset($report_file[$i]["file"])){
