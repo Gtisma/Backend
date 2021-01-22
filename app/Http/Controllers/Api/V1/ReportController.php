@@ -24,11 +24,7 @@ class ReportController extends Controller
         if(isset($sendReport["error"])) {return errorResponse($sendReport["error"],$sendReport["code"]??401);}
         return successResponse($sendReport["data"]);
     }
-    public function sendReport2(ReportRequest $reportRequest){
-        \Log::info("report Data Api 2",[$reportRequest->convertToDto()]);
-        return successResponse($reportRequest->convertToDto());
 
-    }
     public function approveReport(ReportApprovalRequest $reportApprovalRequest){
         $sendReport = $this->reportService->approveReport($reportApprovalRequest->convertToDto());
         if(isset($sendReport["error"])) {return errorResponse($sendReport["error"],$sendReport["code"]??401);}
