@@ -28,9 +28,10 @@ class SendFileCloudNotification
      */
     public function handle(UploadCloud $uploadCloud)
     {
-
-        for($i = 0 ; $i < count($uploadCloud->report_file); $i++){
-            $report_file = $uploadCloud->report_file;
+        $reportF = json_decode($uploadCloud->report_file);
+        \Log::info("ReportFile",[$reportF]);
+        for($i = 0 ; $i < count($reportF); $i++){
+            $report_file =$reportF;
             if(isset($report_file[$i]["file"])){
                 $typeid =  $report_file[$i]["type"] ?? "picture";
                 $id = Constants::ReportContentTpye[$typeid];

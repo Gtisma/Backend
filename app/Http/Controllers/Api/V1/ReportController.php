@@ -32,7 +32,10 @@ class ReportController extends Controller
         if(isset($sendReport["error"])) {return errorResponse($sendReport["error"],$sendReport["code"]??401);}
         return successResponse($sendReport["data"]);
     }
-    public function viewReport(){
+    public function viewReport($status){
+        if(isset($status)){
+            dd($status);
+        }
         $getReport = $this->reportService->getReports();
         if(isset($getReport["error"])) {return errorResponse($getReport["error"],$getReport["code"]??401);}
         return successResponse($getReport["data"]);
