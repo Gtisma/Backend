@@ -35,10 +35,8 @@ class SendFileCloudNotification
             $report_file = json_decode($uploadCloud->report_file,true);
         }
         Log::info("StartDebugArray 1",[$report_file]);
-        return ["data" => $report_file];
 
-        for($i = 0 ; $i < count($reportF); $i++){
-            $report_file =$reportF;
+        for($i = 0 ; $i < count($report_file); $i++){
             Log::info("DebugArray 3 Each",(array)$report_file);
             if(isset($report_file[$i]["file"])){
                 $typeid =  $report_file[$i]["type"] ?? "picture";
