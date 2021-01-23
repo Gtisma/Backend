@@ -31,6 +31,7 @@ class SendFileCloudNotification
     {
         $report_file =$uploadCloud->report_file;
         if(gettype($report_file) === "string") {
+            Log::info("Yes file is a string");
             $report_file = json_decode($uploadCloud->report_file,true);
         }
         Log::info("StartDebugArray 1",[$report_file]);
