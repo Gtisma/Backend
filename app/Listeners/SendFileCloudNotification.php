@@ -34,34 +34,35 @@ class SendFileCloudNotification
             Log::info("Yes file is a string");
             $report_file = json_decode($uploadCloud->report_file,true);
         }
-        Log::info("StartDebugArray 1",[$report_file]);
+
 
         for($i = 0 ; $i < count($report_file); $i++){
-            Log::info("DebugArray 3 Each",(array)$report_file);
             if(isset($report_file[$i]["file"])){
                 $typeid =  $report_file[$i]["type"] ?? "picture";
                 $id = Constants::ReportContentTpye[$typeid];
-                Log::info("DebugArray 3-------",[$report_file[$i]["file"]]);
                 if(is_array($report_file[$i]["file"])){
                     foreach ($report_file[$i]["file"] as $file)
                     {
-                        $file = $report_file[$i]["file"];
-                        Log::info("Report File4 Array each2-------",[$file]);
+                        Log::info("Report File4 Array each2-------");
                         $fileurl = Controller::uploadToCloudStatic($file, 'reports');
+                        if(isset($fileurl["data"])) {
+                            $reportcontent = new ReportContent();
+                            $reportcontent->file_url = $fileurl["data"];
+                            $reportcontent->report_type_id = $id;
+                            $reportcontent->report_id = $uploadCloud->report_id;
+                            $reportcontent->save();
+                        }
+                    }
+                }else {
+                    Log::info("Report File4 Single-------");
+                    $fileurl = Controller::uploadToCloudStatic($report_file[$i]["file"], 'reports');
+                    if(isset($fileurl["data"])) {
                         $reportcontent = new ReportContent();
-                        $reportcontent->file_url = $fileurl;
+                        $reportcontent->file_url = $fileurl["data"];
                         $reportcontent->report_type_id = $id;
                         $reportcontent->report_id = $uploadCloud->report_id;
                         $reportcontent->save();
                     }
-                }else {
-                    Log::info("Report File4 Single-------",[$report_file[$i]["file"]]);
-                    $fileurl = Controller::uploadToCloudStatic($report_file[$i]["file"], 'reports');
-                    $reportcontent = new ReportContent();
-                    $reportcontent->file_url = $fileurl;
-                    $reportcontent->report_type_id = $id;
-                    $reportcontent->report_id = $uploadCloud->report_id;
-                    $reportcontent->save();
                 }
             }
         }
