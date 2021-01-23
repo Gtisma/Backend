@@ -34,10 +34,7 @@ class ReportRequest extends BaseApiRequest
             'state_id' => 'required',
             'crime_type_id' => 'required',
             'description' => ['min:10'],
-            'report_files' => [
-                'type' => 'required|string',
-                'file' => 'required|file',
-                'array']
+
         ];
     }
 
