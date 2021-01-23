@@ -39,7 +39,7 @@ class SendFileCloudNotification
                 if(is_array($report_file[$i]["file"])){
                     foreach ($report_file[$i]["file"] as $file)
                     {
-                        Log::info("Report File4 Array each-------",$file);
+                        Log::info("Report File4 Array each-------",[$file]);
                         $fileurl = Controller::uploadToCloudStatic($file, 'reports');
                         $reportcontent = new ReportContent();
                         $reportcontent->file_url = $fileurl;
