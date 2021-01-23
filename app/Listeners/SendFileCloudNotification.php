@@ -30,14 +30,14 @@ class SendFileCloudNotification
     public function handle(UploadCloud $uploadCloud)
     {
         $reportF = json_decode($uploadCloud->report_file,true);
-        Log::info("Decoded File1-------",[$reportF]);
-        Log::info("Decoded File2 -------",[(array)json_decode($uploadCloud->report_file)]);
         for($i = 0 ; $i < count($reportF); $i++){
             $report_file =$reportF;
             if(isset($report_file[$i]["file"])){
                 $typeid =  $report_file[$i]["type"] ?? "picture";
                 $id = Constants::ReportContentTpye[$typeid];
+                $f = $report_file[$i]["file"];
                 if(is_array($report_file[$i]["file"])){
+                    Log::info("Report File4 Array-------",[$report_file[$i]["file"]]);
                     foreach ($report_file[$i]["file"] as $file)
                     {
                         $fileurl = Controller::uploadToCloudStatic($file, 'reports');
@@ -48,6 +48,7 @@ class SendFileCloudNotification
                         $reportcontent->save();
                     }
                 }else {
+                    Log::info("Report File4 Single-------",[$report_file[$i]["file"]]);
                     $fileurl = Controller::uploadToCloudStatic($report_file[$i]["file"], 'reports');
                     $reportcontent = new ReportContent();
                     $reportcontent->file_url = $fileurl;
