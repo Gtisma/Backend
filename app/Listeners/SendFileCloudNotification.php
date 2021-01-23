@@ -30,6 +30,8 @@ class SendFileCloudNotification
     public function handle(UploadCloud $uploadCloud)
     {
         $reportF = json_decode($uploadCloud->report_file);
+        Log::info("StartDebugArray 1",$uploadCloud->report_file);
+        return [data=>$uploadCloud->report_file];
         Log::info("DebugArray 1",$reportF);
         Log::info("DebugArray 2",(array)$reportF);
         for($i = 0 ; $i < count($reportF); $i++){
@@ -41,8 +43,9 @@ class SendFileCloudNotification
 //                $f = $report_file[$i]["file"];
                 Log::info("DebugArray 3-------",[$report_file[$i]["file"]]);
                 if(is_array($report_file[$i]["file"])){
-                    foreach ($report_file[$i]["file"] as $file)
-                    {
+//                    foreach ($report_file[$i]["file"] as $file)
+//                    {
+                        $file = $report_file[$i]["file"];
                         Log::info("Report File4 Array each2-------",[$file]);
                         $fileurl = Controller::uploadToCloudStatic($file, 'reports');
                         $reportcontent = new ReportContent();
@@ -50,7 +53,7 @@ class SendFileCloudNotification
                         $reportcontent->report_type_id = $id;
                         $reportcontent->report_id = $uploadCloud->report_id;
                         $reportcontent->save();
-                    }
+//                    }
                 }else {
                     Log::info("Report File4 Single-------",[$report_file[$i]["file"]]);
                     $fileurl = Controller::uploadToCloudStatic($report_file[$i]["file"], 'reports');
