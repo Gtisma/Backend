@@ -29,8 +29,9 @@ class SendFileCloudNotification
      */
     public function handle(UploadCloud $uploadCloud)
     {
-        $reportF = json_decode($uploadCloud->report_file);
-        Log::info("Decoded File",[$reportF]);
+        $reportF = json_decode($uploadCloud->report_file,true);
+        Log::info("Decoded File1-------",[$reportF]);
+        Log::info("Decoded File2 -------",[(array)json_decode($uploadCloud->report_file)]);
         for($i = 0 ; $i < count($reportF); $i++){
             $report_file =$reportF;
             if(isset($report_file[$i]["file"])){
