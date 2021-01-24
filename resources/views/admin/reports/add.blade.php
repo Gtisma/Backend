@@ -3,9 +3,15 @@
 @section('content')
 
     <section class="r-split-twin_content r-gutter--bottom r-d-flex r-flex-dir-col r-al-i-l r-tx-l r-gutter--2x@lg r-edges">
+        <div class="element-header">
+            @if (session('message'))
+                <div class="alert alert-info r-blue" >
+                    {{ session('message') }}
+                </div>
+            @endif
+        </div>
+
         <h2 class="r-sr">Add New Report</h2>
-
-
         <div class="r-w-100% r-maxwidth-xs">
             <h3 class="r-mt-0 r-headline--small">Add New Report</h3>
 

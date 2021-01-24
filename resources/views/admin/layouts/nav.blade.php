@@ -70,7 +70,15 @@
                     <title id="thumbUpIconTitle">Thumb Up</title>
                     <path d="M8,8.73984815 C8,8.26242561 8.17078432,7.80075162 8.4814868,7.43826541 L13.2723931,1.84887469 C13.7000127,1.34998522 14.4122932,1.20614658 15,1.5 C15.5737957,1.78689785 15.849314,2.45205792 15.6464466,3.06066017 L14,8 L18.6035746,8 C18.7235578,8 18.8432976,8.01079693 18.9613454,8.03226018 C20.0480981,8.22985158 20.7689058,9.27101818 20.5713144,10.3577709 L19.2985871,17.3577709 C19.1256814,18.3087523 18.2974196,19 17.3308473,19 L10,19 C8.8954305,19 8,18.1045695 8,17 L8,8.73984815 Z" />
                     <path d="M4,18 L4,9" />
-                </svg><span class="r-suffix--wider r-list-item_text"> Security Outfit</span>
+                </svg><span class="r-suffix--wider r-list-item_text">View Security Outfit</span>
+            </a>
+        </li>
+        <li class="r-no-border r-mb-h">
+            <a class=" r-list-item is-vertical-nav" href="{{url('/admin/security/add')}}"><svg role="img" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" aria-labelledby="thumbUpIconTitle" stroke="#52154e" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="miter" fill="none" color="#52154e" class="icon icon-thumb-up">
+                    <title id="thumbUpIconTitle">Thumb Up</title>
+                    <path d="M8,8.73984815 C8,8.26242561 8.17078432,7.80075162 8.4814868,7.43826541 L13.2723931,1.84887469 C13.7000127,1.34998522 14.4122932,1.20614658 15,1.5 C15.5737957,1.78689785 15.849314,2.45205792 15.6464466,3.06066017 L14,8 L18.6035746,8 C18.7235578,8 18.8432976,8.01079693 18.9613454,8.03226018 C20.0480981,8.22985158 20.7689058,9.27101818 20.5713144,10.3577709 L19.2985871,17.3577709 C19.1256814,18.3087523 18.2974196,19 17.3308473,19 L10,19 C8.8954305,19 8,18.1045695 8,17 L8,8.73984815 Z" />
+                    <path d="M4,18 L4,9" />
+                </svg><span class="r-suffix--wider r-list-item_text">Add Security Outfit</span>
             </a>
         </li>
 
@@ -79,22 +87,20 @@
                     <title id="thumbUpIconTitle">Crime Types</title>
                     <path d="M8,8.73984815 C8,8.26242561 8.17078432,7.80075162 8.4814868,7.43826541 L13.2723931,1.84887469 C13.7000127,1.34998522 14.4122932,1.20614658 15,1.5 C15.5737957,1.78689785 15.849314,2.45205792 15.6464466,3.06066017 L14,8 L18.6035746,8 C18.7235578,8 18.8432976,8.01079693 18.9613454,8.03226018 C20.0480981,8.22985158 20.7689058,9.27101818 20.5713144,10.3577709 L19.2985871,17.3577709 C19.1256814,18.3087523 18.2974196,19 17.3308473,19 L10,19 C8.8954305,19 8,18.1045695 8,17 L8,8.73984815 Z" />
                     <path d="M4,18 L4,9" />
-                </svg><span class="r-suffix--wider r-list-item_text"> Crime Types</span>
+                </svg><span class="r-suffix--wider r-list-item_text"> View Crime Types</span>
             </a>
         </li>
         <li class="r-no-border r-mb-h">
-            <a class=" r-list-item is-vertical-nav" href="{{url('/admin/report')}}"><svg width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-labelledby="supportIconTitle" stroke="#52154e" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="miter" fill="none" color="#52154e" class="icon icon-support">
-                    <title id="supportIconTitle">Reports</title>
-                    <path stroke-linecap="round" d="M11 8L9.42229 7.21115C9.14458 7.07229 8.83835 7 8.52786 7H7.82843C7.29799 7 6.78929 7.21071 6.41421 7.58579L5.58579 8.41421C5.21071 8.78929 5 9.29799 5 9.82843L5 14.9296C5 15.5983 5.3342 16.2228 5.8906 16.5937L9.75746 19.1716C10.4944 19.663 11.4668 19.611 12.1472 19.044L17 15"/>
-                    <path d="M14.4549 12.9142C13.8515 12.1062 12.741 11.8739 11.8643 12.3721L10.009 13.4266C9.41298 13.7653 8.66412 13.6641 8.17937 13.1794V13.1794C7.54605 12.546 7.59324 11.5056 8.2813 10.9323L12.4437 7.46356C12.8032 7.16403 13.2562 7 13.7241 7H14.5279C14.8384 7 15.1446 7.07229 15.4223 7.21115L17.8944 8.44721C18.572 8.786 19 9.47852 19 10.2361L19 12.9796C19 14.9037 16.5489 15.718 15.3976 14.1764L14.4549 12.9142Z"/>
-                    <path d="M1 17V8"/>
-                    <path d="M1 17V8"/>
-                    <path d="M23 17V8"/>
-                </svg><span class="r-suffix--wider r-list-item_text">Add Crime Types</span>
+            <a class=" r-list-item is-vertical-nav" href="{{url('/admin/crimetype/add')}}"><svg role="img" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" aria-labelledby="thumbUpIconTitle" stroke="#52154e" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="miter" fill="none" color="#52154e" class="icon icon-thumb-up">
+                    <title id="thumbUpIconTitle"> Add Crime Types</title>
+                    <path d="M8,8.73984815 C8,8.26242561 8.17078432,7.80075162 8.4814868,7.43826541 L13.2723931,1.84887469 C13.7000127,1.34998522 14.4122932,1.20614658 15,1.5 C15.5737957,1.78689785 15.849314,2.45205792 15.6464466,3.06066017 L14,8 L18.6035746,8 C18.7235578,8 18.8432976,8.01079693 18.9613454,8.03226018 C20.0480981,8.22985158 20.7689058,9.27101818 20.5713144,10.3577709 L19.2985871,17.3577709 C19.1256814,18.3087523 18.2974196,19 17.3308473,19 L10,19 C8.8954305,19 8,18.1045695 8,17 L8,8.73984815 Z" />
+                    <path d="M4,18 L4,9" />
+                </svg><span class="r-suffix--wider r-list-item_text"> Add Crime Type</span>
             </a>
         </li>
+
         <li class="r-no-border r-mb-h">
-            <a class=" r-list-item is-vertical-nav" href="{{url('/admin/report')}}"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#52154e" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" class="icon icon-settings">
+            <a class=" r-list-item is-vertical-nav" href="{{url('/admin/rank/add')}}"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#52154e" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" class="icon icon-settings">
                     <line x1="4" y1="21" x2="4" y2="14" />
                     <line x1="4" y1="10" x2="4" y2="3" />
                     <line x1="12" y1="21" x2="12" y2="12" />

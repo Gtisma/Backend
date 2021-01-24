@@ -4181,5 +4181,17 @@ table td,
 .duration-150 {
     transition-duration: 150ms;
 }
+.alert {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+.alert-info {
+    color: #0c5460;
+    background-color: #EFBEEB;
+    border-color: #EFBECC;
+}
 
 /*# sourceMappingURL=main.css.map */
