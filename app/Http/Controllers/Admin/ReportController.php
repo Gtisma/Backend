@@ -39,9 +39,8 @@ class ReportController extends Controller
         }
         return $res;
     }
-    public function index($status)
+    public function index($status = null)
     {
-
         if(isset($status)){
             $sta = $this->checkStatus($status);
             $reports = Report::where('status',$sta)->orderBy('created_at', 'DESC')->paginate(10);

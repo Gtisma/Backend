@@ -81,7 +81,7 @@
                     @endforeach
                 @else
                     <tr >
-                        <td colspan="7">NO Report</td> </tr>
+                        <td colspan="7" class="text-xl-center">No Report</td> </tr>
                     @endif
 
                 </tbody>

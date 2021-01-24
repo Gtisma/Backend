@@ -69,7 +69,10 @@ class RouteServiceProvider extends ServiceProvider
         $this->mapWebRoute('/web.php');
         $this->mapWebRoute('/web/admin/home.php', '/admin');
         $this->mapWebRoute('/web/admin/report.php', '/admin/report');
-//        $this->mapWebRoute('/web/settings.php', '/settings');
+        $this->mapWebRoute('/web/admin/user.php', '/admin/user');
+        $this->mapWebRoute('/web/admin/security.php', '/admin/security');
+        $this->mapWebRoute('/web/admin/crimetype.php', '/admin/crimetype');
+        $this->mapWebRoute('/web/admin/rank.php', '/admin/rank');
 
     }
 

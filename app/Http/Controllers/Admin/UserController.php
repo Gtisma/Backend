@@ -60,7 +60,31 @@ class UserController extends Controller
     public function sendTestmail(){
         $this->sendEmailQueue('Welcome','ezeibesandra@gmail.com',config('mail.from.address'),'admin.email.welcome',null,"www.google.com");
     }
+    private function checkType($type){
+        switch ($type){
+            case 'eyewitness':
+                $role= Constants::Roles[2];
+                break;
+            case 'admin':
+                $role=Constants::Roles[1];
+                break;
+            default:
+                $role= Constants::Roles[0];
+        }
+        return $role;
+    }
 
+    public function viewUsers($type=null){
+        if(isset($type)){
+            $role = $this->checkType($type);
+            $users = User::whereHas("roles", function($q) use($role){ $q->where("name", $role); })->orderby('created_at', 'desc')->paginate(20);
+        }
+        else {
+            $type = "Users";
+            $users = User::orderBy('created_at', 'DESC')->paginate(20);
+        }
+        return view('admin.users.view',compact('users','type'));
+    }
 
 
 }
