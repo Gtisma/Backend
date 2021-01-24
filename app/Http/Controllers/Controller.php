@@ -17,21 +17,16 @@ class Controller extends BaseController
         try {
             $publicid = date("Ymd") . time() . mt_rand(10000, 99999);
             $uploadedFileUrl = cloudinary()->uploadFile($data, array("folder"=> "gtisma/".$path."/","publicid" =>$publicid,"overwrite" => TRUE))->getSecurePath();
-            Log::info("File Uploaded Path", [$uploadedFileUrl]);
             return ["data"=>$uploadedFileUrl];
         }catch (\Exception $e){
-            Log::error("cloudinary exception",[$e->getMessage()]);
             return ["error"=>"File faIL to upload, Contact Admin"];
         }
 
     }
     public static function uploadToCloudStatic($data,$path){
-        Log::info("Cloudinary file Upload",[gettype($data),$data,gettype($data)]);
         try {
-            Log::info("Start sending file------");
             $publicid = date("Ymd") . time() . mt_rand(10000, 99999);
             $uploadedFileUrl = cloudinary()->uploadFile($data, array("folder"=> "gtisma/".$path."/","publicid" =>$publicid,"overwrite" => TRUE))->getSecurePath();
-            Log::info("File Uploaded Path", [$uploadedFileUrl]);
             return ["data"=>$uploadedFileUrl];
         }catch (\Exception $e){
             Log::error("cloudinary exception",[$e->getMessage(),$e]);

@@ -31,11 +31,8 @@ class SendFileCloudNotification
     {
         $report_file =$uploadCloud->report_file;
         if(gettype($report_file) === "string") {
-            Log::info("Yes file is a string");
             $report_file = json_decode($uploadCloud->report_file,true);
         }
-
-
         for($i = 0 ; $i < count($report_file); $i++){
             if(isset($report_file[$i]["file"])){
                 $typeid =  $report_file[$i]["type"] ?? "picture";
@@ -43,7 +40,6 @@ class SendFileCloudNotification
                 if(is_array($report_file[$i]["file"])){
                     foreach ($report_file[$i]["file"] as $file)
                     {
-                        Log::info("Report File4 Array each2-------");
                         $fileurl = Controller::uploadToCloudStatic($file, 'reports');
                         if(isset($fileurl["data"])) {
                             $reportcontent = new ReportContent();
@@ -54,7 +50,6 @@ class SendFileCloudNotification
                         }
                     }
                 }else {
-                    Log::info("Report File4 Single-------");
                     $fileurl = Controller::uploadToCloudStatic($report_file[$i]["file"], 'reports');
                     if(isset($fileurl["data"])) {
                         $reportcontent = new ReportContent();
