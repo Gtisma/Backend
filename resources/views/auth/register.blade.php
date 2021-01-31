@@ -95,6 +95,17 @@
                     @enderror
                     @include('auth.webcam')
                     <p class="r-select-wrapper r-mb-0">
+                        <label for="gender">Gender</label>
+                        <select name="gender_id" id ="gender" class="browser-default">
+                            @if(isset($gender) && count($gender) > 0)
+                                @foreach($gender as $gend)
+                                    <option value="{{$gend->id}}">{{$gend->name}}</option>
+                                @endforeach
+                            @endif
+                        </select>
+
+                    </p>
+                    <p class="r-select-wrapper r-mb-0">
                         <label for="states">State</label>
                         <select name="state_id" id ="states" class="browser-default">
                             <option value="" disabled selected>Choose your State</option>
@@ -108,6 +119,7 @@
                             <strong>Select a valid State</strong>
                         </span>
                     </p>
+
                     <p class="r-select-wrapper r-mb-0">
                         <label for="securities">Securities</label>
                         <select name="security_id" id ="securities" onchange="getRanks()" class="browser-default">

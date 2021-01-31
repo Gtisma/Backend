@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Domain\Helpers\Constants;
+use App\Domain\Models\Gender;
 use App\Domain\Models\Security;
 use App\Domain\Models\State;
 use App\Http\Controllers\Controller;
@@ -38,7 +39,8 @@ class RegisterController extends Controller
     {
         $securities = Security::all();
         $states = State::all();
-        return view('auth.register',compact('securities','states'));
+        $gender = Gender::all();
+        return view('auth.register',compact('securities','states','gender'));
     }
     protected function registered(Request $request, $user)
     {
@@ -74,6 +76,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'state_id' => $data['state_id'],
             'rank_id' => $data['rank_id'],
+            'gender_id' => $data['gender_id'],
             'password' => Hash::make($data['password']),
             'is_active' => Constants::Active['Inactive'],
             'activation_token' => $rand,
