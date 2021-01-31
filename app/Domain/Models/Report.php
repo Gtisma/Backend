@@ -37,7 +37,7 @@ class Report extends Model
 
     public function reportapproval()
     {
-        return $this->hasOne(ReportApproval::class,self::ID);
+        return $this->hasOne(ReportApproval::class,ReportApproval::REPORT_ID,self::ID);
     }
     public function user()
     {

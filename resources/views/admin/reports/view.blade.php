@@ -1,6 +1,7 @@
 @extends('admin.layouts.maindashboard')
 
 @section('content')
+
     <section class="r-section r-section--padded">
         <div class="element-header">
             @if (session('message'))
@@ -9,6 +10,7 @@
                 </div>
             @endif
         </div>
+
 
         <div class="r-content-area">
             <div class="r-section-title">
@@ -53,30 +55,50 @@
                             }
                         @endphp
                 <tr>
+                    <a href="{{url('/admin/report/view/'.$report->id)}}" class="r-none">
                     <td class="r-co-{{$res}}">
+                        <a class="r-none" href="{{url('/admin/report/view/'.$report->id)}}">
                         {{$report->status}}
+                        </a>
                     </td>
                     <td>
+                        <a class="r-none" href="{{url('/admin/report/view/'.$report->id)}}">
                         {{$report->crimetype->name ?? "No Crime Type"}}
+                        </a>
                     </td>
                     <td class="">
+                        <a class="r-none" href="{{url('/admin/report/view/'.$report->id)}}">
                         {{$report->description}}
+                        </a>
                     </td>
                     <td class="">
+                        <a class="r-none" href="{{url('/admin/report/view/'.$report->id)}}">
                         {{$report->user->first_name.' '.$report->user->last_name}}
+                        </a>
                     </td>
                     <td class="">
+                        <a class="r-none" href="{{url('/admin/report/view/'.$report->id)}}">
                         {{$report->created_at}}
+                        </a>
                     </td>
                     <td class="r-co-{{$res}}">
-                        <button  class="r-btn r-btn--primary">
+                        @if($status === 'Done')
+                        <button  class="r-d-flex r-al-i-c r-btn r-btn--primary">
                             {{$status}}
                         </button>
+                        @else
+                            <a href="{{url('/admin/report/approve/'.$report->id)}}" class="r-d-flex r-al-i-c r-btn r-btn--secondary">
+                               {{$status}}
+                            </a>
+                        @endif
                     </td>
 
                     <td class="">
+                        <a class="r-none" href="{{url('/admin/report/view/'.$report->id)}}">
                       View more
+                        </a>
                     </td>
+                    </a>
                 </tr>
                     @endforeach
                 @else

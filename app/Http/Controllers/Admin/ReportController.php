@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Domain\Helpers\Constants;
 use App\Domain\Models\CrimeType;
 use App\Domain\Models\Report;
+use App\Domain\Models\ReportApproval;
 use App\Domain\Models\ReportContent;
 use App\Domain\Models\State;
 use App\Http\Controllers\Controller;
@@ -38,6 +39,33 @@ class ReportController extends Controller
                 $res= "confirmed";
         }
         return $res;
+    }
+
+    public function approveReport($id){
+        $report = Report::find($id);
+        $user = auth()->user();
+        $role = $user->getRoleNames()[0];
+        if($role == Constants::Roles[2]) {
+            return redirect()->back()->with('message','Report cannot be approved by Eyewitness, Contact Admin');
+        }
+        if($report != null) {
+            if($report->status == Constants::Status[1]){
+                return redirect()->back()->with('message','This Report has been Approved, by an Admin');
+            }
+            $report->status = Constants::Status[1];
+            $report->save();
+            $reportApp = new ReportApproval();
+            $reportApp->user_id = $user->id;
+            $reportApp->report_id = $report->id;
+            $reportApp->save();
+            return redirect()->back()->with('message','Report Successfully Approved');
+        }
+        return redirect()->back()->with('message','Report not found for Approval');
+
+    }
+    public function viewReport($id){
+        $report = Report::find($id);
+        return view('admin.reports.details',compact('report'));
     }
     public function index($status = null)
     {

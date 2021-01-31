@@ -48,25 +48,39 @@
 
                 <tr>
                     <td>
+                        <a class="r-none" href="{{url('/admin/user/profile/'.$user->id)}}">
                         {{$user->first_name}}
+                        </a>
                     </td>
                     <td>
+                        <a class="r-none" href="{{url('/admin/user/profile/'.$user->id)}}">
                         {{$user->last_name}}
+                        </a>
                     </td>
                     <td class="">
+                        <a class="r-none" href="{{url('/admin/user/profile/'.$user->id)}}">
                         {{$user->email}}
+                        </a>
                     </td>
                     <td class="">
+                        <a class="r-none" href="{{url('/admin/user/profile/'.$user->id)}}">
                         {{$user->phone}}
+                        </a>
                     </td>
                     <td class="">
+                        <a class="r-none" href="{{url('/admin/user/profile/'.$user->id)}}">
                         {{$user->gender->name?? ""}}
+                        </a>
                     </td>
                     <td class="">
+                        <a class="r-none" href="{{url('/admin/user/profile/'.$user->id)}}">
                         {{$user->source}}
+                        </a>
                     </td>
                     <td class="">
+                        <a class="r-none" href="{{url('/admin/user/profile/'.$user->id)}}">
                         {{$user->created_at}}
+                        </a>
                     </td>
 
 

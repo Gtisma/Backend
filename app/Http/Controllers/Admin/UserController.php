@@ -85,6 +85,14 @@ class UserController extends Controller
         }
         return view('admin.users.view',compact('users','type'));
     }
+    public function viewProfile($id =null){
+        if(isset($id)){
+            $userprofile = User::find($id);
+        }else {
+            $userprofile = auth()->user();
+        }
+        return view('admin.users.profile',compact('userprofile'));
+    }
 
 
 }

@@ -62,7 +62,7 @@
                     </div>
                     <div class="r-d-flex r-al-i-c r-edges*2@xl">
                         <div class="r-hidden-xl-up"><a href="/" class="r-logo r-d-flex r-al-i-c"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000">
-                                    <title>GTISMA Credit Logo Icon (Full Brand Red Background)</title>
+                                    <title>GTISMA  (Full Brand Red Background)</title>
                                     <rect fill="#52154e" width="2000" height="2000" rx="1000" />
                                     <polygon fill="#fff" points="556.34 1245.12 1013.01 280.07 1657.54 1627.43 995.66 653.14 556.34 1245.12" />
                                     <polygon fill="#fff" points="342.46 1673.68 992.77 844.3 1178.66 1127.58 1018.79 1029.29 342.46 1673.68" />
@@ -85,7 +85,7 @@
                         </button>
                         <ul id="user_actions" class="r-dropdown_list r-none r-list dropdown-content">
                             <li>
-                                <a href="https://adx-usr.now.sh/settings" class="r-list-item r-co-brown"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sliders">
+                                <a href="{{url('/admin/user/profile')}}" class="r-list-item r-co-brown"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" class="icon icon-sliders">
                                         <line x1="4" y1="21" x2="4" y2="14" />
                                         <line x1="4" y1="10" x2="4" y2="3" />
                                         <line x1="12" y1="21" x2="12" y2="12" />
