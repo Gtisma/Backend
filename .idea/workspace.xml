@@ -20,9 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cd36280-a89e-408e-830a-9b2d8c76bee7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/users/addadmin.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Domain/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Domain/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/reports/details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/reports/details.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/reports/view.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/reports/view.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web/admin/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web/admin/user.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +219,7 @@
       <workItem from="1609078650893" duration="11569000" />
       <workItem from="1610266604220" duration="21644000" />
       <workItem from="1611012577252" duration="35903000" />
-      <workItem from="1611744828518" duration="20264000" />
+      <workItem from="1611744828518" duration="29918000" />
     </task>
     <servers />
   </component>
@@ -252,8 +258,8 @@
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state x="485" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.834@0.23.1440.834" timestamp="1605264657114" />
-    <state x="458" y="196" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612130883382">
-      <screen x="0" y="23" width="1440" height="839" />
+    <state x="458" y="196" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612299929253">
+      <screen x="0" y="23" width="1440" height="837" />
     </state>
     <state x="458" y="193" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.828@0.23.1440.828" timestamp="1607606099343" />
     <state x="458" y="194" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.829@0.23.1440.829" timestamp="1608808434361" />
@@ -263,6 +269,7 @@
     <state x="458" y="195" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.834@0.23.1440.834" timestamp="1611509942043" />
     <state x="458" y="195" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.835@0.23.1440.835" timestamp="1611506778771" />
     <state x="458" y="195" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.836@0.23.1440.836" timestamp="1605821598950" />
+    <state x="458" y="196" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.837@0.23.1440.837" timestamp="1612299929253" />
     <state x="458" y="196" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.23.1440.839@0.23.1440.839" timestamp="1612130883382" />
     <state x="478" y="300" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1605018458618">
       <screen x="0" y="23" width="1440" height="834" />

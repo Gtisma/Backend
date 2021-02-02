@@ -10,11 +10,14 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Domain\Helpers\Constants;
+use App\Domain\Models\Gender;
+use App\Domain\Models\State;
 use App\Domain\Models\User;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\Auth\EmailActivationRequest;
-
-
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 
 
 class UserController extends Controller
@@ -93,6 +96,46 @@ class UserController extends Controller
         }
         return view('admin.users.profile',compact('userprofile'));
     }
+    public function viewAdminPage(){
+        $states = State::all();
+        $gender = Gender::all();
+        return view('admin.users.addadmin',compact('states','gender'));
+    }
+    protected function validator(array $data)
+    {
+        return Validator::make($data, [
+            'first_name' => ['required', 'string', 'max:255'],
+            'last_name' => ['required', 'string', 'max:255'],
+            'phone' => 'required|string|min:10|max:13|unique:users',
+            'state_id' => ['required'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => [
+                'min:8',
+                'required',
+                'confirmed',
+                'regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$/']
+        ],[ 'password.regex' => 'Password must have Uppercase, Lowercase, Number and Special Character']);
+    }
 
+    public function storeAdmin(Request $request){
+        $validator = $this->validator($request->all());
+        if($validator->fails())
+        {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+        $user = User::create([
+            'first_name' => $request->first_name,
+            'last_name' =>  $request->last_name,
+            'phone' =>  $request->phone,
+            'email' =>  $request->email,
+            'state_id' =>  $request->state_id,
+            'gender_id' =>  $request->gender_id,
+            'password' => Hash::make( $request->password),
+            'is_active' => Constants::Active['Active'],
+        ]);
+        $user->assignRole( Constants::Roles[0] );
+        $user->save();
+        return  redirect('/admin/user/addadmin')->with('message','SuperAdmin Successfully Added');
+    }
 
 }

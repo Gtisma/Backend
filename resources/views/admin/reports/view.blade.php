@@ -58,7 +58,7 @@
                     <a href="{{url('/admin/report/view/'.$report->id)}}" class="r-none">
                     <td class="r-co-{{$res}}">
                         <a class="r-none" href="{{url('/admin/report/view/'.$report->id)}}">
-                        {{$report->status}}
+                        {{ ucfirst($report->status)}}
                         </a>
                     </td>
                     <td>
@@ -83,11 +83,11 @@
                     </td>
                     <td class="r-co-{{$res}}">
                         @if($status === 'Done')
-                        <button  class="r-d-flex r-al-i-c r-btn r-btn--primary">
+                        <button  class="r-d-flex r-al-i-c r-btn r-btn--success">
                             {{$status}}
                         </button>
                         @else
-                            <a href="{{url('/admin/report/approve/'.$report->id)}}" class="r-d-flex r-al-i-c r-btn r-btn--secondary">
+                            <a href="{{url('/admin/report/approve/'.$report->id)}}" class="r-d-flex r-al-i-c r-btn r-btn--action">
                                {{$status}}
                             </a>
                         @endif

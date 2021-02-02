@@ -9,20 +9,20 @@
                 </div>
             @endif
         </div>
-        <div class="r-d-flex r-al-i-c r-j-c-sb">
-            <h2 class="r-mt-0">Report Details</h2>
+        <div class="r-section-title r-no-border r-pt-2 r-pt-1@xl">
+            <h2 class="r-m-0">Report Details</h2>
             @if($report->status === "pending")
-            <a href="{{url('/admin/report/approve/'.$report->id)}}" class="r-d-flex r-al-i-c r-btn r-btn--secondary">
+            <a href="{{url('/admin/report/approve/'.$report->id)}}" class="r-d-flex r-al-i-c r-btn r-btn--action">
                 <span class="r-fw-medium r-btn_icon-adjust">Approve Report</span>
             </a>
             @else
-                <button class="r-d-flex r-al-i-c r-btn r-btn--secondary">
+                <button class="r-d-flex r-al-i-c r-btn r-btn--success">
                     <span class="r-fw-medium r-btn_icon-adjust">Report Approved</span>
                 </button>
             @endif
         </div>
-        <div class="r-split-twin">
-            <div class="r-split-twin_figure no-slanting element-header">
+        <div class="r-split-twin r-grid--gap">
+            <div class="r-split-twin_figure r-mb-2 no-slanting height-auto element-header">
                 @if(isset($report->reportcontent) && count($report->reportcontent) > 0)
                     <div class="main-carousel">
                     @foreach($report->reportcontent as $rcontent)
@@ -53,7 +53,7 @@
 
 
             </div>
-            <div class="r-split-twin_content r-w-100% r-maxwidth-xs">
+            <div class="r-split-twin_content r-w-100%">
                 <ul class="r-none r-al-i-c">
                     <li class="tab">
                         <p class="active r-none r-edges--as-gutter r-caps r-caps--micro r-fw-bold">
