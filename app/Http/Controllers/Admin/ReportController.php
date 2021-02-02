@@ -83,7 +83,7 @@ class ReportController extends Controller
     {
         $states = State::all();
         $crimetypes = CrimeType::all();
-        return view('admin.reports.addnew',compact('states','crimetypes'));
+        return view('admin.reports.add',compact('states','crimetypes'));
     }
     public function store(Request $request)
     {
