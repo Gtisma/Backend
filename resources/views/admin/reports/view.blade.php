@@ -17,7 +17,8 @@
                 <h2 class="r-section-title_title">
                     Report List
                 </h2>
-            </div><table class="responsive-table striped"><thead>
+            </div>
+            <table class="responsive-table striped"><thead>
                 <tr><th>
                         Status
                     </th>
@@ -83,7 +84,7 @@
                     </td>
                     <td class="r-co-{{$res}}">
                         @if($status === 'Done')
-                        <button  class="r-d-flex r-al-i-c r-btn r-btn--success">
+                        <button  class="r-d-flex r-al-i-c r-btn r-btn--success r-width-100">
                             {{$status}}
                         </button>
                         @else

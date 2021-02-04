@@ -40,7 +40,7 @@
                     <div class="carousel-cell"> <img src="{{$rcontent->file_url}}" alt="Report" /></div>
                             @else
                     <div class="carousel-cell">
-                        <audio controls class="">
+                        <audio controls class="r-audio">
                             <source src="{{$rcontent->file_url}}">
                         </audio>
                     </div>

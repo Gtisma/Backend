@@ -1488,7 +1488,9 @@ h3,
 .r-btn--action { background-color: var(--color-action); }
 .r-btn--action:focus, .r-btn--action:hover { background-color: var(--color-action__hover); }
 
-
+.r-width-100{
+    width: 100%;
+}
 .r-btn--floating {
     width: 3.2em;
     height: 3.2em;
@@ -4294,6 +4296,12 @@ h1 {
     background-color: #97A0AF;
     width: 100%;
     height: 480px;
+}
+.r-audio{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 /*# sourceMappingURL=main.css.map */

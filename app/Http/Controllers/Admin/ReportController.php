@@ -79,6 +79,11 @@ class ReportController extends Controller
 
         return view('admin.reports.view',compact('reports'));
     }
+    public function reportByCrimeType($id)
+    {
+        $reports = Report::where('crime_type_id',$id)->orderBy('created_at', 'DESC')->paginate(10);
+        return view('admin.reports.view',compact('reports'));
+    }
     public function create()
     {
         $states = State::all();

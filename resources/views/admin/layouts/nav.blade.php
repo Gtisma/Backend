@@ -8,44 +8,34 @@
             </a>
         </li>
         <li class="r-no-border r-mb-h">
-            <a class=" r-list-item is-vertical-nav" href="{{url('/admin/user/admin')}}"><svg width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-labelledby="verifiedIconTitle" stroke="#52154e" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="miter" fill="none" color="#52154e" class="icon icon-verified">
-                    <title id="verifiedIconTitle">Verified</title>
-                    <path d="M8 12.5L10.5 15L16 9.5" />
-                    <path d="M12 22C13.2363 22 14.2979 21.2522 14.7572 20.1843C14.9195 19.8068 15.4558 19.5847 15.8375 19.7368C16.9175 20.1672 18.1969 19.9453 19.0711 19.0711C19.9452 18.1969 20.1671 16.9175 19.7368 15.8376C19.5847 15.4558 19.8068 14.9195 20.1843 14.7572C21.2522 14.2979 22 13.2363 22 12C22 10.7637 21.2522 9.70214 20.1843 9.24282C19.8068 9.08046 19.5847 8.54419 19.7368 8.16246C20.1672 7.08254 19.9453 5.80311 19.0711 4.92894C18.1969 4.05477 16.9175 3.83286 15.8376 4.26321C15.4558 4.41534 14.9195 4.1932 14.7572 3.8157C14.2979 2.74778 13.2363 2 12 2C10.7637 2 9.70214 2.74777 9.24282 3.81569C9.08046 4.19318 8.54419 4.41531 8.16246 4.26319C7.08254 3.83284 5.80311 4.05474 4.92894 4.92891C4.05477 5.80308 3.83286 7.08251 4.26321 8.16243C4.41534 8.54417 4.1932 9.08046 3.8157 9.24282C2.74778 9.70213 2 10.7637 2 12C2 13.2363 2.74777 14.2979 3.81569 14.7572C4.19318 14.9195 4.41531 15.4558 4.26319 15.8375C3.83284 16.9175 4.05474 18.1969 4.92891 19.0711C5.80308 19.9452 7.08251 20.1671 8.16243 19.7368C8.54416 19.5847 9.08046 19.8068 9.24282 20.1843C9.70213 21.2522 10.7637 22 12 22Z" />
-                </svg><span class="r-suffix--wider r-list-item_text">View Admins</span>
+            <a class=" r-list-item is-vertical-nav" href="{{url('/admin/user/admin')}}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#52154E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                <span class="r-suffix--wider r-list-item_text">View Admins</span>
             </a>
         </li>
         <li class="r-no-border r-mb-h">
-            <a class=" r-list-item is-vertical-nav" href="{{url('/admin/user/superadmin')}}"><svg width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-labelledby="verifiedIconTitle" stroke="#52154e" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="miter" fill="none" color="#52154e" class="icon icon-verified">
-                    <title id="verifiedIconTitle">Verified</title>
-                    <path d="M8 12.5L10.5 15L16 9.5" />
-                    <path d="M12 22C13.2363 22 14.2979 21.2522 14.7572 20.1843C14.9195 19.8068 15.4558 19.5847 15.8375 19.7368C16.9175 20.1672 18.1969 19.9453 19.0711 19.0711C19.9452 18.1969 20.1671 16.9175 19.7368 15.8376C19.5847 15.4558 19.8068 14.9195 20.1843 14.7572C21.2522 14.2979 22 13.2363 22 12C22 10.7637 21.2522 9.70214 20.1843 9.24282C19.8068 9.08046 19.5847 8.54419 19.7368 8.16246C20.1672 7.08254 19.9453 5.80311 19.0711 4.92894C18.1969 4.05477 16.9175 3.83286 15.8376 4.26321C15.4558 4.41534 14.9195 4.1932 14.7572 3.8157C14.2979 2.74778 13.2363 2 12 2C10.7637 2 9.70214 2.74777 9.24282 3.81569C9.08046 4.19318 8.54419 4.41531 8.16246 4.26319C7.08254 3.83284 5.80311 4.05474 4.92894 4.92891C4.05477 5.80308 3.83286 7.08251 4.26321 8.16243C4.41534 8.54417 4.1932 9.08046 3.8157 9.24282C2.74778 9.70213 2 10.7637 2 12C2 13.2363 2.74777 14.2979 3.81569 14.7572C4.19318 14.9195 4.41531 15.4558 4.26319 15.8375C3.83284 16.9175 4.05474 18.1969 4.92891 19.0711C5.80308 19.9452 7.08251 20.1671 8.16243 19.7368C8.54416 19.5847 9.08046 19.8068 9.24282 20.1843C9.70213 21.2522 10.7637 22 12 22Z" />
-                </svg><span class="r-suffix--wider r-list-item_text">View Super Admins</span>
+            <a class=" r-list-item is-vertical-nav" href="{{url('/admin/user/superadmin')}}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#52154E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                <span class="r-suffix--wider r-list-item_text">View Super Admins</span>
             </a>
         </li>
         <li class="r-no-border r-mb-h">
-            <a class=" r-list-item is-vertical-nav" href="{{url('/admin/user/addadmin')}}"><svg role="img" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" aria-labelledby="thumbUpIconTitle" stroke="#52154e" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="miter" fill="none" color="#52154e" class="icon icon-thumb-up">
-                    <title id="thumbUpIconTitle">Thumb Up</title>
-                    <path d="M8,8.73984815 C8,8.26242561 8.17078432,7.80075162 8.4814868,7.43826541 L13.2723931,1.84887469 C13.7000127,1.34998522 14.4122932,1.20614658 15,1.5 C15.5737957,1.78689785 15.849314,2.45205792 15.6464466,3.06066017 L14,8 L18.6035746,8 C18.7235578,8 18.8432976,8.01079693 18.9613454,8.03226018 C20.0480981,8.22985158 20.7689058,9.27101818 20.5713144,10.3577709 L19.2985871,17.3577709 C19.1256814,18.3087523 18.2974196,19 17.3308473,19 L10,19 C8.8954305,19 8,18.1045695 8,17 L8,8.73984815 Z" />
-                    <path d="M4,18 L4,9" />
-                </svg><span class="r-suffix--wider r-list-item_text"> New SuperAdmin</span>
+            <a class=" r-list-item is-vertical-nav" href="{{url('/admin/user/addadmin')}}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#52154E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user-plus"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><line x1="20" y1="8" x2="20" y2="14"></line><line x1="23" y1="11" x2="17" y2="11"></line></svg>
+                <span class="r-suffix--wider r-list-item_text"> New SuperAdmin</span>
             </a>
         </li>
 
         <li class="r-no-border r-mb-h">
-            <a class=" r-list-item is-vertical-nav" href="{{url('/admin/report/add')}}"><svg role="img" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" aria-labelledby="thumbUpIconTitle" stroke="#52154e" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="miter" fill="none" color="#52154e" class="icon icon-thumb-up">
-                    <title id="thumbUpIconTitle">Thumb Up</title>
-                    <path d="M8,8.73984815 C8,8.26242561 8.17078432,7.80075162 8.4814868,7.43826541 L13.2723931,1.84887469 C13.7000127,1.34998522 14.4122932,1.20614658 15,1.5 C15.5737957,1.78689785 15.849314,2.45205792 15.6464466,3.06066017 L14,8 L18.6035746,8 C18.7235578,8 18.8432976,8.01079693 18.9613454,8.03226018 C20.0480981,8.22985158 20.7689058,9.27101818 20.5713144,10.3577709 L19.2985871,17.3577709 C19.1256814,18.3087523 18.2974196,19 17.3308473,19 L10,19 C8.8954305,19 8,18.1045695 8,17 L8,8.73984815 Z" />
-                    <path d="M4,18 L4,9" />
-                </svg><span class="r-suffix--wider r-list-item_text">New Report</span>
+            <a class=" r-list-item is-vertical-nav" href="{{url('/admin/report/add')}}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#52154E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                <span class="r-suffix--wider r-list-item_text">New Report</span>
             </a>
         </li>
         <li class="r-no-border r-mb-h">
-            <a class=" r-list-item is-vertical-nav" href="{{url('/admin/user/eyewitness')}}"><svg width="30" height="30" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-labelledby="verifiedIconTitle" stroke="#52154e" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="miter" fill="none" color="#52154e" class="icon icon-verified">
-                    <title id="verifiedIconTitle">Verified</title>
-                    <path d="M8 12.5L10.5 15L16 9.5" />
-                    <path d="M12 22C13.2363 22 14.2979 21.2522 14.7572 20.1843C14.9195 19.8068 15.4558 19.5847 15.8375 19.7368C16.9175 20.1672 18.1969 19.9453 19.0711 19.0711C19.9452 18.1969 20.1671 16.9175 19.7368 15.8376C19.5847 15.4558 19.8068 14.9195 20.1843 14.7572C21.2522 14.2979 22 13.2363 22 12C22 10.7637 21.2522 9.70214 20.1843 9.24282C19.8068 9.08046 19.5847 8.54419 19.7368 8.16246C20.1672 7.08254 19.9453 5.80311 19.0711 4.92894C18.1969 4.05477 16.9175 3.83286 15.8376 4.26321C15.4558 4.41534 14.9195 4.1932 14.7572 3.8157C14.2979 2.74778 13.2363 2 12 2C10.7637 2 9.70214 2.74777 9.24282 3.81569C9.08046 4.19318 8.54419 4.41531 8.16246 4.26319C7.08254 3.83284 5.80311 4.05474 4.92894 4.92891C4.05477 5.80308 3.83286 7.08251 4.26321 8.16243C4.41534 8.54417 4.1932 9.08046 3.8157 9.24282C2.74778 9.70213 2 10.7637 2 12C2 13.2363 2.74777 14.2979 3.81569 14.7572C4.19318 14.9195 4.41531 15.4558 4.26319 15.8375C3.83284 16.9175 4.05474 18.1969 4.92891 19.0711C5.80308 19.9452 7.08251 20.1671 8.16243 19.7368C8.54416 19.5847 9.08046 19.8068 9.24282 20.1843C9.70213 21.2522 10.7637 22 12 22Z" />
-                </svg><span class="r-suffix--wider r-list-item_text">View Eyewitness</span>
+            <a class=" r-list-item is-vertical-nav" href="{{url('/admin/user/eyewitness')}}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#52154E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                <span class="r-suffix--wider r-list-item_text">View Eyewitness</span>
             </a>
         </li>
 
@@ -74,51 +64,35 @@
             </a>
         </li>
         <li class="r-no-border r-mb-h">
-            <a class=" r-list-item is-vertical-nav" href="{{url('/admin/security')}}"><svg role="img" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" aria-labelledby="thumbUpIconTitle" stroke="#52154e" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="miter" fill="none" color="#52154e" class="icon icon-thumb-up">
-                    <title id="thumbUpIconTitle">Thumb Up</title>
-                    <path d="M8,8.73984815 C8,8.26242561 8.17078432,7.80075162 8.4814868,7.43826541 L13.2723931,1.84887469 C13.7000127,1.34998522 14.4122932,1.20614658 15,1.5 C15.5737957,1.78689785 15.849314,2.45205792 15.6464466,3.06066017 L14,8 L18.6035746,8 C18.7235578,8 18.8432976,8.01079693 18.9613454,8.03226018 C20.0480981,8.22985158 20.7689058,9.27101818 20.5713144,10.3577709 L19.2985871,17.3577709 C19.1256814,18.3087523 18.2974196,19 17.3308473,19 L10,19 C8.8954305,19 8,18.1045695 8,17 L8,8.73984815 Z" />
-                    <path d="M4,18 L4,9" />
-                </svg><span class="r-suffix--wider r-list-item_text">View Security Outfit</span>
+            <a class=" r-list-item is-vertical-nav" href="{{url('/admin/security')}}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#52154E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                <span class="r-suffix--wider r-list-item_text">View Security Outfit</span>
             </a>
         </li>
         <li class="r-no-border r-mb-h">
-            <a class=" r-list-item is-vertical-nav" href="{{url('/admin/security/add')}}"><svg role="img" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" aria-labelledby="thumbUpIconTitle" stroke="#52154e" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="miter" fill="none" color="#52154e" class="icon icon-thumb-up">
-                    <title id="thumbUpIconTitle">Thumb Up</title>
-                    <path d="M8,8.73984815 C8,8.26242561 8.17078432,7.80075162 8.4814868,7.43826541 L13.2723931,1.84887469 C13.7000127,1.34998522 14.4122932,1.20614658 15,1.5 C15.5737957,1.78689785 15.849314,2.45205792 15.6464466,3.06066017 L14,8 L18.6035746,8 C18.7235578,8 18.8432976,8.01079693 18.9613454,8.03226018 C20.0480981,8.22985158 20.7689058,9.27101818 20.5713144,10.3577709 L19.2985871,17.3577709 C19.1256814,18.3087523 18.2974196,19 17.3308473,19 L10,19 C8.8954305,19 8,18.1045695 8,17 L8,8.73984815 Z" />
-                    <path d="M4,18 L4,9" />
-                </svg><span class="r-suffix--wider r-list-item_text">Add Security Outfit</span>
+            <a class=" r-list-item is-vertical-nav" href="{{url('/admin/security/add')}}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#52154E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                <span class="r-suffix--wider r-list-item_text">Add Security Outfit</span>
             </a>
         </li>
 
         <li class="r-no-border r-mb-h">
-            <a class=" r-list-item is-vertical-nav" href="{{url('/admin/crimetype')}}"><svg role="img" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" aria-labelledby="thumbUpIconTitle" stroke="#52154e" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="miter" fill="none" color="#52154e" class="icon icon-thumb-up">
-                    <title id="thumbUpIconTitle">Crime Types</title>
-                    <path d="M8,8.73984815 C8,8.26242561 8.17078432,7.80075162 8.4814868,7.43826541 L13.2723931,1.84887469 C13.7000127,1.34998522 14.4122932,1.20614658 15,1.5 C15.5737957,1.78689785 15.849314,2.45205792 15.6464466,3.06066017 L14,8 L18.6035746,8 C18.7235578,8 18.8432976,8.01079693 18.9613454,8.03226018 C20.0480981,8.22985158 20.7689058,9.27101818 20.5713144,10.3577709 L19.2985871,17.3577709 C19.1256814,18.3087523 18.2974196,19 17.3308473,19 L10,19 C8.8954305,19 8,18.1045695 8,17 L8,8.73984815 Z" />
-                    <path d="M4,18 L4,9" />
-                </svg><span class="r-suffix--wider r-list-item_text"> View Crime Types</span>
+            <a class=" r-list-item is-vertical-nav" href="{{url('/admin/crimetype')}}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#52154E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                <span class="r-suffix--wider r-list-item_text"> View Crime Types</span>
             </a>
         </li>
         <li class="r-no-border r-mb-h">
-            <a class=" r-list-item is-vertical-nav" href="{{url('/admin/crimetype/add')}}"><svg role="img" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" aria-labelledby="thumbUpIconTitle" stroke="#52154e" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="miter" fill="none" color="#52154e" class="icon icon-thumb-up">
-                    <title id="thumbUpIconTitle"> Add Crime Types</title>
-                    <path d="M8,8.73984815 C8,8.26242561 8.17078432,7.80075162 8.4814868,7.43826541 L13.2723931,1.84887469 C13.7000127,1.34998522 14.4122932,1.20614658 15,1.5 C15.5737957,1.78689785 15.849314,2.45205792 15.6464466,3.06066017 L14,8 L18.6035746,8 C18.7235578,8 18.8432976,8.01079693 18.9613454,8.03226018 C20.0480981,8.22985158 20.7689058,9.27101818 20.5713144,10.3577709 L19.2985871,17.3577709 C19.1256814,18.3087523 18.2974196,19 17.3308473,19 L10,19 C8.8954305,19 8,18.1045695 8,17 L8,8.73984815 Z" />
-                    <path d="M4,18 L4,9" />
-                </svg><span class="r-suffix--wider r-list-item_text"> Add Crime Type</span>
+            <a class=" r-list-item is-vertical-nav" href="{{url('/admin/crimetype/add')}}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#52154E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                <span class="r-suffix--wider r-list-item_text"> Add Crime Type</span>
             </a>
         </li>
 
         <li class="r-no-border r-mb-h">
-            <a class=" r-list-item is-vertical-nav" href="{{url('/admin/rank/add')}}"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#52154e" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" class="icon icon-settings">
-                    <line x1="4" y1="21" x2="4" y2="14" />
-                    <line x1="4" y1="10" x2="4" y2="3" />
-                    <line x1="12" y1="21" x2="12" y2="12" />
-                    <line x1="12" y1="8" x2="12" y2="3" />
-                    <line x1="20" y1="21" x2="20" y2="16" />
-                    <line x1="20" y1="12" x2="20" y2="3" />
-                    <line x1="1" y1="14" x2="7" y2="14" />
-                    <line x1="9" y1="8" x2="15" y2="8" />
-                    <line x1="17" y1="16" x2="23" y2="16" />
-                </svg><span class="r-suffix--wider r-list-item_text">Add ranks</span>
+            <a class=" r-list-item is-vertical-nav" href="{{url('/admin/rank/add')}}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#52154E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                <span class="r-suffix--wider r-list-item_text">Add ranks</span>
             </a>
         </li></ul>
 </nav>
