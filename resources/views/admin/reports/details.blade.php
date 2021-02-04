@@ -22,38 +22,8 @@
             @endif
         </div>
         <div class="r-split-twin r-grid--gap">
-            <div class="r-split-twin_figure r-mb-2 no-slanting height-auto element-header">
-                @if(isset($report->reportcontent) && count($report->reportcontent) > 0)
-                    <div class="main-carousel">
-                    @foreach($report->reportcontent as $rcontent)
-                    @if($rcontent->report_type_id ==2)
-                    <div class="carousel-cell video-wrap">
-                        <iframe
-                            src="{{$rcontent->file_url}}"
-                            frameborder="0"
-                            allowfullscreen>
-                        </iframe>
-                        <div class="video-wrap__grippy"></div>
-                        <div class="video-wrap__grippy"></div>
-                    </div>
-                            @elseif($rcontent->report_type_id == 1)
-                    <div class="carousel-cell"> <img src="{{$rcontent->file_url}}" alt="Report" /></div>
-                            @else
-                    <div class="carousel-cell">
-                        <audio controls class="r-audio">
-                            <source src="{{$rcontent->file_url}}">
-                        </audio>
-                    </div>
-                            @endif
-                        @endforeach
-                </div>
-                @else
-                    <p>No Report Content Uploaded</p>
-                    @endif
 
-
-            </div>
-            <div class="r-split-twin_content r-w-100%">
+            <div class="r-split-twin_figure r-mb-2 no-slanting height-auto element-header" >
                 <ul class="r-none r-al-i-c">
                     <li class="tab">
                         <p class="active r-none r-edges--as-gutter r-caps r-caps--micro r-fw-bold">
@@ -116,6 +86,40 @@
                         </p>
                     </li>
                 </ul>
+            </div>
+
+            <div class="r-split-twin_content r-w-100%">
+                @if(isset($report->reportcontent) && count($report->reportcontent) > 0)
+                    <div class="main-carousel">
+                        @foreach($report->reportcontent as $rcontent)
+                            @if($rcontent->report_type_id ==2)
+                                <div class="carousel-cell video-wrap">
+                                    <iframe
+                                        src="{{$rcontent->file_url}}"
+                                        frameborder="0"
+                                        allowfullscreen>
+                                    </iframe>
+                                    <div class="video-wrap__grippy"></div>
+                                    <div class="video-wrap__grippy"></div>
+                                </div>
+                            @elseif($rcontent->report_type_id == 1)
+                                <div class="carousel-cell"> <img src="{{$rcontent->file_url}}" alt="Report" /></div>
+                            @else
+                                <div class="carousel-cell">
+                                    <audio controls class="r-audio">
+                                        <source src="{{$rcontent->file_url}}">
+                                    </audio>
+                                </div>
+                            @endif
+                        @endforeach
+                    </div>
+                @else
+                    <div>
+                    <p class="r-flex-dir-col r-al-i-c r-tx-c">No Report Content Uploaded</p>
+                    </div>
+                @endif
+
+
             </div>
         </div>
     </section>
