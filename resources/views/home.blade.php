@@ -127,8 +127,8 @@
                 <div class="col-lg-8">
                     <div class="header-hero-content text-center">
                         <h3 class="header-sub-title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.2s">GTISMA - Report Crime Cases</h3>
-                        <h2 class="header-title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">Connect people to attend to your case</h2>
-                        <p class="text wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s">Today </p>
+                        <h2 class="header-title wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.5s">Connect people to attend to your case today</h2>
+                        <p class="text wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="0.8s"> </p>
                         <a href="#" class="main-btn wow fadeInUp" data-wow-duration="1.3s" data-wow-delay="1.1s">Download Mobile App</a>
                     </div> <!-- header hero content -->
                 </div>

@@ -20,14 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cd36280-a89e-408e-830a-9b2d8c76bee7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/homeassets/images/header-mobile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/homeassets/images/logo3.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/homeassets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/homeassets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/homeassets/images/logo-2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/homeassets/images/logo-2.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/homeassets/images/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/homeassets/images/logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/maindashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/maindashboard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -219,7 +212,7 @@
       <workItem from="1609078650893" duration="11569000" />
       <workItem from="1610266604220" duration="21644000" />
       <workItem from="1611012577252" duration="35903000" />
-      <workItem from="1611744828518" duration="43502000" />
+      <workItem from="1611744828518" duration="44151000" />
     </task>
     <servers />
   </component>
