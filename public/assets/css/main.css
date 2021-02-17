@@ -4040,6 +4040,12 @@ table td,
 .r-blue {
     color: deepskyblue;
 }
+.r-white {
+    color: #ffffff;
+}
+.r-black {
+    color: #000000;
+}
 .r-dropzone {
     display: flex;
     justify-content: center;

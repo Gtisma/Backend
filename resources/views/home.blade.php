@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="{{ asset('homeassets/css/style.css')}}">
 
 
+
 </head>
 
 <body>
@@ -69,8 +70,9 @@
             <div class="row">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg">
-                        <a class="navbar-brand" href="{{url('/')}}">
+                        <a class="navbar-brand r-flex r-al-i-c" href="{{url('/')}}">
                             <img src="{{ asset('homeassets/images/logo.svg')}}" alt="Logo">
+                            <span class="r-white">TISMA</span>
                         </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="toggler-icon"></span>
@@ -134,7 +136,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="header-hero-image text-center wow fadeIn" data-wow-duration="1.3s" data-wow-delay="1.4s">
-                        <img src="{{ asset('homeassets/images/header-hero.png')}}" alt="hero">
+                        <img src="{{ asset('homeassets/images/header-mobile.png')}}" alt="hero">
                     </div> <!-- header hero image -->
                 </div>
             </div> <!-- row -->
@@ -145,35 +147,6 @@
 
 <!--====== HEADER PART ENDS ======-->
 
-<!--====== BRAMD PART START ======-->
-
-<div class="brand-area pt-90">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="brand-logo d-flex align-items-center justify-content-center justify-content-md-between">
-                    <div class="single-logo mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                        <img src="{{ asset('homeassets/images/brand-1.png')}}" alt="brand">
-                    </div> <!-- single logo -->
-                    <div class="single-logo mt-30 wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.2s">
-                        <img src="{{ asset('homeassets/images/brand-2.png')}}" alt="brand">
-                    </div> <!-- single logo -->
-                    <div class="single-logo mt-30 wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.3s">
-                        <img src="{{ asset('homeassets/images/brand-3.png')}}" alt="brand">
-                    </div> <!-- single logo -->
-                    <div class="single-logo mt-30 wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.4s">
-                        <img src="{{ asset('homeassets/images/brand-4.png')}}" alt="brand">
-                    </div> <!-- single logo -->
-                    <div class="single-logo mt-30 wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.5s">
-                        <img src="{{ asset('homeassets/images/brand-5.png')}}" alt="brand">
-                    </div> <!-- single logo -->
-                </div> <!-- brand logo -->
-            </div>
-        </div>   <!-- row -->
-    </div> <!-- container -->
-</div>
-
-<!--====== BRAMD PART ENDS ======-->
 
 <!--====== SERVICES PART START ======-->
 
@@ -430,28 +403,15 @@
                 </div>
                 <div class="col-lg-5 col-md-7 col-sm-7">
                     <div class="footer-link d-flex mt-50 justify-content-md-between">
-                        <div class="link-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
-                            <div class="footer-title">
-                                <h4 class="title">Quick Link</h4>
-                            </div>
-                            <ul class="link">
-                                <li><a href="#">Road Map</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Refund Policy</a></li>
-                                <li><a href="#">Terms of Service</a></li>
-                                <li><a href="#">Pricing</a></li>
-                            </ul>
-                        </div> <!-- footer wrapper -->
+
                         <div class="link-wrapper wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
                             <div class="footer-title">
                                 <h4 class="title">Resources</h4>
                             </div>
                             <ul class="link">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Page</a></li>
-                                <li><a href="#">Portfolio</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="{{url('/')}}">Home</a></li>
+                                <li><a href="#features">Features</a></li>
+                                <li><a href="{{url('/login')}}">Login</a></li>
                             </ul>
                         </div> <!-- footer wrapper -->
                     </div> <!-- footer link -->
@@ -462,10 +422,9 @@
                             <h4 class="title">Contact Us</h4>
                         </div>
                         <ul class="contact">
-                            <li>+809272561823</li>
+                            <li>+2347061251479</li>
                             <li>info@gtima.com</li>
-                            <li>www.geoticsm.org</li>
-                            <li>Akura <br> Ondo State.</li>
+                            <li>Akure <br> Ondo State.</li>
                         </ul>
                     </div> <!-- footer contact -->
                 </div>
@@ -476,7 +435,7 @@
                 <div class="col-lg-12">
                     <div class="copyright d-sm-flex justify-content-between">
                         <div class="copyright-content">
-                            <p class="text">Designed and Developed by <a href="https:www.geoticsm.org" rel="nofollow">GTISMA TEAM</a></p>
+                            <p class="text">Designed and Developed by <a href="https://www.geoticsm.org" rel="nofollow">GTISMA TEAM</a></p>
                         </div> <!-- copyright content -->
                     </div> <!-- copyright -->
                 </div>

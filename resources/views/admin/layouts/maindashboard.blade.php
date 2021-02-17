@@ -8,7 +8,9 @@
     <aside class="r-shell_aside r-zx-8" aria-labelledby="sidebarTitle"><div class="r-aside">
             <div class="r-aside_header r-edges@xl">
                 <h2 class="sr" id="sidebarTitle">Main Navigation</h2>
-                <div class="r-d-flex r-al-i-c r-edges--left"><a href="{{ url('/') }}" class="r-logo r-d-flex r-al-i-c"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375pt" height="374.999991pt" viewBox="0 0 375 374.999991" version="1.2">
+                <div class="r-d-flex r-al-i-c r-edges--left">
+                    <a href="{{ url('/') }}" class="r-logo r-d-flex r-al-i-c">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375pt" height="374.999991pt" viewBox="0 0 375 374.999991" version="1.2">
                             <defs>
                                 <clipPath id="clip1">
                                     <path d="M 57.75 37.5 L 317.25 37.5 L 317.25 337.5 L 57.75 337.5 Z M 57.75 37.5 "/>
@@ -26,9 +28,11 @@
                                 </g>
                             </g>
                         </svg>
+                    <span>
         GTISMA Dashboard
     </span>
-                    </a></div>
+                    </a>
+                </div>
             </div>
             @include('admin.layouts.nav')
             <div class="r-aside_footer r-ml-1 r-border-top">

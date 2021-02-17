@@ -20,9 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2cd36280-a89e-408e-830a-9b2d8c76bee7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/homeassets/images/header-mobile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/homeassets/images/logo3.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/nav.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/reports/details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/reports/details.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/homeassets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/homeassets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/homeassets/images/logo-2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/homeassets/images/logo-2.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/homeassets/images/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/homeassets/images/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/layouts/maindashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/layouts/maindashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +173,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/crimetypes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/homeassets/images" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -182,11 +188,11 @@
       <recent name="$PROJECT_DIR$/app/Domain/Api" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/homeassets/images" />
       <recent name="$PROJECT_DIR$/resources/views/admin/crimetypes" />
       <recent name="$PROJECT_DIR$/resources/views/admin/security" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Admin" />
       <recent name="$PROJECT_DIR$/routes/web/admin" />
-      <recent name="$PROJECT_DIR$/resources/views/admin/ranks" />
     </key>
   </component>
   <component name="RunManager">
@@ -213,7 +219,7 @@
       <workItem from="1609078650893" duration="11569000" />
       <workItem from="1610266604220" duration="21644000" />
       <workItem from="1611012577252" duration="35903000" />
-      <workItem from="1611744828518" duration="38908000" />
+      <workItem from="1611744828518" duration="43502000" />
     </task>
     <servers />
   </component>
