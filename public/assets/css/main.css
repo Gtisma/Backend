@@ -4258,7 +4258,6 @@ table td,
     width: 40%;
     top: 32px;
     bottom: 40px;
-    border: 2px solid green;
     z-index: 3;
 }
 .video-wrap__grippy:before {
@@ -4269,7 +4268,6 @@ table td,
     height: 35%;
     top: 0;
     left: 100%;
-    border: 2px solid green;
 }
 .video-wrap__grippy + .video-wrap__grippy {
     left: auto;
