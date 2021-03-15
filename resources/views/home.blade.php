@@ -9,13 +9,18 @@
     <title>{{ config('app.name', 'GTISMA') }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="GTISMA Report Crime Case, Connect people to attend to your case today" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name='keywords' content='reports,gtisma,geoticsm,case,crime,rape,kidnapping,robbery,fishery' />
+    <meta name="revisit-after" content="7 days">
+    <meta name="coverage" content="Worldwide">
+    <meta name="distribution" content="Global">
+    <meta name="title" content="GTISMA REPORT CASES">
+    <meta name="author" content="GTISMA">
+    <meta name="url" content="https://www.geotiscm.org/">
     <meta property="og:locale" content="en_US" />
     <meta property="og:url" content="https://www.geotiscm.org/" />
     <meta property="og:site_name" content="GTISMA" />
     <meta name="og:description" content="GTISMA Report Crime Case, Connect people to attend to your case today" />
-
+    <meta property=”og:title” content="GTISMA"/>
 
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="{{ asset('favicon/favicon.ico') }}" >
