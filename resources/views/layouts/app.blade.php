@@ -24,7 +24,7 @@
     <meta property="og:site_name" content="GTISMA" />
     <meta name="og:description" content="GTISMA Report Crime Case, Connect people to attend to your case today" />
 
-    <script type="application/ld+json">
+    <script type="application/ld+json"></script>
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
