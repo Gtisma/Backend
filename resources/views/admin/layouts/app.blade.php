@@ -11,6 +11,8 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
+    <meta name="description" content="GTISMA - Report Crime Case, Connect people to attend to your case today" />
+
     <link rel="canonical" href="https://geotiscm.org/">
     <link href="{{ asset('assets/css/datatable.css') }}" rel="stylesheet" type="text/css">
     <script src="{{ asset('assets/js/datatable.min.js') }}"></script>

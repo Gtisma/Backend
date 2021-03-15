@@ -69,12 +69,25 @@ class ReportController extends Controller
     }
     public function index($status = null)
     {
+        $user = auth()->user();
+        $role = $user->getRoleNames()[0];
+
         if(isset($status)){
             $sta = $this->checkStatus($status);
-            $reports = Report::where('status',$sta)->orderBy('created_at', 'DESC')->paginate(10);
+            if($role === Constants::Roles[1]) {
+                $reports = Report::where( [Report::STATE_ID => $user->state_id,Report::STATUS=> $sta])->orderBy('created_at', 'DESC')->paginate(10);
+            }else {
+                $reports = Report::where('status', $sta)->orderBy('created_at', 'DESC')->paginate(10);
+            }
         }
         else {
-            $reports = Report::orderBy('created_at', 'DESC')->paginate(10);
+
+
+             if($role === Constants::Roles[1]) {
+                 $reports = Report::where([Report::STATE_ID => $user->state_id])->orderBy('created_at', 'DESC')->paginate(10);
+             }else {
+                 $reports = Report::orderBy('created_at', 'DESC')->paginate(10);
+             }
         }
 
         return view('admin.reports.view',compact('reports'));

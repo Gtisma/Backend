@@ -78,13 +78,28 @@ class UserController extends Controller
     }
 
     public function viewUsers($type=null){
+        $user = auth()->user();
+        $rolename = $user->getRoleNames()[0];
+
         if(isset($type)){
             $role = $this->checkType($type);
-            $users = User::whereHas("roles", function($q) use($role){ $q->where("name", $role); })->orderby('created_at', 'desc')->paginate(20);
+            if($rolename ==  Constants::Roles[0]){
+                $users = User::whereHas("roles", function ($q) use ($role) {
+                    $q->where("name", $role);
+                })->where(User::STATE_ID,$user->state_id)->orderby('created_at', 'desc')->paginate(20);
+            }else {
+                $users = User::whereHas("roles", function ($q) use ($role) {
+                    $q->where("name", $role);
+                })->orderby('created_at', 'desc')->paginate(20);
+            }
         }
         else {
             $type = "Users";
-            $users = User::orderBy('created_at', 'DESC')->paginate(20);
+            if($rolename ==  Constants::Roles[0]) {
+                $users = User::where(User::STATE_ID,$user->state_id)->orderBy('created_at', 'DESC')->paginate(20);
+            }else{
+                $users = User::orderBy('created_at', 'DESC')->paginate(20);
+            }
         }
         return view('admin.users.view',compact('users','type'));
     }
