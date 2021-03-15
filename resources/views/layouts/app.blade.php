@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <meta name="description" content="GTISMA - Report Crime Case, Connect people to attend to your case today" />
+    <meta name="description" content="GTISMA Report Crime Case, Connect people to attend to your case today" />
 
     <title>{{ config('app.name', 'GTISMA') }}</title>
 
@@ -22,6 +22,8 @@
     <meta property="og:locale" content="en_US" />
     <meta property="og:url" content="https://www.geotiscm.org/" />
     <meta property="og:site_name" content="GTISMA" />
+    <meta name="og:description" content="GTISMA Report Crime Case, Connect people to attend to your case today" />
+
     <script type="application/ld+json">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
