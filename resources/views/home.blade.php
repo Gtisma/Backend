@@ -21,6 +21,9 @@
     <meta property="og:site_name" content="GTISMA" />
     <meta name="og:description" content="GTISMA Report Crime Case, Connect people to attend to your case today" />
     <meta property=”og:title” content="GTISMA REPORT CASES"/>
+    <meta property="og:image" content="{{asset('favicon/favicon.ico')}}" />
+    <meta property="og:image:url" content="{{asset('favicon/favicon.ico')}}" />
+    <meta property="og:image:size" content="300" />
 
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="{{ asset('favicon/favicon.ico') }}" >
