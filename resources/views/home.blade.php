@@ -8,11 +8,14 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'GTISMA') }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
     <meta name="description" content="GTISMA Report Crime Case, Connect people to attend to your case today" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://www.geotiscm.org/" />
+    <meta property="og:site_name" content="GTISMA" />
+    <meta name="og:description" content="GTISMA Report Crime Case, Connect people to attend to your case today" />
+
 
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="{{ asset('favicon/favicon.ico') }}" >
@@ -36,14 +39,8 @@
     <link rel="canonical" href="https://geotiscm.org/">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:url" content="https://www.geotiscm.org/" />
-    <meta property="og:site_name" content="GTISMA" />
-    <meta name="og:description" content="GTISMA Report Crime Case, Connect people to attend to your case today" />
 
     <script type="application/ld+json"></script>
-
-
 
 </head>
 
