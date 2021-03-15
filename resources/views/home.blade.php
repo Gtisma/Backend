@@ -20,7 +20,7 @@
     <meta property="og:url" content="https://www.geotiscm.org/" />
     <meta property="og:site_name" content="GTISMA" />
     <meta name="og:description" content="GTISMA Report Crime Case, Connect people to attend to your case today" />
-    <meta property=”og:title” content="GTISMA"/>
+    <meta property=”og:title” content="GTISMA REPORT CASES"/>
 
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="{{ asset('favicon/favicon.ico') }}" >
